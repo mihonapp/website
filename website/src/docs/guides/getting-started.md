@@ -44,10 +44,6 @@ You can now tap the download button next to extensions to install them.
 
 > You may need to [enable third-party installations](/docs/faq/browse/extensions#enabling-third-party-installations).
 
-::: tip Official repository
-Mihon has an official extension repository, you can use the **Add repository** button on the [Extensions](/extensions/) page, or copy the url manually below.
-> `https://raw.githubusercontent.com/mihonapp/extensions/repo/index.min.json`
-:::
 == Manual extensions
 Extensions can be manually installed through `.apk` files.
 

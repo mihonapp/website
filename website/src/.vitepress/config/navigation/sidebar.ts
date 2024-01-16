@@ -19,10 +19,6 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
           link: '/download/',
         },
         {
-          text: 'Extensions',
-          link: '/extensions/',
-        },
-        {
           text: 'Changelogs',
           link: '/changelogs/',
         },

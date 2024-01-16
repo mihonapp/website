@@ -8,9 +8,7 @@ description: Frequently Asked Questions about Extensions.
 Frequently Asked Questions about Extensions.
 
 ## What are some recommended extensions and sources?
-**Mihon** offers a few extensions for use with self-hosted content [here](https://github.com/mihonapp/extensions).
-
-Otherwise, Mihon is bring-your-own-content and does not offer anything.
+Mihon is bring-your-own-content and does not offer anything.
 
 ::: info Disclaimer
 **Mihon** isn't responsible for slow, down, missing chapters, or subpar image quality of sources as it doesn't host the content.
