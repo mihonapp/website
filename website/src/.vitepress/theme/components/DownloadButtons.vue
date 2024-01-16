@@ -81,7 +81,7 @@ function handleAnalytics(type: 'preview' | 'stable') {
       </a>
     </div>
     <span class="version-disclaimer">
-      Requires <strong>Android 6.0</strong> or higher.
+      Requires <strong>Android 8.0</strong> or higher.
     </span>
   </div>
 </template>
