@@ -18,7 +18,7 @@ const themeConfig: DefaultTheme.Config = {
   socialLinks: [
     {
       icon: 'github',
-      link: 'https://github.com/tachiyomiorg/tachiyomi',
+      link: 'https://github.com/mihonapp/mihon',
       ariaLabel: 'Project GitHub',
     },
     {

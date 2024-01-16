@@ -10,7 +10,7 @@
 <p align="center">Discover and read manga, webtoons, comics, and more – easier than ever on your Android device.</p>
 
 <p align="center">
-	<a title="Netlify deployment" href="https://app.netlify.com/sites/tachiyomiorg/deploys">
+	<a title="Netlify deployment" href="https://app.netlify.com/sites/mihonapp/deploys">
 		<img src="https://api.netlify.com/api/v1/badges/95d9e2f8-42ae-4e40-8c99-82b870c51e1a/deploy-status">
 	</a>
 	<br>
@@ -37,7 +37,7 @@
 
 <p align="center">Thank you to all the people who have already contributed!</p>
 <p align="right">
-	<a href="https://github.com/tachiyomiorg/tachiyomi/graphs/contributors">
+	<a href="https://github.com/mihonapp/mihon/graphs/contributors">
 		<img src="https://contrib.rocks/image?repo=tachiyomiorg/website" width="800"/>
 	</a>
 </p>
