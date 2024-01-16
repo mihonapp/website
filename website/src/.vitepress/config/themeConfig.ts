@@ -22,6 +22,11 @@ const themeConfig: DefaultTheme.Config = {
       ariaLabel: 'Project GitHub',
     },
     {
+      icon: 'discord',
+      link: 'https://discord.gg/mihon',
+      ariaLabel: 'Discord Server',
+    },
+    {
       icon: 'x',
       link: 'https://twitter.com/mihonapp',
       ariaLabel: 'X Page',

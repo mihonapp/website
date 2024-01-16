@@ -10,6 +10,9 @@
 <p align="center">Discover and read manga, webtoons, comics, and more – easier than ever on your Android device.</p>
 
 <p align="center">
+	<a title="Discord server" href="https://discord.gg/mihon">
+		<img src="https://img.shields.io/discord/1195734228319617024.svg?label=&labelColor=6A7EC2&color=7389D8&logo=discord&logoColor=FFFFFF">
+	</a>
 	<a title="GitHub downloads" href="https://github.com/mihonapp/mihon/releases">
 		<img src="https://img.shields.io/github/downloads/mihonapp/mihon/total?label=downloads&labelColor=27303D&color=0D1117&logo=github&logoColor=FFFFFF&style=flat">
 	</a>
@@ -32,16 +35,14 @@
 </p>
 
 <p align="center">Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.</p>
+<p align="center">If you got any questions, join our <a target="_blank" href="https://discord.gg/mihon">Discord server</a>.</p>
 
 <h3 align="center">Repositories</h3>
 
 <div>
 	<p align="center">
-		<a href="https://github.com/tachiyomiorg/tachiyomi/">
-			<img src="https://github-readme-stats.vercel.app/api/pin/?username=tachiyomiorg&repo=tachiyomi&bg_color=161B22&text_color=c9d1d9&title_color=818CF8&icon_color=818CF8&border_radius=8&hide_border=true" alt="Android App">
-		</a>
-		<a href="https://github.com/tachiyomiorg/extensions/">
-			<img src="https://github-readme-stats.vercel.app/api/pin/?username=tachiyomiorg&repo=extensions&bg_color=161B22&text_color=c9d1d9&title_color=818CF8&icon_color=818CF8&border_radius=8&hide_border=true" alt="App Extensions">
+		<a href="https://github.com/mihonapp/mihon/">
+			<img src="https://github-readme-stats.vercel.app/api/pin/?username=mihonapp&repo=mihon&bg_color=161B22&text_color=c9d1d9&title_color=818CF8&icon_color=818CF8&border_radius=8&hide_border=true" alt="Android App">
 		</a>
 	</p>
 </div>

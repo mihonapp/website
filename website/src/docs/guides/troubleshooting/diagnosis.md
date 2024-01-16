@@ -32,6 +32,10 @@ Follow these steps to troubleshoot and find solutions.
 If any of these solutions help, go to [Personalized Issue](#personalized-issue).
 If it is not just you, go to [Widespread Issue](#widespread-issue).
 
+If none of these solutions help, try asking in our [Discord server](https://discord.gg/mihon).
+
+State your app version and the source, series, and chapter with the problem if it is not listed.
+
 ::: tip An extension update may fix your issue
 Wait or check for an extension update if you have not already.
 There are no ETAs for updates.

@@ -72,4 +72,5 @@ Refer to [this GitHub comment](https://git.mihon.dev/tachiyomi/tachiyomi/issues/
 Projects using the **Mihon** name for anime streaming aren't affiliated with the main project.
 
 ## What's a fork?
-Forks are alternate **Mihon** versions with distinct features managed by other developers.
+Forks are alternate **Mihon** versions with distinct features.
+Get more details [here](/forks/).
