@@ -27,6 +27,6 @@ defineProps<{ title: string, description?: string, dir?: string }>()
         <div v-if="description" tw="mt-2 text-4xl text-slate-600" v-html="description" />
       </div>
     </div>
-    <div tw="shrink-0 h-2 w-full flex" style="background-color: #8995ff;" />
+    <div tw="shrink-0 h-2 w-full flex" style="background-color: #7bc4ff;" />
   </div>
 </template>
