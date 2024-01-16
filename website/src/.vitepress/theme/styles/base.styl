@@ -8,6 +8,7 @@
 
 // Assign theme color
 $themeColor = #0877D2
+$darkBgColor = #151533
 
 :root {
   --vp-c-brand: $themeColor
@@ -21,16 +22,15 @@ $themeColor = #0877D2
 }
 
 .dark {
-  $bgColor = #151533
-  --vp-c-bg: $bgColor
-  --vp-c-bg-alt: shade($bgColor, 20%);
-  --vp-c-bg-elv: shade($bgColor, 10%);
-  --vp-c-bg-soft: shade($bgColor, 15%);
-  --vp-c-border: tint($bgColor, 10%);
-  --vp-c-divider: tint($bgColor, 8%);
-  --vp-c-gutter: shade($bgColor, 40%);
-  --vp-custom-block-info-bg:  tint($bgColor, 3%) !important;
-  --vp-custom-block-details-bg: shade($bgColor, 20%);
+  --vp-c-bg: $darkBgColor
+  --vp-c-bg-alt: shade($darkBgColor, 20%);
+  --vp-c-bg-elv: shade($darkBgColor, 10%);
+  --vp-c-bg-soft: shade($darkBgColor, 15%);
+  --vp-c-border: tint($darkBgColor, 10%);
+  --vp-c-divider: tint($darkBgColor, 8%);
+  --vp-c-gutter: shade($darkBgColor, 40%);
+  --vp-custom-block-info-bg:  tint($darkBgColor, 3%) !important;
+  --vp-custom-block-details-bg: shade($darkBgColor, 20%);
 }
 
 /**
@@ -77,7 +77,7 @@ html:not(.dark) {
 }
 
 .dark {
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, var(--vp-c-brand-darker) 25%, var(--vp-c-brand-darkest) 25%)
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, shade($darkBgColor, 10%) 25%, shade($darkBgColor, 20%) 25%)
 }
 
 @media (min-width 640px) {
