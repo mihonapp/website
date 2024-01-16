@@ -32,7 +32,7 @@ See the [Local source guide](/docs/guides/local-source/) for instructions.
 == External repositories
 External repositories add additional sources to **Mihon**. You can add external repositories by going to <nav to="browse"> and tapping **Extension repos**.
 
-Once there, you can add repositories by inputing URLs ending with `index.min.json`. A small set of extensions are available [here](/extensions/).
+Once there, you can add repositories by inputing URLs ending with `index.min.json`.
 
 ::: danger Caution
 Mihon will not provide resources for any unofficial repositories. Beware that any third-party repositories or extensions will have full access to the app and may contain malware.
