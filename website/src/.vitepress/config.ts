@@ -21,7 +21,7 @@ import generateFeed from './config/hooks/generateFeed'
 // Allows generation of RSS feed
 import generateOgImages from './config/hooks/generateOgImages'
 
-const title = 'Tachiyomi'
+const title = 'Mihon'
 const description = 'Discover and read manga, webtoons, comics, and more – easier than ever on your Android device.'
 
 const env = loadEnv('', process.cwd())

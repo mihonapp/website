@@ -6,7 +6,7 @@ description: Backups helps you prevent losing your library if something happens.
 
 # Backups
 
-Backups in **Tachiyomi** are compatible between different versions of the app.
+Backups in **Mihon** are compatible between different versions of the app.
 
 ::: tip How to create a backup
 1. Go to <nav to="data-and-storage">.
@@ -46,7 +46,7 @@ To ensure a smooth restoration process, remember to:
 Before starting to import the selected backup, the app will remind the user of these.
 
 ### Transferring downloads to a new installation
-You can transfer downloaded series chapters from one version of **Tachiyomi** to another
+You can transfer downloaded series chapters from one version of **Mihon** to another
 by correctly specifying the Download Location.
 
 ## Suggestions for backups
@@ -65,7 +65,7 @@ This way, you can recover from catastrophic failures.
 :::
 
 ### Syncing backups with external cloud services
-Cross device sync in **Tachiyomi** is not currently available, but users can use
+Cross device sync in **Mihon** is not currently available, but users can use
 [Autosync for Google Drive](https://play.google.com/store/apps/details?id=com.ttxapps.drivesync)
 in order to sync backup files to Drive automatically with the following steps:
 
@@ -77,4 +77,4 @@ Users who are familiar with [FolderSync](https://play.google.com/store/apps/deta
 or [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm) can setup auto sync of their backups similarly.
 
 ## Additional information for forks
-Most Tachiyomi forks support the `.tachibk`/`.proto.gz` format to backup/restore your library, but have specific limitations. Refer to their documentation for more information.
+Most Mihon forks support the `.tachibk`/`.proto.gz` format to backup/restore your library, but have specific limitations. Refer to their documentation for more information.

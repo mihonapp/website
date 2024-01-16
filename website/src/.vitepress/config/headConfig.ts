@@ -3,8 +3,8 @@ import type { HeadConfig } from 'vitepress'
 const headConfig: HeadConfig[] = [
   ['meta', { name: 'darkreader-lock' }],
 
-  ['meta', { name: 'theme-color', content: '#818CF8' }],
-  ['meta', { name: 'msapplication-TileColor', content: '#818CF8' }],
+  ['meta', { name: 'theme-color', content: '#0058A0' }],
+  ['meta', { name: 'msapplication-TileColor', content: '#0058A0' }],
 
   ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
   ['meta', { name: 'referrer', content: 'no-referrer-when-downgrade' }],
@@ -29,7 +29,7 @@ const headConfig: HeadConfig[] = [
     },
   ],
   ['link', { rel: 'manifest', href: '/site.webmanifest' }],
-  ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#818CF8' }],
+  ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#0058A0' }],
   [
     'link',
     {
@@ -41,10 +41,10 @@ const headConfig: HeadConfig[] = [
   ],
 
   ['meta', { name: 'twitter:card', content: 'summary' }],
-  ['meta', { name: 'twitter:site', content: '@tachiyomiorg' }],
-  ['meta', { name: 'twitter:creator', content: '@tachiyomiorg' }],
+  ['meta', { name: 'twitter:site', content: '@mihonapp' }],
+  ['meta', { name: 'twitter:creator', content: '@mihonapp' }],
 
-  ['meta', { property: 'og:site_name', content: 'Tachiyomi' }],
+  ['meta', { property: 'og:site_name', content: 'Mihon' }],
   [
     'meta',
     {

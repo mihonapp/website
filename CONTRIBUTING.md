@@ -70,7 +70,7 @@ It is also recommended you lint your files before the PR.
 ### Videos
 
 - Use `.webm` format
-  - Encode it with our [HandBrake profile](./.github/assets/tachiyomi-handbrake-profile.json)
+  - Encode it with our [HandBrake profile](./.github/assets/mihon-handbrake-profile.json)
 
 - Remove audio track
 

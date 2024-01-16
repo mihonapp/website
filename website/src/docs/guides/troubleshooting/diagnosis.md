@@ -27,7 +27,7 @@ Follow these steps to troubleshoot and find solutions.
   - Clear Database
   - DNS over HTTPS
 1. **Download Issues**: Delete the queue and retry downloads.
-1. **Restart Tachiyomi**: Force close and reopen the app.
+1. **Restart Mihon**: Force close and reopen the app.
 
 If any of these solutions help, go to [Personalized Issue](#personalized-issue).
 If it is not just you, go to [Widespread Issue](#widespread-issue).
@@ -38,7 +38,7 @@ There are no ETAs for updates.
 :::
 
 ## Personalized issue
-If you're the only one facing a problem, you might be encountering [Cloudflare](/docs/guides/troubleshooting/#cloudflare) protection, an IP ban, or other countermeasures set by website owners against programs like **Tachiyomi**.
+If you're the only one facing a problem, you might be encountering [Cloudflare](/docs/guides/troubleshooting/#cloudflare) protection, an IP ban, or other countermeasures set by website owners against programs like **Mihon**.
 
 **To minimize future issues:**
 - Avoid using downloads with the source.

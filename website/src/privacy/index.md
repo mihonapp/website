@@ -1,13 +1,13 @@
 ---
 title: Privacy policy
-description: Privacy Policy that explains how Tachiyomi collects, uses, and protects users' personal information.
+description: Privacy Policy that explains how Mihon collects, uses, and protects users' personal information.
 lastUpdated: false
 editLink: false
 ---
 
 # Privacy policy
 
-Tachiyomi is an Open Source app.
+Mihon is an Open Source app.
 This SERVICE is provided at no cost and is intended for use as is.
 
 This page details our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service.
@@ -57,4 +57,4 @@ The current iteration of this policy is effective as of December 15, 2021.
 
 ## Contact Us
 
-If you have any questions or suggestions about this Privacy Policy, do not hesitate to reach out to us on [our Discord server](https://discord.gg/tachiyomi).
+If you have any questions or suggestions about this Privacy Policy, do not hesitate to reach out to us on [our Discord server](https://discord.gg/mihon).

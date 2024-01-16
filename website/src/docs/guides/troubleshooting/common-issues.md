@@ -15,10 +15,10 @@ Here's how to tackle common challenges.
 * Temporarily switch download location from SD card, then revert and restart the app.
 * Long filenames trigger this. Android file manager doesn't support **>255** characters.
   * If known, shorten the file/folder name via computer when SD card is connected.
-* Else, delete **Tachiyomi** downloads folder on SD card.
+* Else, delete **Mihon** downloads folder on SD card.
 
 ### Storage issues with Android 11+
-See [this](/docs/faq/storage) section of the FAQ to learn how Scoped Storage affects **Tachiyomi** in **Android 11+** and how to fix it.
+See [this](/docs/faq/storage) section of the FAQ to learn how Scoped Storage affects **Mihon** in **Android 11+** and how to fix it.
 
 ### Slow loading
 Sources being slow could stem from site slowness, your internet, or source-imposed rate limits/IP bans.
@@ -70,7 +70,7 @@ Try these solutions:
 Storage-related error causes:
 
 * Storage full, check device/SD Card.
-* Grant **Tachiyomi** SD card access in Android settings.
+* Grant **Mihon** SD card access in Android settings.
 * Download folder access issues, validate paths.
 * Corrupted or inaccessible writing drive, verify using a file manager.
 
@@ -91,7 +91,7 @@ This error likely indicates a down source or removed series.
 ### `HTTP Error: 429` - Too Many Requests
 This error suggests the source temporarily banned your IP due to fast downloads/reads.
 
-[Report the issue](https://github.com/tachiyomiorg/extensions/issues/new/choose) to add rate limits and prevent future IP bans.
+[Report the issue](https://github.com/mihonapp/extensions/issues/new/choose) to add rate limits and prevent future IP bans.
 
 ### `HTTP Error: 5xx`
 Errors like `500`, `502`, etc., indicate server-side issues on the source's end.

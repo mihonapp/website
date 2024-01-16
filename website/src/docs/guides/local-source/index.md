@@ -6,7 +6,7 @@ description: For users who would like to download and organize their own media.
 
 # Local source
 
-If you like to download and organize your media, then you want to know how to manage your own series in Tachiyomi.
+If you like to download and organize your media, then you want to know how to manage your own series in Mihon.
 
 ::: warning
 This page explores some advanced features.
@@ -14,7 +14,7 @@ This page explores some advanced features.
 
 ## Creating local series
 
-1. In the location you specified as your storage location (e.g., `/Tachiyomi/`), there should be a `local` folder. Place correctly structured series inside that (e.g. `/Tachiyomi/local/`).
+1. In the location you specified as your storage location (e.g., `/Mihon/`), there should be a `local` folder. Place correctly structured series inside that (e.g. `/Mihon/local/`).
 
     > If adding series in folders it is recommended to add a file named `.nomedia` to the local folder so images do not show up in the gallery.
 
@@ -25,11 +25,11 @@ If you add more chapters then you'll have to manually refresh the chapter list (
 Supported chapter formats are folders with pictures inside (such as `.jpg`, `.png`, etc) or archive files (`ZIP`/`CBZ`, `RAR`/`CBR`, and `EPUB`).
 But expect better performance with directories and `ZIP`/`CBZ`.
 
-Note that a single folder or archive file is treated as a single chapter. For example, Tachiyomi will not automatically split an `EPUB` file containing multiple chapters into separate chapters within the app.
+Note that a single folder or archive file is treated as a single chapter. For example, Mihon will not automatically split an `EPUB` file containing multiple chapters into separate chapters within the app.
 
 ### Folder structure
 
-Tachiyomi requires a specific folder structure for local series to be correctly processed.
+Mihon requires a specific folder structure for local series to be correctly processed.
 Local series will be read from the `local` folder.
 Each series must have a `Series` folder and a `Chapter` folder.
 Images will then go into the chapter folder.
@@ -79,7 +79,7 @@ You can refer to the following example:
 </div>
 :::
 
-Tachiyomi will see three chapters in a single series.
+Mihon will see three chapters in a single series.
 The path to the folder with images must contain both the series title and the chapter name (as seen above).
 
 ### Archive files

@@ -1,16 +1,16 @@
 {
-  "name": "tachiyomi-website",
+  "name": "mihon-website",
   "type": "module",
   "version": "3.0.0",
   "private": true,
-  "description": "Official website for the Tachiyomi app.",
+  "description": "Official website for the Mihon app.",
   "license": "MPL-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tachiyomiorg/website.git"
+    "url": "git+https://github.com/mihonapp/website.git"
   },
   "bugs": {
-    "url": "https://github.com/tachiyomiorg/website/issues"
+    "url": "https://github.com/mihonapp/website/issues"
   },
   "engines": {
     "node": ">=20",

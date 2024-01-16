@@ -3,11 +3,11 @@ title: Home
 layout: home
 
 hero:
-  name: Tachiyomi
+  name: Mihon
   text: Full-featured reader
   tagline: Discover and read manga, webtoons, comics, and more – easier than ever on your Android device.
   image:
-    alt: Tachiyomi Library Tab Dark
+    alt: Mihon Library Tab Dark
     light: /home/phone.light.webp
     dark: /home/phone.dark.webp
   actions:
@@ -15,7 +15,7 @@ hero:
       text: Get started
       link: /docs/guides/getting-started
 
-customMetaTitle: Tachiyomi
+customMetaTitle: Mihon
 
 features:
   - title: Tracking

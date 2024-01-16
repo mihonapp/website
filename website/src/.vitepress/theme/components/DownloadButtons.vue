@@ -8,12 +8,12 @@ const downloadInformation = computed(() => ({
   preview: {
     tagName: release.preview.tag_name ?? 'r0000',
     asset: (release.preview.assets ?? [])
-      .find(a => /^tachiyomi-r\d{4,}.apk/.test(a.name)),
+      .find(a => /^mihon-r\d{4,}.apk/.test(a.name)),
   },
   stable: {
     tagName: release.stable.tag_name ?? 'v0.00.0',
     asset: (release.stable.assets ?? [])
-      .find(a => /^tachiyomi-v\d+\.\d+\.\d+.apk/.test(a.name)),
+      .find(a => /^mihon-v\d+\.\d+\.\d+.apk/.test(a.name)),
   },
 }))
 
@@ -41,7 +41,7 @@ function handleAnalytics(type: 'preview' | 'stable') {
         Unsupported operating system
       </p>
       <p>
-        <strong>Tachiyomi</strong> is an <strong>Android app</strong> only.
+        <strong>Mihon</strong> is an <strong>Android app</strong> only.
         Use an <strong>Android device</strong> to download and install the app.
       </p>
     </div>
@@ -51,7 +51,7 @@ function handleAnalytics(type: 'preview' | 'stable') {
       </p>
       <p>
         Any app for any operating systems other than Android called
-        <strong>Tachiyomi</strong> is not affiliated with this project.
+        <strong>Mihon</strong> is not affiliated with this project.
       </p>
       <blockquote>
         For more information, read the

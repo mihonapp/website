@@ -36,7 +36,7 @@ onMounted(() => {
           Unsupported operating system
         </p>
         <p>
-          <strong>Tachiyomi</strong> is an <strong>Android app</strong> only.
+          <strong>Mihon</strong> is an <strong>Android app</strong> only.
           Use an <strong>Android device</strong> to download and install the app.
         </p>
       </div>
@@ -45,7 +45,7 @@ onMounted(() => {
       <div class="action-buttons">
         <a
           class="action-button primary"
-          href="tachiyomi://add-repo?url=https://raw.githubusercontent.com/tachiyomiorg/extensions/repo/index.min.json"
+          href="tachiyomi://add-repo?url=https://raw.githubusercontent.com/mihonapp/extensions/repo/index.min.json"
           @click="handleAnalytics()"
         >
           <IconDownload />
@@ -54,7 +54,7 @@ onMounted(() => {
         </a>
       </div>
       <span class="version-disclaimer">
-        Requires <strong>Tachiyomi 0.15.2</strong> or higher.
+        Requires <strong>Mihon 0.15.2</strong> or higher.
       </span>
       <div class="custom-block danger">
         <p class="custom-block-title">

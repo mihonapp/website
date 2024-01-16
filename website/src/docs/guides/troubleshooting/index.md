@@ -59,7 +59,7 @@ Newer Android users can check/change WebView in [Developer Options](https://deve
 :::
 
 ::: warning Caution with Non-Standard WebView
-Using non-standard WebView (like Firefox) might cause **Tachiyomi** to malfunction or crash.
+Using non-standard WebView (like Firefox) might cause **Mihon** to malfunction or crash.
 
 It's best to use the standard [Android System WebView](https://play.google.com/store/apps/details?id=com.google.android.webview) or [Google Chrome](https://play.google.com/store/apps/details?id=com.android.chrome).
 :::
@@ -67,7 +67,7 @@ It's best to use the standard [Android System WebView](https://play.google.com/s
 ## Cloudflare
 
 **Cloudflare**, an anti-bot mechanism, is used by some sources.
-Some sources intentionally have higher **Cloudflare** protection to deter apps like **Tachiyomi**.
+Some sources intentionally have higher **Cloudflare** protection to deter apps like **Mihon**.
 
 ### Dealing with Cloudflare looping
 Certain sources may employ more advanced **Cloudflare** protection, leading to WebView continuously reloading when bypassing using the above solution.
@@ -108,7 +108,7 @@ Follow these steps:
 **Split APK Installer** helps show better error messages or may even successfully install your `.apk` without issue.
 Common errors include:
 
-::: details `INSTALL_FAILED_UPDATE_INCOMPATIBLE: Package eu.kanade.tachiyomi signatures do not match the previously installed version; ignoring!`
+::: details `INSTALL_FAILED_UPDATE_INCOMPATIBLE: Package app.mihon signatures do not match the previously installed version; ignoring!`
 Seeing this error while installing the `.apk` over an existing **F-Droid** build indicates a mismatch in signatures.
 Data backup, uninstall, and fresh installation are required.
 :::
