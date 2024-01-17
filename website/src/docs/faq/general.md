@@ -20,7 +20,7 @@ Porting is difficult due to the separate codebases of iOS and Android apps.
 Any app proclaiming to be "**Mihon for iOS**" is not by us and should be treated as a scam.
 
 ## What is Mihon Preview?
-**Mihon Preview** is a regularly updated beta version of the app.
+**Mihon Preview** is the latest beta version of the app.
 It showcases potential upcoming features, but it's more prone to bugs and crashes.
 
 ::: warning CAUTION
