@@ -23,7 +23,9 @@ Any app proclaiming to be "**Mihon for iOS**" is not by us and should be treated
 **Mihon Preview** is a regularly updated beta version of the app.
 It showcases potential upcoming features, but it's more prone to bugs and crashes.
 
-Ideal for users seeking the latest **Mihon** experience, it's essential to [enable auto-backup](/docs/guides/backups#enabling-automatic-backups) to prevent library loss due to issues.
+::: warning CAUTION
+While it's ideal for users seeking the latest **Mihon** experience, it's essential to keep [auto-backup](/docs/guides/backups#enabling-automatic-backups) enabled to prevent library loss due to issues.
+:::
 
 ## Can I read light novels?
 **Mihon** can't read light novels; it's an image parser, not a text parser.
