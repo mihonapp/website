@@ -13,6 +13,6 @@ import ChangelogsList from "@theme/components/ChangelogsList.vue";
 
 # Changelogs
 
-Changelogs of all Mihon stable releases, which are also available [on GitHub](https://github.com/mihonapp/mihon/releases). Preview releases can be seen [on GitHub](https://github.com/mihonapp/mihon-preview/releases).
+Changelogs of all Mihon stable releases, which are also available [on GitHub](https://github.com/mihonapp/mihon/releases). Beta releases can be seen [on GitHub](https://github.com/mihonapp/mihon-preview/releases).
 
 <ChangelogsList />

@@ -8,7 +8,7 @@ type GitHubRelease = GetResponseDataTypeFromEndpointMethod<typeof octokit.repos.
 
 export interface AppRelease {
   stable: GitHubRelease
-  preview: GitHubRelease
+  beta: GitHubRelease
 }
 
 declare const data: AppRelease
@@ -21,11 +21,11 @@ export default defineLoader({
       repo: 'mihon',
     })
 
-    const { data: preview } = await octokit.repos.getLatestRelease({
+    const { data: beta } = await octokit.repos.getLatestRelease({
       owner: 'mihonapp',
       repo: 'mihon-preview',
     })
 
-    return { stable, preview }
+    return { stable, beta }
   },
 })

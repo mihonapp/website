@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/vue-query'
 import axios from 'axios'
 import { GITHUB_EXTENSION_JSON } from '../../config/constants'
 
-export type ReleaseType = 'stable' | 'preview'
+export type ReleaseType = 'stable' | 'beta'
 
 export interface Extension {
   name: string
