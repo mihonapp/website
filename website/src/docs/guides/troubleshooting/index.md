@@ -13,35 +13,31 @@ Be sure to check the [Frequently Asked Questions](/docs/faq/general) for how to 
 ## WebView
 
 ### Accessing websites via WebView
+Once you've entered a source/series, go to <nav to="webview">, or simply press the <nav to="webview-single"> icon directly inside a series.
 
 ::: tabs
 == From Browse
 1. Open **Browse** from the bottom navbar.
-1. Tap the desired source.
-1. Tap the **WebView** icon in the top toolbar.
-1. Complete a **CAPTCHA** if one is shown.
-1. Close by tapping `X` at the top-left.
+2. Tap the desired source.
+3. Tap the **WebView** icon in the top toolbar.
+4. Complete a **CAPTCHA** if one is shown.
+5. Close by tapping `X` at the top-left.
 == From a Series
 1. Open a series.
-1. Tap the **WebView** icon button.
-1. Complete a **CAPTCHA** if one is shown.
-1. Close by tapping `X` at the top-left.
+2. Tap the **WebView** icon button.
+3. Complete a **CAPTCHA** if one is shown.
+4. Close by tapping `X` at the top-left.
 :::
 
-Repeat if needed.
-Alternatively, try opening the website in your browser using the **Overflow** icon in the WebView screen and solve any **CAPTCHA** there.
-
-![Open WebView](/docs/guides/troubleshooting/open-webview.dark.webp =1079x520)
-
 ### Clearing cookies and WebView data
-This resets your WebView to a clean state, including any login states.
+This resets your **WebView** to a clean state, including any login states.
 
 1. Navigate to <nav to="advanced">.
 1. Tap **Clear cookies**.
 1. Tap **Clear WebView data**.
 
 ### WebView update
-To update WebView, you need to find what WebView implementation is used on your device.
+To update **WebView**, you need to find what **WebView** implementation is used on your device.
 
 Typical default implementation depends on the Android version as follows:
 
@@ -59,7 +55,7 @@ Newer Android users can check/change WebView in [Developer Options](https://deve
 :::
 
 ::: warning Caution with Non-Standard WebView
-Using non-standard WebView (like Firefox) might cause **Mihon** to malfunction or crash.
+Using non-standard **WebView** (like **Firefox**) might cause **Mihon** to malfunction or crash.
 
 It's best to use the standard [Android System WebView](https://play.google.com/store/apps/details?id=com.google.android.webview) or [Google Chrome](https://play.google.com/store/apps/details?id=com.android.chrome).
 :::
@@ -70,7 +66,7 @@ It's best to use the standard [Android System WebView](https://play.google.com/s
 Some sources intentionally have higher **Cloudflare** protection to deter apps like **Mihon**.
 
 ### Dealing with Cloudflare looping
-Certain sources may employ more advanced **Cloudflare** protection, leading to WebView continuously reloading when bypassing using the above solution.
+Certain sources may employ more advanced **Cloudflare** protection, leading to **WebView** continuously reloading when bypassing using the above solution.
 If this occurs, try [Accessing the Website via WebView](#accessing-websites-via-webview).
 
 ### Changing your user agent
