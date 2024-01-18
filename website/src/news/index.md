@@ -1,6 +1,6 @@
 ---
 title: News
-description: Collection of news and announcements about Tachiyomi.
+description: Collection of news and announcements about Mihon.
 lastUpdated: false
 editLink: false
 prev: false
@@ -14,7 +14,7 @@ import RssLink from "@theme/components/RssLink.vue";
 
 # News
 
-Collection of news and announcements about Tachiyomi.
+Collection of news and announcements about Mihon.
 
 Also available as <RssLink />.
 

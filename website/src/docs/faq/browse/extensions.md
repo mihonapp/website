@@ -8,12 +8,10 @@ description: Frequently Asked Questions about Extensions.
 Frequently Asked Questions about Extensions.
 
 ## What are some recommended extensions and sources?
-**Tachiyomi** offers a few extensions for use with self-hosted content [here](https://github.com/tachiyomiorg/extensions).
-
-Otherwise, Tachiyomi is bring-your-own-content and does not offer anything.
+Mihon is bring-your-own-content and does not offer anything.
 
 ::: info Disclaimer
-**Tachiyomi** isn't responsible for slow, down, missing chapters, or subpar image quality of sources as it doesn't host the content.
+**Mihon** isn't responsible for slow, down, missing chapters, or subpar image quality of sources as it doesn't host the content.
 :::
 
 ## Enabling third-party installations
@@ -41,8 +39,8 @@ When prompted while installing your first extension, allow unknown apps installa
 ::::
 
 ## How do I uninstall an extension?
-Uninstall extensions like regular apps: through device settings or in **Tachiyomi**.
+Uninstall extensions like regular apps: through device settings or in **Mihon**.
 
 ::: tip Uninstalling an extension
-In **Tachiyomi**, uninstall an extension via <nav to="extensions">, then tap **Uninstall** on the chosen extension.
+In **Mihon**, uninstall an extension via <nav to="extensions">, then tap **Uninstall** on the chosen extension.
 :::

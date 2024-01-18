@@ -1,4 +1,4 @@
-# Tachiyomi Website Contributing Guide
+# Mihon Website Contributing Guide
 
 Before submitting your contribution, please make sure to take a moment and read through the following guidelines:
 
@@ -70,7 +70,7 @@ It is also recommended you lint your files before the PR.
 ### Videos
 
 - Use `.webm` format
-  - Encode it with our [HandBrake profile](./.github/assets/tachiyomi-handbrake-profile.json)
+  - Encode it with our [HandBrake profile](./.github/assets/mihon-handbrake-profile.json)
 
 - Remove audio track
 
@@ -78,4 +78,4 @@ It is also recommended you lint your files before the PR.
 
 Thank you to all the people who have already contributed!
 
-[![List of Contributors](https://contrib.rocks/image?repo=tachiyomiorg/website 'List of Contributors')](https://github.com/tachiyomiorg/website/graphs/contributors)
+[![List of Contributors](https://contrib.rocks/image?repo=mihonapp/website 'List of Contributors')](https://github.com/mihonapp/website/graphs/contributors)

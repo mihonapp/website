@@ -1,7 +1,7 @@
 ---
 title: Getting started
 titleTemplate: Guides
-description: Essential information to help you get set up with Tachiyomi.
+description: Essential information to help you get set up with Mihon.
 ---
 
 <script setup lang="ts">
@@ -10,19 +10,19 @@ import { data as release } from "@theme/data/release.data"
 
 # Getting started
 
-Essential information to help you get set up with Tachiyomi.
+Essential information to help you get set up with Mihon.
 
 ## Installation guide
 
-### Downloading Tachiyomi
+### Downloading Mihon
 
-1. Visit our [download](/news/2024-01-13-goodbye) page to get the latest version of **Tachiyomi**.
+1. Visit our [download](/download/) page to get the latest version of **Mihon**.
 2. After the download is complete, open the `.apk` file.
 3. Proceed with the installation process.
 
 ### Adding sources
 
-Once **Tachiyomi** is installed on your device, you can bring your own content to read from various sources:
+Once **Mihon** is installed on your device, you can bring your own content to read from various sources:
 
 :::: tabs
 == Local source
@@ -30,12 +30,12 @@ Read content stored locally on your device.
 
 See the [Local source guide](/docs/guides/local-source/) for instructions.
 == External repositories
-External repositories add additional sources to **Tachiyomi**. You can add external repositories by going to <nav to="browse"> and tapping **Extension repos**.
+External repositories add additional sources to **Mihon**. You can add external repositories by going to <nav to="browse"> and tapping **Extension repos**.
 
-Once there, you can add repositories by inputing URLs ending with `index.min.json`. A small set of extensions are available [here](/extensions/).
+Once there, you can add repositories by inputing URLs ending with `index.min.json`.
 
 ::: danger Caution
-Tachiyomi will not provide resources for any unofficial repositories. Beware that any third-party repositories or extensions will have full access to the app and may contain malware.
+Mihon will not provide resources for any unofficial repositories. Beware that any third-party repositories or extensions will have full access to the app and may contain malware.
 :::
 
 Once you've added a repository, go to <nav to="extensions"> and refresh the extensions list.
@@ -44,15 +44,11 @@ You can now tap the download button next to extensions to install them.
 
 > You may need to [enable third-party installations](/docs/faq/browse/extensions#enabling-third-party-installations).
 
-::: tip Official repository
-Tachiyomi has an official extension repository, you can use the **Add repository** button on the [Extensions](/extensions/) page, or copy the url manually below.
-> `https://raw.githubusercontent.com/tachiyomiorg/extensions/repo/index.min.json`
-:::
 == Manual extensions
 Extensions can be manually installed through `.apk` files.
 
 ::: danger Caution
-Tachiyomi will not provide resources for any unofficial extensions. Beware that any third-party repositories or extensions will have full access to the app and may contain malware.
+Mihon will not provide resources for any unofficial extensions. Beware that any third-party repositories or extensions will have full access to the app and may contain malware.
 :::
 ::::
 

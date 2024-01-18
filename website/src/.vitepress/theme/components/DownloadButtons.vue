@@ -5,15 +5,15 @@ import { computed, onMounted, ref } from 'vue'
 import { data as release } from '../data/release.data'
 
 const downloadInformation = computed(() => ({
-  preview: {
-    tagName: release.preview.tag_name ?? 'r0000',
-    asset: (release.preview.assets ?? [])
-      .find(a => /^tachiyomi-r\d{4,}.apk/.test(a.name)),
+  beta: {
+    tagName: release.beta.tag_name ?? 'r0000',
+    asset: (release.beta.assets ?? [])
+      .find(a => /^mihon-r\d{4,}.apk/.test(a.name)),
   },
   stable: {
     tagName: release.stable.tag_name ?? 'v0.00.0',
     asset: (release.stable.assets ?? [])
-      .find(a => /^tachiyomi-v\d+\.\d+\.\d+.apk/.test(a.name)),
+      .find(a => /^mihon-v\d+\.\d+\.\d+.apk/.test(a.name)),
   },
 }))
 
@@ -23,13 +23,13 @@ onMounted(() => {
   isAndroid.value = !!navigator.userAgent.match(/android/i)
 })
 
-function handleAnalytics(type: 'preview' | 'stable') {
+function handleAnalytics(type: 'beta' | 'stable') {
   window.gtag?.('event', 'Download', {
     event_category: 'App',
-    event_label: type === 'stable' ? 'Stable' : 'Preview',
+    event_label: type === 'stable' ? 'Stable' : 'Beta',
     version: type === 'stable'
       ? release.stable.tag_name
-      : release.preview.tag_name,
+      : release.beta.tag_name,
   })
 }
 </script>
@@ -41,7 +41,7 @@ function handleAnalytics(type: 'preview' | 'stable') {
         Unsupported operating system
       </p>
       <p>
-        <strong>Tachiyomi</strong> is an <strong>Android app</strong> only.
+        <strong>Mihon</strong> is an <strong>Android app</strong> only.
         Use an <strong>Android device</strong> to download and install the app.
       </p>
     </div>
@@ -51,7 +51,7 @@ function handleAnalytics(type: 'preview' | 'stable') {
       </p>
       <p>
         Any app for any operating systems other than Android called
-        <strong>Tachiyomi</strong> is not affiliated with this project.
+        <strong>Mihon</strong> is not affiliated with this project.
       </p>
       <blockquote>
         For more information, read the
@@ -66,22 +66,22 @@ function handleAnalytics(type: 'preview' | 'stable') {
         @click="handleAnalytics('stable')"
       >
         <IconDownload />
-        <span class="text">Stable</span>
+        <span class="text">Mihon</span>
         <span class="version">{{ downloadInformation.stable.tagName }}</span>
       </a>
       <a
         class="download-button secondary"
-        :download="downloadInformation.preview.asset?.name"
-        :href="downloadInformation.preview.asset?.browser_download_url"
-        @click="handleAnalytics('preview')"
+        :download="downloadInformation.beta.asset?.name"
+        :href="downloadInformation.beta.asset?.browser_download_url"
+        @click="handleAnalytics('beta')"
       >
         <IconBugReport />
-        <span class="text">Preview</span>
-        <span class="version">{{ downloadInformation.preview.tagName }}</span>
+        <span class="text">Mihon Beta</span>
+        <span class="version">{{ downloadInformation.beta.tagName }}</span>
       </a>
     </div>
     <span class="version-disclaimer">
-      Requires <strong>Android 6.0</strong> or higher.
+      Requires <strong>Android 8.0</strong> or higher.
     </span>
   </div>
 </template>

@@ -1,6 +1,6 @@
 ---
 title: Changelogs
-description: Changelogs of all Tachiyomi stable releases.
+description: Changelogs of all Mihon stable releases.
 lastUpdated: false
 editLink: false
 prev: false
@@ -13,6 +13,6 @@ import ChangelogsList from "@theme/components/ChangelogsList.vue";
 
 # Changelogs
 
-Changelogs of all Tachiyomi stable releases, which are also available [on GitHub](https://github.com/tachiyomiorg/tachiyomi/releases). Preview releases can be seen [on GitHub](https://github.com/tachiyomiorg/tachiyomi-preview/releases).
+Changelogs of all Mihon stable releases, which are also available [on GitHub](https://github.com/mihonapp/mihon/releases). Beta releases can be seen [on GitHub](https://github.com/mihonapp/mihon-preview/releases).
 
 <ChangelogsList />

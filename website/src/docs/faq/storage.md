@@ -6,7 +6,7 @@ description: Understanding Storage Permissions.
 
 # Storage location
 
-Tachiyomi manages several things within a selected storage location, including automatic backups, chapter downloads, and the Local source.
+Mihon manages several things within a selected storage location, including automatic backups, chapter downloads, and the Local source.
 
 The following illustrates the folder structure:
 
@@ -20,11 +20,11 @@ The following illustrates the folder structure:
       <span class="folder main">autobackup</span>
       <ul>
         <li>
-          <img src="/img/tachiyomi-book.png" alt="File" class="tree-icon icon-tachiyomi">
-          <span class="file jpg">eu.kanade.tachiyomi_yyyy-mm-dd_hh-mm<span class="file-extension">.tachibk</span></span>
+          <img src="/img/mihon-64px.png" alt="File" class="tree-icon icon-mihon">
+          <span class="file jpg">app.mihon_yyyy-mm-dd_hh-mm<span class="file-extension">.tachibk</span></span>
         </li>
         <li>
-          <img src="/img/tachiyomi-book.png" alt="File" class="tree-icon icon-tachiyomi">
+          <img src="/img/mihon-64px.png" alt="File" class="tree-icon icon-mihon">
           <span>...</span>
         </li>
       </ul>
@@ -103,7 +103,7 @@ Backup file name prefixes are unique for the app to avoid potential collisions b
 
 ## Migrating from v0.14.x or earlier
 
-If you were using the default locations before, then simply select the existing `Tachiyomi` folder.
+If you were using the default locations before, then simply select the existing `Mihon` folder.
 
 ::: warning
 If you have an existing `downloads` folder, you should be selecting its parent folder (if applicable; avoid choosing the root of your storage) or you should move your downloads to a new location.
@@ -117,7 +117,7 @@ If you need to change your storage location or have moved files around from outs
 
 Since Android 11, most apps are enforced to use [Scoped Storage](https://developer.android.com/about/versions/11/privacy/storage) for better security for users so that apps cannot read everything on the device.
 
-**Scoped Storage**'s introduction affects various storage-related functions in **Tachiyomi**.
+**Scoped Storage**'s introduction affects various storage-related functions in **Mihon**.
 These functions may become slower due to **Scoped Storage**'s inherent latency, as discussed in detail [here](https://www.xda-developers.com/android-q-storage-access-framework-scoped-storage/).
 
 This can impact tasks like deleting chapters, library loading times, accessing local files like downloads or the local source, and more. As always, using internal storage is recommended over SD cards if latency is of concern.

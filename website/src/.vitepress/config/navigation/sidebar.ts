@@ -1,8 +1,10 @@
 import type { DefaultTheme } from 'vitepress'
 
 const sidebar: DefaultTheme.SidebarMulti = {
+  '/download/': defaultSidebar(),
   '/extensions/': defaultSidebar(),
   '/docs/': defaultSidebar(),
+  '/forks/': defaultSidebar(),
   '/changelogs/': defaultSidebar(),
   '/news/': defaultSidebar(),
   '/sandbox/': defaultSidebar(),
@@ -13,12 +15,20 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
     {
       items: [
         {
-          text: 'Extensions',
-          link: '/extensions/',
+          text: 'Download',
+          link: '/download/',
         },
         {
           text: 'Changelogs',
           link: '/changelogs/',
+        },
+        {
+          text: 'Forks',
+          link: '/forks/',
+        },
+        {
+          text: 'Contribute',
+          link: '/docs/contribute',
         },
       ],
     },

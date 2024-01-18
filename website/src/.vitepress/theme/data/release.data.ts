@@ -8,7 +8,7 @@ type GitHubRelease = GetResponseDataTypeFromEndpointMethod<typeof octokit.repos.
 
 export interface AppRelease {
   stable: GitHubRelease
-  preview: GitHubRelease
+  beta: GitHubRelease
 }
 
 declare const data: AppRelease
@@ -17,15 +17,15 @@ export { data }
 export default defineLoader({
   async load(): Promise<AppRelease> {
     const { data: stable } = await octokit.repos.getLatestRelease({
-      owner: 'tachiyomiorg',
-      repo: 'tachiyomi',
+      owner: 'mihonapp',
+      repo: 'mihon',
     })
 
-    const { data: preview } = await octokit.repos.getLatestRelease({
-      owner: 'tachiyomiorg',
-      repo: 'tachiyomi-preview',
+    const { data: beta } = await octokit.repos.getLatestRelease({
+      owner: 'mihonapp',
+      repo: 'mihon-preview',
     })
 
-    return { stable, preview }
+    return { stable, beta }
   },
 })

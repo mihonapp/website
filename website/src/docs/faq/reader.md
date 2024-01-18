@@ -8,7 +8,7 @@ description: Frequently Asked Questions about the Reader.
 Frequently Asked Questions about the Reader.
 
 ## Why didn't the page load?
-Besides network-related problems, **Tachiyomi** may occasionally fail to recognize certain images.
+Besides network-related problems, **Mihon** may occasionally fail to recognize certain images.
 To address this, simply exit and re-enter the reader, often resolving the issue.
 
 ## Can I see two pages at once?
