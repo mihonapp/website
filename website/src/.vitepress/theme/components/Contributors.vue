@@ -9,7 +9,7 @@ function isHigherThan(tagName: string, reference: string) {
 }
 
 const notMentioned = computed(() => {
-  return isHigherThan('v0.8.5', tag.value) ? ['arkon'] : []
+  return isHigherThan('v0.16.0', tag.value) ? ['AntsyLich'] : []
 })
 
 const nonExistent = ref<string[]>([])
