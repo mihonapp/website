@@ -46,6 +46,10 @@ html:not(.dark) {
       display: none !important
     }
   }
+
+  figure:has(img[data-mode="darkmode-only"]) {
+    display: none !important
+  }
 }
 
 .dark {
@@ -55,6 +59,10 @@ html:not(.dark) {
     & + figcaption {
       display: none !important
     }
+  }
+
+  figure:has(img[data-mode="lightmode-only"]) {
+    display: none !important
   }
 }
 
@@ -161,6 +169,10 @@ main figure {
     margin: 0 auto
     border-radius: 12px
     box-shadow: 2px 2px 8px 4px var(--vp-c-bg-alt)
+
+    &[alt="Translation progress"] {
+      box-shadow: none !important
+    }
   }
 
   figcaption {
