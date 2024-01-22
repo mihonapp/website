@@ -102,7 +102,8 @@ Follow these steps:
 1. Try installing your `.apk` from Split APK Installer.
 
 ::: warning
-Split APK Installer is not supported on Android 13+ :::
+Split APK Installer is not supported on Android 13+
+:::
 
 **Split APK Installer** helps show better error messages or may even successfully install your `.apk` without issue.
 Common errors include:
