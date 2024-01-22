@@ -54,7 +54,7 @@
 <h3 align="center">Credits</h3>
 
 <p align="center">Thank you to all the people who have already contributed!</p>
-<p align="right">
+<p align="center">
 	<a href="https://github.com/mihonapp/mihon/graphs/contributors">
 		<img src="https://contrib.rocks/image?repo=mihonapp/website" width="800"/>
 	</a>
