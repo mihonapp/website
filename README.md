@@ -24,13 +24,13 @@ If you got any questions, [join our Discord server](https://discord.gg/mihon).
 
 ### Repositories
 
-[![mihonapp/mihon - GitHub](https://github-readme-stats.vercel.app/api/pin/?username=mihonapp&repo=mihon&bg_color=161B22&text_color=c9d1d9&title_color=818CF8&icon_color=818CF8&border_radius=8&hide_border=true)](https://github.com/mihonapp/mihon/)
+[![mihonapp/mihon - GitHub](https://github-readme-stats.vercel.app/api/pin/?username=mihonapp&repo=mihon&bg_color=161B22&text_color=c9d1d9&title_color=0877d2&icon_color=0877d2&border_radius=8&hide_border=true)](https://github.com/mihonapp/mihon/)
 
 ### Credits
 
 Thank you to all the people who have contributed!
 
-<a href="https://github.com/mihonapp/mihon/graphs/contributors">
+<a href="https://github.com/mihonapp/website/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=mihonapp/website" alt="Mihon website contributors" title="Mihon website contributors" width="800"/>
 </a>
 
