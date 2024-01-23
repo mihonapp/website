@@ -31,7 +31,7 @@
     "lint:style:fix": "stylelint --fix \"**/*.{styl,vue}\" \"src/.vitepress/**/*.{styl,vue}\""
   },
   "dependencies": {
-    "@iconify-prerendered/vue-mdi": "0.23.1702456985",
+    "@iconify-prerendered/vue-mdi": "0.23.1704178618",
     "@octokit/rest": "20.0.2",
     "@octokit/types": "12.4.0",
     "@tanstack/vue-query": "5.17.19",
@@ -57,8 +57,8 @@
     "@types/lodash.groupby": "4.6.9",
     "@types/markdown-it": "13.0.7",
     "@types/node": "20.11.5",
-    "@typescript-eslint/eslint-plugin": "6.19.0",
-    "@typescript-eslint/parser": "6.19.0",
+    "@typescript-eslint/eslint-plugin": "6.19.1",
+    "@typescript-eslint/parser": "6.19.1",
     "eslint": "8.56.0",
     "eslint-config-standard": "17.1.0",
     "eslint-plugin-vue": "9.20.1",
@@ -75,7 +75,7 @@
     "vitepress": "1.0.0-rc.40",
     "vitepress-plugin-tabs": "0.5.0",
     "vue": "3.4.15",
-    "vue-eslint-parser": "9.4.1",
+    "vue-eslint-parser": "9.4.2",
     "x-satori": "0.1.5"
   },
   "simple-git-hooks": {
