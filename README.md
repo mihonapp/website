@@ -31,7 +31,7 @@ If you got any questions, [join our Discord server](https://discord.gg/mihon).
 Thank you to all the people who have contributed!
 
 <a href="https://github.com/mihonapp/website/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=mihonapp/website" alt="Mihon website contributors" title="Mihon website contributors" width="800"/>
+    <img src="https://contrib.rocks/image?repo=mihonapp/website" alt="Mihon website contributors" title="Mihon website contributors" width="600"/>
 </a>
 
 ### Disclaimer
