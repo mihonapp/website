@@ -68,8 +68,8 @@ const themeConfig: DefaultTheme.Config = {
   search: {
     provider: 'algolia',
     options: {
-      appId: 'RT84RY5BHX',
-      apiKey: '619832e6530b975e540d443690adc08a',
+      appId: 'IXX45N1P5C',
+      apiKey: 'a7a819b0bd88bc7333c7f42d611ec04e',
       indexName: 'mihon',
     },
   },
