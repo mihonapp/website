@@ -66,7 +66,12 @@ const themeConfig: DefaultTheme.Config = {
   },
 
   search: {
-    provider: 'local',
+    provider: 'algolia',
+    options: {
+      appId: 'RT84RY5BHX',
+      apiKey: '619832e6530b975e540d443690adc08a',
+      indexName: 'mihon',
+    },
   },
 }
 
