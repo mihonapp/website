@@ -47,7 +47,7 @@ const themeConfig: DefaultTheme.Config = {
   ],
 
   footer: {
-    message: '<a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Open-source Apache Licensed</a> <span class="divider">|</span> <a href="/privacy/">Privacy policy</a> <span class="divider">|</span> Powered by <a target="_blank" href="https://www.netlify.com/">Netlify <img src="/img/logo-netlify.svg" alt="Netlify Logo" height="12px" width="12px" style="display: inline-block"></a>',
+    message: '<a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Open-source Apache Licensed</a> <span class="divider">|</span> <a href="/privacy/">Privacy policy</a>',
     copyright: `Copyright © ${new Date().getFullYear()} Mihon App`,
   },
 
