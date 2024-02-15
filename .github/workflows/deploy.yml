@@ -6,10 +6,6 @@ on:
         branches:
             - main
 
-env:
-    VITE_BASE: /website/
-    VITE_HOSTNAME: https://mihonapp.github.io
-
 jobs:
     deploy:
         runs-on: ubuntu-latest
