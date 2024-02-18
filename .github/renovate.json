@@ -9,7 +9,7 @@
 		{
 			"groupName": "dependencies",
 			"matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-			"automerge": true
+			"automerge": false
 		}
 	],
 	"schedule": ["every sunday"]
