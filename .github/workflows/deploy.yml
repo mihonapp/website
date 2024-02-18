@@ -60,7 +60,7 @@ jobs:
               run: pnpm build
 
             - name: Configure pages
-              uses: actions/configure-pages@v2
+              uses: actions/configure-pages@v4
 
             - name: Upload pages artifact
               uses: actions/upload-pages-artifact@v1
