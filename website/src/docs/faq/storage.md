@@ -103,7 +103,7 @@ Backup file name prefixes are unique for the app to avoid potential collisions b
 
 ## Migrating from Tachiyomi v0.14.x or earlier
 
-If you were using the default locations before, then simply select the existing `Mihon` folder.
+If you were using the default locations before, then simply select the existing `Tachiyomi` folder.
 
 ::: warning
 If you have an existing `downloads` folder, you should be selecting its parent folder (if applicable; avoid choosing the root of your storage) or you should move your downloads to a new location.
