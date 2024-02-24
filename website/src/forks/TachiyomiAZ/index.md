@@ -1,7 +1,7 @@
 ---
 title: TachiyomiAZ
 titleTemplate: false
-description: Hentai-focused with legacy features
+description: Legacy support with backported features
 
 layout: home
 pageClass: page-tachiyomi-az
@@ -34,7 +34,7 @@ features:
   - title: SadPanda Support
     details: Forked from TachiyomiEH, supports E-Hentai/Ex-Hentai logins.
     icon: 🔞
-    
+
 theme: "#FFCC4D"
 image: /forks/logo-az.webp
 imageSize: small
