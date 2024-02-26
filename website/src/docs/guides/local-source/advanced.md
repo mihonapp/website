@@ -33,7 +33,7 @@ You can copy the following example and edit the details as needed:
 }
 ```
 ::: tip
-If you don't want to manually create the `details.json` file, you can alternatively use [this tool.](https://tachi-local.netlify.app/?utm\_source=tachi-website\&utm\_medium=referral\&utm\_campaign=tachi-website)
+If you don't want to manually create the `details.json` file, you can alternatively use [this tool](https://github.com/ghostbear/koguma/releases/latest).
 :::
 
 ## Using a custom cover image
