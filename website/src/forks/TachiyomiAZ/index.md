@@ -1,15 +1,15 @@
 ---
 title: TachiyomiAZ
 titleTemplate: false
-description: Hentai-focused with legacy features
+description: Legacy support with backported features
 
 layout: home
 pageClass: page-tachiyomi-az
 
 hero:
   name: TachiyomiAZ
-  text: Hentai-focused
-  tagline: Recommendation system, a hamburger menu, and loads of hentai
+  text: Classic UI
+  tagline: Android 5+ support, Backported features, and Reliable updates
   image: /forks/logo-az.webp
   actions:
     - theme: brand
@@ -18,19 +18,22 @@ hero:
     - theme: alt
       text: GitHub
       link: https://github.com/az4521/tachiyomiAZ
+    - theme: alt
+      text: Dev Build
+      link: https://crafty.moe/tachiyomiAZ.apk
 
 customMetaTitle: TachiyomiAZ
 
 features:
-  - title: Hentai-focused
-    details: Adds several features to enhance your Hentai experience.
-    icon: 🔞
   - title: Series recommendations
-    details: Get recommendations from MyAnimeList and AniDB.
+    details: Get recommendations from Anilist and MyAnimeList.
     icon: 📚
-  - title: Legacy design
+  - title: Classic material design
     details: Keeps the old design of Tachiyomi with hamburger menu.
-    icon: 👵
+    icon: 🍔
+  - title: SadPanda Support
+    details: Forked from TachiyomiEH, supports E-Hentai/Ex-Hentai logins.
+    icon: 🔞
 
 theme: "#FFCC4D"
 image: /forks/logo-az.webp
@@ -50,6 +53,14 @@ const members = [
     title: "Creator",
     links: [
       { icon: "github", link: "https://github.com/az4521" }
+    ]
+  },
+  {
+    avatar: "https://www.github.com/KraXen72.png",
+    name: "KraXen72",
+    title: "Occasional Maintainer",
+    links: [
+      { icon: "github", link: "https://github.com/KraXen72" }
     ]
   },
   {
