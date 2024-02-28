@@ -86,3 +86,16 @@ If you encounter difficulties while searching for a specific series, consider th
   > Example: **Bungo Stray Dogs** instead of **Bungou Stray Dogs**
 
   > Example: **3-gatsu no Lion** instead of **Sangatsu no Lion**.
+
+### Opening links in Mihon instead of browser
+
+You can open links that are supported by an extension in **Mihon** instead of opening them in your default browser.
+
+Follow these steps (Android 12+, the steps may vary on older devices):
+
+1. Open the system settings of your device and navigate to **Apps** > **Choose default apps**.
+1. Choose "**Opening links**", then scroll down and select the extension.
+1. Make sure "**Open supported links**" is toggled on and select "**Supported web addresses**".
+1. Toggle the switches for the URLs.
+
+Even after setting links to open in **Mihon**, you can bypass it in your browser by opening links in new tabs.
