@@ -91,8 +91,6 @@ This error likely indicates a down source or removed series.
 ### `HTTP Error: 429` - Too Many Requests
 This error suggests the source temporarily banned your IP due to fast downloads/reads.
 
-[Report the issue](https://github.com/mihonapp/extensions/issues/new/choose) to add rate limits and prevent future IP bans.
-
 ### `HTTP Error: 5xx`
 Errors like `500`, `502`, etc., indicate server-side issues on the source's end.
 
