@@ -4,13 +4,13 @@ titleTemplate: Frequently Asked Questions
 description: Frequently Asked Questions about Upcoming Updates
 ---
 
-# Upcoming Updates
+# Upcoming
 Frequently Asked Questions about Upcoming Updates
 
 ## What is this Calendar?
-The Upcoming Updates page does *not* consult with external trackers, publishers, or otherwise claim that a chapter update will be released on a particular day. 
+The Upcoming Updates page does *not* consult with external trackers, publishers, or otherwise claim that a chapter update will be released on a particular day.
 
-What it does do is allow users of Mihon to visually plot their upcoming smart updates, as well as get a feel for when new chapters are *expected* to be released. 
+What it does do is allow users of Mihon to visually plot their upcoming smart updates, as well as get a feel for when new chapters are *expected* to be released.
 
 ## What are Smart Updates?
 In order to reduce strain on our partners and save user bandwidth, Mihon tries to estimate when chapter updates will be available, and only once that time has past include that series in automatic updates.
