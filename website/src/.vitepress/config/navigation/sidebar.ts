@@ -68,6 +68,10 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
           text: 'Storage',
           link: '/docs/faq/storage',
         },
+        {
+          text: 'Upcoming Updates',
+          link: '/docs/faq/upcoming',
+        },
       ],
     },
     {
