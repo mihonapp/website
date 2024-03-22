@@ -1,11 +1,11 @@
 ---
 title: Upcoming Updates
 titleTemplate: Frequently Asked Questions
-description: Frequently Asked Questions
+description: Frequently Asked Questions about Upcoming Updates
 ---
 
-# Upcoming
-Frequently Asked Questions
+# Upcoming Updates
+Frequently Asked Questions about Upcoming Updates
 
 ## What is this Calendar?
 The Upcoming Updates page does *not* consult with external trackers, publishers, or otherwise claim that a chapter update will be released on a particular day. 
