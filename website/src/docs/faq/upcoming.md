@@ -13,7 +13,7 @@ The Upcoming Updates page does *not* consult with external trackers, publishers,
 What it does do is allow users of Mihon to visually plot their upcoming smart updates, as well as get a feel for when new chapters are *expected* to be released.
 
 ## What are Smart Updates?
-In order to reduce strain on our partners and save user bandwidth, Mihon tries to estimate when chapter updates will be available, and only once that time has past include that series in automatic updates.
+In order to reduce strain on sources and save user bandwidth, Mihon tries to estimate when chapter updates will be available, and only once that time has passed, include that series in automatic updates.
 
 ## Why are my chapter updates on the wrong day?
-Smart updates determine time of chapter updates based on the time between currently released chapters. Sources that provide incorrect update dates, periods of hiatus, or bursts of short chapters may result in the estimate seeming off. As more chapters are released, this difference should normalize.
+Smart updates determine time of chapter updates based on the time between currently released chapters. Sources that provide incorrect update dates, periods of hiatus, or update in batches may result in the estimate seeming off. As more chapters are released, the schedule should become more accurate.
