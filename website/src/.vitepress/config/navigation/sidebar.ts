@@ -40,7 +40,7 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
           text: 'Library',
           link: '/docs/faq/library',
         },
-          {
+        {
           text: 'Updates',
           collapsed: true,
           items: [
