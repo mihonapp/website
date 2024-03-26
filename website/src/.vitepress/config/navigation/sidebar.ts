@@ -40,6 +40,14 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
           text: 'Library',
           link: '/docs/faq/library',
         },
+          {
+          text: 'Updates',
+          collapsed: true,
+          items: [
+            { text: 'Smart updates', link: '/docs/faq/updates/smart' },
+            { text: 'Upcoming', link: '/docs/faq/updates/upcoming' },
+          ],
+        },
         {
           text: 'Browse',
           link: '/docs/faq/browse/',
@@ -67,10 +75,6 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
         {
           text: 'Storage',
           link: '/docs/faq/storage',
-        },
-        {
-          text: 'Upcoming Updates',
-          link: '/docs/faq/upcoming',
         },
       ],
     },
