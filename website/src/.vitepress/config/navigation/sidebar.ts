@@ -45,6 +45,7 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
           collapsed: true,
           items: [
             { text: 'Smart updates', link: '/docs/faq/updates/smart' },
+            { text: 'Upcoming', link: '/docs/faq/updates/upcoming' },
           ],
         },
         {
