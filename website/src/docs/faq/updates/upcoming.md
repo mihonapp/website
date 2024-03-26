@@ -1,5 +1,5 @@
 ---
-title: Upcoming Updates
+title: Upcoming
 titleTemplate: Frequently Asked Questions
 description: Frequently Asked Questions about Upcoming Updates
 ---
