@@ -26,4 +26,4 @@ Occasionally, cover images for local series might not appear.
    * The cover issue should now be resolved.
    * Re-add the series to your library, mark your read chapters, and re-enable tracking if necessary.
 
-Related GitHub Issue: [#932](https://git.mihon.dev/tachiyomi/tachiyomi/issues/932)
+Related GitHub Issue: [#932](https://git.mihon.tech/tachiyomi/tachiyomi/issues/932)
