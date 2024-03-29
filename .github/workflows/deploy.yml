@@ -28,17 +28,17 @@ jobs:
 
         steps:
             - name: Checkout
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
               with:
                   fetch-depth: 0
 
             - name: Install Node.js
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v4
               with:
                   node-version: 20
 
             - name: Install pnpm
-              uses: pnpm/action-setup@v2
+              uses: pnpm/action-setup@v4
               with:
                 version: 8
                 run_install: false
@@ -49,7 +49,7 @@ jobs:
               run: |
                 echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
-            - uses: actions/cache@v3
+            - uses: actions/cache@v4
               name: Setup pnpm cache
               with:
                 path: ${{ env.STORE_PATH }}
@@ -64,13 +64,13 @@ jobs:
               run: pnpm build
 
             - name: Configure pages
-              uses: actions/configure-pages@v2
+              uses: actions/configure-pages@v4
 
             - name: Upload pages artifact
-              uses: actions/upload-pages-artifact@v1
+              uses: actions/upload-pages-artifact@v3
               with:
                   path: website/dist
 
             - name: Deploy
               id: deployment
-              uses: actions/deploy-pages@v1
+              uses: actions/deploy-pages@v4
