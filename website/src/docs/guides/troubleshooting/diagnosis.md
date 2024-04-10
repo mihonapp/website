@@ -22,10 +22,10 @@ Follow these steps to troubleshoot and find solutions.
 1. **Source Status**: Verify the source's status in a browser.
 1. **Retry Button**: Look for a retry button on the series page.
 1. **Advanced Settings**: Under <nav to="advanced">, try these options:
-  - Clear Cache
-  - Clear Cookies
-  - Clear Database
-  - DNS over HTTPS
+   - Clear Cache
+   - Clear Cookies
+   - Clear Database
+   - DNS over HTTPS
 1. **Download Issues**: Delete the queue and retry downloads.
 1. **Restart Mihon**: Force close and reopen the app.
 
