@@ -76,8 +76,8 @@ importers:
         specifier: 4.6.9
         version: 4.6.9
       '@types/markdown-it':
-        specifier: 13.0.7
-        version: 13.0.7
+        specifier: 14.0.1
+        version: 14.0.1
       '@types/node':
         specifier: 20.12.7
         version: 20.12.7
@@ -947,9 +947,6 @@ packages:
 
   '@types/lodash@4.14.198':
     resolution: {integrity: sha512-trNJ/vtMZYMLhfN45uLq4ShQSw0/S7xCTLLVM+WM1rmFpba/VS42jVUgaO3w/NOLiWR/09lnYk0yMaA/atdIsg==}
-
-  '@types/markdown-it@13.0.7':
-    resolution: {integrity: sha512-U/CBi2YUUcTHBt5tjO2r5QV/x0Po6nsYwQU4Y04fBS6vfoImaiZ6f8bi3CjTCxBPQSO1LMyUqkByzi8AidyxfA==}
 
   '@types/markdown-it@14.0.1':
     resolution: {integrity: sha512-6WfOG3jXR78DW8L5cTYCVVGAsIFZskRHCDo5tbqa+qtKVt4oDRVH7hyIWu1SpDQJlmIoEivNQZ5h+AGAOrgOtQ==}
@@ -4391,11 +4388,6 @@ snapshots:
       '@types/lodash': 4.14.198
 
   '@types/lodash@4.14.198': {}
-
-  '@types/markdown-it@13.0.7':
-    dependencies:
-      '@types/linkify-it': 3.0.3
-      '@types/mdurl': 1.0.2
 
   '@types/markdown-it@14.0.1':
     dependencies:
