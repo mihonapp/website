@@ -18,8 +18,8 @@ importers:
         specifier: 13.5.0
         version: 13.5.0
       '@tanstack/vue-query':
-        specifier: 5.34.1
-        version: 5.34.1(vue@3.4.26(typescript@5.4.5))
+        specifier: 5.34.2
+        version: 5.34.2(vue@3.4.26(typescript@5.4.5))
       '@vueuse/core':
         specifier: 10.9.0
         version: 10.9.0(vue@3.4.26(typescript@5.4.5))
@@ -908,11 +908,11 @@ packages:
     resolution: {integrity: sha512-3VPh0SYMGCa5dWQEqNab87UpCMk+ANWHDP4ALs5PeEW9EpfTAbrezzaOk/OiM52IESViefkoAOYuxdoa04p6aA==}
     engines: {node: '>=12'}
 
-  '@tanstack/query-core@5.34.1':
-    resolution: {integrity: sha512-/a4yTnX525QUl8rFULrDLIogjqqcY/CiVvS/vWMgl477mO4WIIDxwQsLvEgb7vzlW8FqX/9CiCmaiAUnYVgB1w==}
+  '@tanstack/query-core@5.34.2':
+    resolution: {integrity: sha512-FM1UXldYcoMiWmVbpewV14EVpnr/ETBbdF84tmCktx29e2bXBFhGtAfyDHUD4X1FehaV5tC9GkXZUMZRQV3lcA==}
 
-  '@tanstack/vue-query@5.34.1':
-    resolution: {integrity: sha512-TN8KGK9Nl6nqpDrPzrZC0a1sqXLNtiMBEPpPQAmCsKZWPAnI040W00wnls8PTwyba+ma8oUAzk7RpO9NmtrxCw==}
+  '@tanstack/vue-query@5.34.2':
+    resolution: {integrity: sha512-aG5Xi/JaJxNjqPPVnA5pf/FSocvFCeyUgZdXIVXl5lnQ2TSJ8vrYDqjdK3Dj06mo001s/003jRazQtsje6y/kQ==}
     peerDependencies:
       '@vue/composition-api': ^1.1.2
       vue: ^2.6.0 || ^3.3.0
@@ -4438,12 +4438,12 @@ snapshots:
     dependencies:
       remove-accents: 0.4.2
 
-  '@tanstack/query-core@5.34.1': {}
+  '@tanstack/query-core@5.34.2': {}
 
-  '@tanstack/vue-query@5.34.1(vue@3.4.26(typescript@5.4.5))':
+  '@tanstack/vue-query@5.34.2(vue@3.4.26(typescript@5.4.5))':
     dependencies:
       '@tanstack/match-sorter-utils': 8.11.8
-      '@tanstack/query-core': 5.34.1
+      '@tanstack/query-core': 5.34.2
       '@vue/devtools-api': 6.5.1
       vue: 3.4.26(typescript@5.4.5)
       vue-demi: 0.14.7(vue@3.4.26(typescript@5.4.5))
