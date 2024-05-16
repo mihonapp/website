@@ -12,7 +12,7 @@ function renderMarkdown(string: string | null | undefined) {
     .replace(/(?<=\(|(, ))@(.*?)(?=\)|(, ))/g, '[@$2](https://github.com/$2)')
     .replace(/#(\d+)/g, '[#$1](https://github.com/mihonapp/mihon/issues/$1)')
     .replace(/^Check out the .*past release notes.* if you're.*$/m, '')
-    .replace(/https\:\/\/github.com\/mihonapp\/mihon\/releases\/tag\/(.*?)/g, '#$1')
+    .replace(/https:\/\/github.com\/mihonapp\/mihon\/releases\/tag\/(.*)/g, '#$1')
     .trim()
 
   return md.render(flavoredString)

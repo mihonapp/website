@@ -37,7 +37,7 @@ async function generateFeed(config: SiteConfig, hostname: string) {
 
     const markdown = (src ?? '')
       .replace(/^---.*---/s, '')
-      .replace(/]\((\/.*?)\)/g, `](${hostname}$1)`)
+      .replace(/\]\((\/.*?)\)/g, `](${hostname}$1)`)
       .replace(/^# .*$/m, '')
       .trim()
 
