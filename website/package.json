@@ -37,7 +37,7 @@
     "@octokit/types": "13.5.0",
     "@tanstack/vue-query": "5.37.1",
     "@vueuse/core": "10.9.0",
-    "axios": "1.6.8",
+    "axios": "1.7.0",
     "element-plus": "2.7.3",
     "lodash.groupby": "4.6.0",
     "markdown-it": "14.1.0",
