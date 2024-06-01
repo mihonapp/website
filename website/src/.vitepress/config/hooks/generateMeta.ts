@@ -6,125 +6,84 @@ function generateMeta(context: TransformContext, hostname: string) {
 
   const url = `${hostname}/${pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2')}`
 
+  const addMetaTag = (name: string, content: any) => {
+    if (content !== undefined && content !== null)
+      head.push(['meta', { name, content: String(content) }])
+  }
+
+  const addPropertyTag = (property: string, content: any) => {
+    if (content !== undefined && content !== null)
+      head.push(['meta', { property, content: String(content) }])
+  }
+
+  const addLinkTag = (rel: string, href: string, type?: string, title?: string) => {
+    if (href) {
+      const attributes: { rel: string, href: string, type?: string, title?: string } = { rel, href }
+      if (type)
+        attributes.type = type
+      if (title)
+        attributes.title = title
+      head.push(['link', attributes])
+    }
+  }
+
   head.push(['link', { rel: 'canonical', href: url }])
-  head.push(['meta', { property: 'og:url', content: url }])
-  head.push(['meta', { name: 'twitter:url', content: url }])
-  head.push(['meta', { name: 'twitter:card', content: 'summary_large_image' }])
+  addPropertyTag('og:url', url)
+  addMetaTag('twitter:url', url)
+  addMetaTag('twitter:card', 'summary_large_image')
 
   if (pageData.frontmatter.theme)
-    head.push(['meta', { name: 'theme-color', content: pageData.frontmatter.theme }])
+    addMetaTag('theme-color', pageData.frontmatter.theme)
 
   if (pageData.frontmatter.type)
-    head.push(['meta', { property: 'og:type', content: pageData.frontmatter.type }])
+    addPropertyTag('og:type', pageData.frontmatter.type)
 
   if (pageData.frontmatter.customMetaTitle) {
-    head.push([
-      'meta',
-      {
-        property: 'og:title',
-        content: pageData.frontmatter.customMetaTitle,
-      },
-    ])
-    head.push([
-      'meta',
-      {
-        name: 'twitter:title',
-        content: pageData.frontmatter.customMetaTitle,
-      },
-    ])
-    head.push(['meta', { property: 'og:site_name', content: '' }])
+    addPropertyTag('og:title', pageData.frontmatter.customMetaTitle)
+    addMetaTag('twitter:title', pageData.frontmatter.customMetaTitle)
+    addPropertyTag('og:site_name', '')
   }
   else {
-    head.push(['meta', { property: 'og:title', content: pageData.frontmatter.title }])
-    head.push(['meta', { name: 'twitter:title', content: pageData.frontmatter.title }])
+    addPropertyTag('og:title', pageData.frontmatter.title)
+    addMetaTag('twitter:title', pageData.frontmatter.title)
   }
+
   if (pageData.frontmatter.description) {
-    head.push([
-      'meta',
-      {
-        property: 'og:description',
-        content: pageData.frontmatter.description,
-      },
-    ])
-    head.push([
-      'meta',
-      {
-        name: 'twitter:description',
-        content: pageData.frontmatter.description,
-      },
-    ])
+    addPropertyTag('og:description', pageData.frontmatter.description)
+    addMetaTag('twitter:description', pageData.frontmatter.description)
   }
+
   if (pageData.frontmatter.image) {
-    head.push([
-      'meta',
-      {
-        property: 'og:image',
-        content: `${hostname}/${pageData.frontmatter.image.replace(/^\//, '')}`,
-      },
-    ])
-    head.push([
-      'meta',
-      {
-        name: 'twitter:image',
-        content: `${hostname}/${pageData.frontmatter.image.replace(/^\//, '')}`,
-      },
-    ])
+    const imageUrl = `${hostname}/${pageData.frontmatter.image.replace(/^\//, '')}`
+    addPropertyTag('og:image', imageUrl)
+    addMetaTag('twitter:image', imageUrl)
   }
   else {
     const url = pageData.filePath.replace('index.md', '').replace('.md', '')
     const imageUrl = `${url}/__og_image__/og.png`.replace(/\/\//g, '/').replace(/^\//, '')
-
-    head.push(['meta', { property: 'og:image', content: `${hostname}/${imageUrl}` }])
-    head.push(['meta', { property: 'og:image:width', content: '1200' }])
-    head.push(['meta', { property: 'og:image:height', content: '628' }])
-    head.push(['meta', { property: 'og:image:type', content: 'image/png' }])
-    head.push(['meta', { property: 'og:image:alt', content: pageData.frontmatter.title }])
-    head.push(['meta', { name: 'twitter:image', content: `${hostname}/${imageUrl}` }])
-    head.push(['meta', { name: 'twitter:image:width', content: '1200' }])
-    head.push(['meta', { name: 'twitter:image:height', content: '628' }])
-    head.push(['meta', { name: 'twitter:image:alt', content: pageData.frontmatter.title }])
+    addPropertyTag('og:image', `${hostname}/${imageUrl}`)
+    addPropertyTag('og:image:width', '1200')
+    addPropertyTag('og:image:height', '628')
+    addPropertyTag('og:image:type', 'image/png')
+    addPropertyTag('og:image:alt', pageData.frontmatter.title)
+    addMetaTag('twitter:image', `${hostname}/${imageUrl}`)
+    addMetaTag('twitter:image:width', '1200')
+    addMetaTag('twitter:image:height', '628')
+    addMetaTag('twitter:image:alt', pageData.frontmatter.title)
   }
+
   if (pageData.frontmatter.tag)
-    head.push(['meta', { property: 'article:tag', content: pageData.frontmatter.tag }])
+    addPropertyTag('article:tag', pageData.frontmatter.tag)
 
-  if (pageData.frontmatter.date) {
-    head.push([
-      'meta',
-      {
-        property: 'article:published_time',
-        content: pageData.frontmatter.date,
-      },
-    ])
-  }
-  if (pageData.lastUpdated && pageData.frontmatter.lastUpdated !== false) {
-    head.push([
-      'meta',
-      {
-        property: 'article:modified_time',
-        content: new Date(pageData.lastUpdated).toISOString(),
-      },
-    ])
-  }
+  if (pageData.frontmatter.date)
+    addPropertyTag('article:published_time', pageData.frontmatter.date)
+
+  if (pageData.lastUpdated && pageData.frontmatter.lastUpdated !== false)
+    addPropertyTag('article:modified_time', new Date(pageData.lastUpdated).toISOString())
 
   if (pageData.filePath === 'news/index.md') {
-    head.push([
-      'link',
-      {
-        rel: 'alternate',
-        type: 'application/rss+xml',
-        title: 'RSS feed for the news archive',
-        href: `${hostname}/feed.rss`,
-      },
-    ])
-    head.push([
-      'link',
-      {
-        rel: 'alternate',
-        type: 'application/json',
-        title: 'JSON of the news archive',
-        href: `${hostname}/news.json`,
-      },
-    ])
+    addLinkTag('alternate', `${hostname}/feed.rss`, 'application/rss+xml', 'RSS feed for the news archive')
+    addLinkTag('alternate', `${hostname}/news.json`, 'application/json', 'JSON of the news archive')
   }
 
   return head
