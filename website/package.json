@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@iconify-prerendered/vue-mdi": "0.23.1718880438",
-    "@octokit/rest": "20.1.1",
+    "@octokit/rest": "21.0.0",
     "@octokit/types": "13.5.0",
     "@tanstack/vue-query": "5.45.0",
     "@vueuse/core": "10.11.0",
