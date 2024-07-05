@@ -1,7 +1,6 @@
 ---
 title: Privacy policy
 description: Privacy Policy that explains how Mihon collects, uses, and protects users' personal information.
-lastUpdated: true
 editLink: false
 ---
 
