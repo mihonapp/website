@@ -1,7 +1,7 @@
 ---
 title: Privacy policy
 description: Privacy Policy that explains how Mihon collects, uses, and protects users' personal information.
-lastUpdated: false
+lastUpdated: true
 editLink: false
 ---
 
@@ -23,14 +23,6 @@ The information that we request will be retained by us and used as described in 
 
 Links to the privacy policy of third-party service providers used by the app:
 * [Google Analytics for Firebase](https://firebase.google.com/policies/analytics)
-* [Sentry](https://sentry.io/privacy/)
-
-### Log Data
-
-In a case of an error in the app, the Service automatically collects data and information called Log Data.
-This Log Data may include information including your device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.
-
-This can be disabled within the app.
 
 ### Analytics Data
 
@@ -52,8 +44,6 @@ This includes the use of external tracking services (e.g. MyAnimeList).
 
 We may periodically update our Privacy Policy.
 Thus, you are advised to review this page periodically for any changes.
-
-The current iteration of this policy is effective as of December 15, 2021.
 
 ## Contact Us
 
