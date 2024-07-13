@@ -12,9 +12,9 @@ Backups in **Mihon** are compatible between different versions of the app.
 1. Go to <nav to="data-and-storage">.
 1. Select **Create backup** and choose a location to save it.
 
-![Backup and Restore](/docs/guides/backups/backup.light.webp#light =414x215)
+![Backup and Restore](/docs/guides/backups/backup.light.webp#light =414x187)
 
-![Backup and Restore](/docs/guides/backups/backup.dark.webp#dark =414x215)
+![Backup and Restore](/docs/guides/backups/backup.dark.webp#dark =414x187)
 :::
 
 ## General backup details
