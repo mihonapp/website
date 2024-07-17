@@ -44,7 +44,7 @@ Double tap animation speed changes the speed in which the zoom happens when doub
 
 ::: tabs
 == No animation
-![No-animation](/docs/guides/reader-settings/animation-speed_off.gif =288x618)
+![No Animation](/docs/guides/reader-settings/animation-speed_off.gif =288x618)
 == Normal
 ![Normal](/docs/guides/reader-settings/animation-speed_normal.gif =288x618)
 == Fast
@@ -56,13 +56,6 @@ Briefly show current mode when reader is opened
 
 ### Show tap zones overlay <Badge type="info" text="Off" />
 TBA
-
-### 32-bit color <Badge type="info" text="Off" />
-This setting decodes images in `ARGB888` format to allow the reader to display more colors.
-
-::: warning
-This setting will only show up on devices running **Android 8.0** or higher.
-:::
 
 ### Animate page transitions <Badge type="info" text="On" />
 This setting applies a smooth transition when tapping to change page.
