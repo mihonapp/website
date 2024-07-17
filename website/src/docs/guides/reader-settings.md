@@ -55,7 +55,7 @@ Double tap animation speed changes the speed in which the zoom happens when doub
 Briefly show current mode when reader is opened
 
 ### Show tap zones overlay <Badge type="info" text="Off" />
-TBA
+Briefly shows an overlay for the currently enabled tap zones when reader is opened
 
 ### Animate page transitions <Badge type="info" text="On" />
 This setting applies a smooth transition when tapping to change page.
@@ -101,10 +101,10 @@ TBA
 TBA
 
 ### Keep screen on <Badge type="info" text="On" />
-TBA
+Keeps the screen from going to sleep
 
 ### Show page number <Badge type="info" text="On" />
-TBA
+Shows the current page number at the bottom of the screen
 
 ## Reading
 
@@ -264,7 +264,7 @@ TBA
 TBA
 
 ### Volume keys <Badge type="info" text="Off" />
-TBA
+Turn pages using the volume keys
 
 ## Actions
 
