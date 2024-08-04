@@ -21,7 +21,7 @@ features:
     icon: <img src="/forks/logo-az.webp" alt="TachiyomiAZ Logo" height="32" width="32">
     link: /forks/TachiyomiAZ/
   - title: Yōkai
-    details: New design approach along with several other enhancements
+    details: Takes the best from J2K and enhances it
     icon: <img src="/forks/logo-yokai.webp" alt="Yokai Logo" height="32" width="32">
     link: /forks/Yokai/
 ---
