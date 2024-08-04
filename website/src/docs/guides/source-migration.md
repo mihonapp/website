@@ -97,4 +97,24 @@ You will need to remove these manually with a file manager.
 1. Wait until all your **Series** is found and hit the done at the top and you're done.
 
     > If a series is not found, or is wrong you can manually search it by pressing **Overflow** -> **Search manually**.
+
+==Yokai
+### Migrating multiple Series
+
+1. Tap **Settings** -> **Sources** -> **Source migration**.
+1. Select the **Source** you'd like to migrate _from_ and select **All**.
+1. Select the **Sources** that you'd like to migrate _to_ and search by and tap the arrow at the bottom right.
+1. Choose which data you want to transfer over.
+1. Wait until all your **Series** is found and hit the done at the top and you're done.
+
+    > If a series is not found, or is wrong you can manually search it by pressing Overflow -> **Search manually**.
+
+### Migrating a single Series
+
+1. Tap into a **Series** in your Library.
+1. Tap **Overflow** -> **Migrate**.
+1. Select the **Sources** you'd like to search and migrate _to_ and hit the arrow at the bottom right.
+1. Wait until it is found and select _done_ in the top right and you're done.
+
+    > If a series is not found, or is wrong you can manually search it by pressing Overflow -> **Search manually**
 ::::
