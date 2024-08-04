@@ -7,8 +7,7 @@
  * -------------------------------------------------------------------------- */
 
 // Assign theme color
-$themeColor = #0877d2
-$darkBgColor = #151533
+$themeColor = #818cf8
 
 :root {
   --vp-c-brand: $themeColor
@@ -19,19 +18,6 @@ $darkBgColor = #151533
   --vp-c-brand-darker: shade($themeColor, 50%)
   --vp-c-brand-darkest: shade($themeColor, 75%)
   --vp-c-brand-dimm: alpha($themeColor, 0.08)
-}
-
-.dark {
-  --vp-c-bg: $darkBgColor
-  --vp-c-bg-alt: shade($darkBgColor, 20%)
-  --vp-c-bg-elv: shade($darkBgColor, 10%)
-  --vp-c-bg-soft: shade($darkBgColor, 15%)
-  --vp-c-border: tint($darkBgColor, 10%)
-  --vp-c-divider: tint($darkBgColor, 8%)
-  --vp-c-gutter: shade($darkBgColor, 40%)
-  --vp-custom-block-info-bg:  tint($darkBgColor, 3%) !important
-  --vp-custom-block-details-bg: shade($darkBgColor, 20%)
-  --vp-button-alt-bg: tint($darkBgColor, 10%)
 }
 
 /**
@@ -71,7 +57,7 @@ html:not(.dark) {
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-button-brand-bg: var(--vp-c-brand-dark)
+  --vp-button-brand-bg: var(--vp-c-brand-darker)
 }
 
 /**
@@ -86,7 +72,7 @@ html:not(.dark) {
 }
 
 .dark {
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, shade($darkBgColor, 10%) 25%, shade($darkBgColor, 20%) 25%)
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, var(--vp-c-brand-darker) 25%, var(--vp-c-brand-darkest) 25%)
 }
 
 @media (min-width 640px) {
