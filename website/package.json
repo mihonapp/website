@@ -45,8 +45,8 @@
     "moment": "2.30.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.6.1",
-    "@eslint/eslintrc": "^3.0.0",
+    "@antfu/eslint-config": "^2.24.1",
+    "@eslint/eslintrc": "^3.1.0",
     "@mdit/plugin-attrs": "0.13.0",
     "@mdit/plugin-figure": "0.13.0",
     "@mdit/plugin-img-lazyload": "0.13.0",
@@ -57,9 +57,9 @@
     "@types/gtag.js": "0.0.20",
     "@types/lodash.groupby": "4.6.9",
     "@types/markdown-it": "14.1.2",
-    "@types/node": "20.14.14",
-    "@typescript-eslint/eslint-plugin": "7.18.0",
-    "@typescript-eslint/parser": "7.18.0",
+    "@types/node": "22.1.0",
+    "@typescript-eslint/eslint-plugin": "8.0.0",
+    "@typescript-eslint/parser": "8.0.0",
     "eslint": "9.8.0",
     "eslint-config-standard": "17.1.0",
     "eslint-plugin-vue": "9.27.0",
