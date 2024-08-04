@@ -4,7 +4,7 @@ titleTemplate: false
 description: Takes the best from J2K and enhances it
 
 layout: home
-pageClass: page-tachiyomi-yokai
+pageClass: page-yokai
 
 hero:
   name: Yōkai
@@ -43,7 +43,7 @@ imageSize: small
 <br><VPTeamMembers size="small" :members="members" />
 
 <script setup>
-import "@theme/styles/forks/tachiyomi-yokai.styl"
+import "@theme/styles/forks/yokai.styl"
 import { VPTeamMembers } from "vitepress/theme"
 
 const members = [
