@@ -252,24 +252,28 @@ TBA
 :::
 
 ### Crop borders <Badge type="info" text="Off" /> {#crop-borders-longstrip}
-TBA
+Automatically detects blank space around images and crops them for better readability.
 
 ### Split wide pages <Badge type="info" text="Off" /> {#split-wide-longstrip}
 TBA
 
 ### Double tap to zoom <Badge type="info" text="On" />
-TBA
+Zooms into the image on double tap.
 
 ## Navigation
-TBA
 
 ### Volume keys <Badge type="info" text="Off" />
 Turn pages using the volume keys.
 
 ## Actions
 
-### Show on long tap <Badge type="info" text="On" />
-TBA
+### Show actions on long tap <Badge type="info" text="On" />
+Shows the following options on long tap while the reader is open.
+
+- Set as cover
+- Copy to clipboard
+- Share
+- Save
 
 ### Save pages into seperate folders <Badge type="info" text="Off" />
 TBA
