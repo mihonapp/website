@@ -35,6 +35,10 @@ Backups in **Mihon** are compatible between different versions of the app.
 - **Downloaded** chapters including [local source](/docs/guides/local-source/) chapters
 - **Custom covers**
 
+::: tip
+To convert your backups to JSON or to view and edit the information outside of the app, you can use [Mihon Backup Viewer](https://github.com/Animeboynz/Mihon-Backup-Viewer).
+:::
+
 ## Restoring a backup
 Restoring a backup can be done through the "Data and storage" settings.
 
