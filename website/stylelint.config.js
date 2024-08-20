@@ -1,5 +1,6 @@
-module.exports = {
+export default {
   plugins: ['stylelint-stylus'],
+  extends: ['stylelint-stylus/standard'],
   rules: {
     'stylus/pythonic': 'never',
     'stylus/declaration-colon': 'always',
@@ -21,5 +22,4 @@ module.exports = {
       },
     ],
   },
-  extends: ['stylelint-stylus/standard'],
 }
