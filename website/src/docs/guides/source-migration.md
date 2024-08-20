@@ -43,7 +43,7 @@ You will need to remove these manually with a file manager.
 1. Choose which data you want to transfer over, and you're done.
 
 ==TachiyomiJ2K
-### Migrating multiple Series
+### Migrating multiple Series {#migrating-multiple-series-j2k}
 
 1. Tap **Settings** -> **Sources** -> **Source migration**.
 1. Select the **Source** you'd like to migrate _from_ and select **All**.
@@ -53,7 +53,7 @@ You will need to remove these manually with a file manager.
 
     > If a series is not found, or is wrong you can manually search it by pressing Overflow -> **Search manually**.
 
-### Migrating a single Series
+### Migrating a single Series {#migrating-a-single-series-j2k}
 
 1. Tap into a **Series** in your Library.
 1. Tap **Overflow** -> **Migrate**.
@@ -63,7 +63,7 @@ You will need to remove these manually with a file manager.
     > If a series is not found, or is wrong you can manually search it by pressing Overflow -> **Search manually**
 
 ==TachiyomiSY
-### Migrating from Library
+### Migrating from Library {#migrating-from-library-sy}
 
 1. Tap into **Library**.
 1. Tap **Overflow** -> **Source migration**.
@@ -87,7 +87,7 @@ You will need to remove these manually with a file manager.
     > If a series is not found, or is wrong you can manually search it by pressing **Overflow** -> **Search manually**.
 
 ==TachiyomiAZ
-### Instructions
+### Instructions {instructions-az}
 
 1. Tap into **Library**.
 1. Tap **Overflow** -> **Source migration**.
@@ -99,7 +99,7 @@ You will need to remove these manually with a file manager.
     > If a series is not found, or is wrong you can manually search it by pressing **Overflow** -> **Search manually**.
 
 ==Yokai
-### Migrating multiple Series
+### Migrating multiple Series {#migrating-multiple-series-yokai}
 
 1. Tap **Settings** -> **Sources** -> **Source migration**.
 1. Select the **Source** you'd like to migrate _from_ and select **All**.
@@ -109,7 +109,7 @@ You will need to remove these manually with a file manager.
 
     > If a series is not found, or is wrong you can manually search it by pressing Overflow -> **Search manually**.
 
-### Migrating a single Series
+### Migrating a single Series {#migrating-a-single-series-yokai}
 
 1. Tap into a **Series** in your Library.
 1. Tap **Overflow** -> **Migrate**.
