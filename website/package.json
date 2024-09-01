@@ -64,7 +64,7 @@
     "eslint-config-standard": "17.1.0",
     "eslint-plugin-vue": "9.27.0",
     "feed": "4.2.2",
-    "lint-staged": "15.2.9",
+    "lint-staged": "15.2.10",
     "markdownlint": "0.35.0",
     "markdownlint-cli": "0.41.0",
     "sentences-per-line": "0.2.1",
