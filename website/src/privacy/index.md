@@ -21,13 +21,18 @@ For a better experience, while using our Service, we may require you to provide 
 The information that we request will be retained by us and used as described in this privacy policy.
 
 Links to the privacy policy of third-party service providers used by the app:
-* [Google Analytics for Firebase](https://firebase.google.com/policies/analytics)
+* [Google Analytics](https://www.google.com/analytics/terms/)
+* [Firebase Crashlytics](https://firebase.google.com/support/privacy)
 
 ### Analytics Data
 
-The Service is integrated with [Firebase](https://firebase.google.com/) to collect anonymized analytics data about Service usage.
+The Service is integrated with Google Analytics to collect anonymized analytics data about Service usage.
 
 For more information, you can refer to [How Google uses data when you use our partners' sites or apps](https://google.com/policies/privacy/partners/).
+
+### Crash Reporting
+
+The Service uses Firebase Crashlytics to collect crash reports and performance data to improve app stability and user experience. This data is anonymized and does not contain personally identifiable information.
 
 ## External Links
 
