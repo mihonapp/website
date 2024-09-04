@@ -78,7 +78,7 @@ While some sources have specific user agent strings, most rely on the app's defa
 1. Replace the **Default user agent string** with a different user agent string.
    >    [Here's a reference site](https://www.whatismybrowser.com/guides/the-latest-user-agent/).
    * You can use any user agent strings available in the reference site or by searching online.
-   * You may need to try other user agents from different devices, browsers, and/or operating systems.
+   * You may need to try different user agents from different devices, browsers, and/or operating systems.
 1. After changing the user agent string, remember to restart the app & check WebView to see if it passes verification.
 :::
 
