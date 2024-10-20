@@ -106,6 +106,10 @@ Keeps the screen from going to sleep.
 ### Show page number <Badge type="info" text="On" />
 Shows the current page number at the bottom of the screen.
 
+## E-ink
+### Flash on page change <Badge type="info" text="Off" />
+Flashes the screen on page change to reduce ghosting on E-ink displays.
+
 ## Reading
 
 ### Skip chapters marked read <Badge type="info" text="Off" />
@@ -118,7 +122,7 @@ Skips over filtered chapters while reading.
 Skips over chapters detected as duplicates.
 
 ### Always show chapter transition <Badge type="info" text="On" />
-TBA
+Shows chapter transitions regardless of whether the next chapter is loaded or not.
 
 ## Pages
 
@@ -236,7 +240,7 @@ TBA
 :::
 
 ### Side padding <Badge type="info" text="None" />
-TBA
+Adds the specified padding to the left and right of the screen.
 
 ### Sensitivity for hiding menu on scroll <Badge type="info" text="Low" />
 
@@ -257,13 +261,22 @@ Automatically detects blank space around images and crops them for better readab
 ### Split wide pages <Badge type="info" text="Off" /> {#split-wide-longstrip}
 TBA
 
+### Rotate wide pages to fit <Badge type="info" text="Off" />
+TBA
+
 ### Double tap to zoom <Badge type="info" text="On" />
 Zooms into the image on double tap.
+
+### Disable zoom out <Badge type="info" text="Off" />
+TBA
 
 ## Navigation
 
 ### Volume keys <Badge type="info" text="Off" />
 Turn pages using the volume keys.
+
+### Invert volume keys <Badge type="info" text="Off" />
+Invert the direction of the volume buttons
 
 ## Actions
 
