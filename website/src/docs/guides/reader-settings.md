@@ -204,7 +204,7 @@ TBA
 ### Split wide pages <Badge type="info" text="Off" /> {#split-wide-pages}
 TBA
 
-### Rotate wide pages to fit <Badge type="info" text="Off" />
+### Rotate wide pages to fit <Badge type="info" text="Off" /> {#rotate-wide-pages}
 TBA
 
 ## Long strip
@@ -261,7 +261,7 @@ Automatically detects blank space around images and crops them for better readab
 ### Split wide pages <Badge type="info" text="Off" /> {#split-wide-longstrip}
 TBA
 
-### Rotate wide pages to fit <Badge type="info" text="Off" />
+### Rotate wide pages to fit <Badge type="info" text="Off" /> {#rotate-wide-longstrip}
 TBA
 
 ### Double tap to zoom <Badge type="info" text="On" />
