@@ -124,8 +124,6 @@ Skips over chapters detected as duplicates.
 ### Always show chapter transition <Badge type="info" text="On" />
 Shows chapter transitions regardless of whether the next chapter is loaded or not.
 
-## Pages
-
 ### Tap zones <Badge type="info" text="Default" /> {#tap-zones-pages}
 
 ::: tabs
@@ -155,6 +153,23 @@ Changes so that the tap zones are flipped vertically.
 == Both
 Changes so that the tap zones are flipped horizontally and vertically.
 :::
+
+### Crop borders <Badge type="info" text="Off" /> {#crop-borders-pages}
+
+:::tabs
+== Off
+![Not cropping borders](/docs/guides/reader-settings/crop-borders_off.webp =512x788)
+== On
+![Cropping borders](/docs/guides/reader-settings/crop-borders_on.webp =512x788)
+:::
+
+### Split wide pages <Badge type="info" text="Off" /> {#split-wide-pages}
+TBA
+
+### Rotate wide pages to fit <Badge type="info" text="Off" /> {#rotate-wide-pages}
+TBA
+
+## Reading - Paged only
 
 ### Scale type <Badge type="info" text="Fit screen" />
 
@@ -186,58 +201,13 @@ Changes so that the tap zones are flipped horizontally and vertically.
 ![Center](/docs/guides/reader-settings/zoom-start-position_center.webp =512x788)
 :::
 
-### Crop borders <Badge type="info" text="Off" /> {#crop-borders-pages}
-
-:::tabs
-== Off
-![Not cropping borders](/docs/guides/reader-settings/crop-borders_off.webp =512x788)
-== On
-![Cropping borders](/docs/guides/reader-settings/crop-borders_on.webp =512x788)
-:::
-
 ### Automatically zoom into wide images <Badge type="info" text="On" />
 TBA
 
 ### Pan wide images <Badge type="info" text="On" />
 TBA
 
-### Split wide pages <Badge type="info" text="Off" /> {#split-wide-pages}
-TBA
-
-### Rotate wide pages to fit <Badge type="info" text="Off" /> {#rotate-wide-pages}
-TBA
-
-## Long strip
-
-### Tap zones <Badge type="info" text="Default" /> {#tap-zones-longstrip}
-
-::: tabs
-== Default
-![Right and Left](/docs/guides/reader-settings/tap-zones_right-and-left.webp =247x600)
-== L shaped
-![L shaped](/docs/guides/reader-settings/tap-zones_l-shaped.webp =247x600)
-== Kindle-ish
-![Kindle-ish](/docs/guides/reader-settings/tap-zones_kindle-ish.webp =247x600)
-== Edge
-![Edge](/docs/guides/reader-settings/tap-zones_edge.webp =247x600)
-== Right and Left
-![Right and Left](/docs/guides/reader-settings/tap-zones_right-and-left.webp =247x600)
-== Disabled
-No tap zones to assist with navigation will be active.
-:::
-
-### Invert tap zones <Badge type="info" text="None" /> {#invert-tap-zones-longstrip}
-
-::: tabs
-== None
-TBA
-== Horizontal
-TBA
-== Vertical
-TBA
-== Both
-TBA
-:::
+## Reading - Long strip only
 
 ### Side padding <Badge type="info" text="None" />
 Adds the specified padding to the left and right of the screen.
@@ -254,15 +224,6 @@ TBA
 == Lowest
 TBA
 :::
-
-### Crop borders <Badge type="info" text="Off" /> {#crop-borders-longstrip}
-Automatically detects blank space around images and crops them for better readability.
-
-### Split wide pages <Badge type="info" text="Off" /> {#split-wide-longstrip}
-TBA
-
-### Rotate wide pages to fit <Badge type="info" text="Off" /> {#rotate-wide-longstrip}
-TBA
 
 ### Double tap to zoom <Badge type="info" text="On" />
 Zooms into the image on double tap.
