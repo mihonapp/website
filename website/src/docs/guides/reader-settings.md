@@ -44,11 +44,11 @@ Double tap animation speed changes the speed in which the zoom happens when doub
 
 ::: tabs
 == No animation
-![No Animation](/docs/guides/reader-settings/animation-speed_off.gif =288x618)
+![No Animation](/docs/guides/reader-settings/animation-speed_off.webp =288x618)
 == Normal
-![Normal](/docs/guides/reader-settings/animation-speed_normal.gif =288x618)
+![Normal](/docs/guides/reader-settings/animation-speed_normal.webp =288x618)
 == Fast
-![Fast](/docs/guides/reader-settings/animation-speed_fast.gif =288x618)
+![Fast](/docs/guides/reader-settings/animation-speed_fast.webp =288x618)
 :::
 
 ### Show reading mode <Badge type="info" text="On" />
