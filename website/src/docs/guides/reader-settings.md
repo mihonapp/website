@@ -44,25 +44,18 @@ Double tap animation speed changes the speed in which the zoom happens when doub
 
 ::: tabs
 == No animation
-TBA
+![No Animation](/docs/guides/reader-settings/animation-speed_off.webp =288x618)
 == Normal
-TBA
+![Normal](/docs/guides/reader-settings/animation-speed_normal.webp =288x618)
 == Fast
-TBA
+![Fast](/docs/guides/reader-settings/animation-speed_fast.webp =288x618)
 :::
 
 ### Show reading mode <Badge type="info" text="On" />
-Briefly show current mode when reader is opened
+Briefly show the current reading mode when the reader is opened.
 
 ### Show tap zones overlay <Badge type="info" text="Off" />
-TBA
-
-### 32-bit color <Badge type="info" text="Off" />
-This setting decodes images in `ARGB888` format to allow the reader to display more colors.
-
-::: warning
-This setting will only show up on devices running **Android 8.0** or higher.
-:::
+Briefly shows an overlay for the current tap zones when reader is opened.
 
 ### Animate page transitions <Badge type="info" text="On" />
 This setting applies a smooth transition when tapping to change page.
@@ -102,32 +95,34 @@ Automatically sets the color based on the content of your page.
 :::
 
 ### Fullscreen <Badge type="info" text="On" />
-TBA
+Allows app elements to extend to the edges of the screen, including the status and navigation bars.
 
 ### Show content in cutout area <Badge type="info" text="On" />
-TBA
+Displays reader content in the camera cutout area, maximizing the use of the entire screen.
 
 ### Keep screen on <Badge type="info" text="On" />
-TBA
+Keeps the screen from going to sleep.
 
 ### Show page number <Badge type="info" text="On" />
-TBA
+Shows the current page number at the bottom of the screen.
+
+## E-ink
+### Flash on page change <Badge type="info" text="Off" />
+Flashes the screen on page change to reduce ghosting on E-ink displays.
 
 ## Reading
 
 ### Skip chapters marked read <Badge type="info" text="Off" />
-TBA
+Skips over already read chapters while reading.
 
 ### Skip filtered chapters <Badge type="info" text="On" />
-TBA
+Skips over filtered chapters while reading.
 
 ### Skip duplicate chapters <Badge type="info" text="Off" />
-TBA
+Skips over chapters detected as duplicates.
 
 ### Always show chapter transition <Badge type="info" text="On" />
-TBA
-
-## Pages
+Shows chapter transitions regardless of whether the next chapter is loaded or not.
 
 ### Tap zones <Badge type="info" text="Default" /> {#tap-zones-pages}
 
@@ -159,6 +154,23 @@ Changes so that the tap zones are flipped vertically.
 Changes so that the tap zones are flipped horizontally and vertically.
 :::
 
+### Crop borders <Badge type="info" text="Off" /> {#crop-borders-pages}
+
+:::tabs
+== Off
+![Not cropping borders](/docs/guides/reader-settings/crop-borders_off.webp =512x788)
+== On
+![Cropping borders](/docs/guides/reader-settings/crop-borders_on.webp =512x788)
+:::
+
+### Split wide pages <Badge type="info" text="Off" /> {#split-wide-pages}
+TBA
+
+### Rotate wide pages to fit <Badge type="info" text="Off" /> {#rotate-wide-pages}
+TBA
+
+## Reading - Paged only
+
 ### Scale type <Badge type="info" text="Fit screen" />
 
 ::: tabs
@@ -189,61 +201,16 @@ Changes so that the tap zones are flipped horizontally and vertically.
 ![Center](/docs/guides/reader-settings/zoom-start-position_center.webp =512x788)
 :::
 
-### Crop borders <Badge type="info" text="Off" /> {#crop-borders-pages}
-
-:::tabs
-== Off
-![Not cropping borders](/docs/guides/reader-settings/crop-borders_off.webp =512x788)
-== On
-![Cropping borders](/docs/guides/reader-settings/crop-borders_on.webp =512x788)
-:::
-
 ### Automatically zoom into wide images <Badge type="info" text="On" />
 TBA
 
 ### Pan wide images <Badge type="info" text="On" />
 TBA
 
-### Split wide pages <Badge type="info" text="Off" /> {#split-wide-pages}
-TBA
-
-### Rotate wide pages to fit <Badge type="info" text="Off" />
-TBA
-
-## Long strip
-
-### Tap zones <Badge type="info" text="Default" /> {#tap-zones-longstrip}
-
-::: tabs
-== Default
-![Right and Left](/docs/guides/reader-settings/tap-zones_right-and-left.webp =247x600)
-== L shaped
-![L shaped](/docs/guides/reader-settings/tap-zones_l-shaped.webp =247x600)
-== Kindle-ish
-![Kindle-ish](/docs/guides/reader-settings/tap-zones_kindle-ish.webp =247x600)
-== Edge
-![Edge](/docs/guides/reader-settings/tap-zones_edge.webp =247x600)
-== Right and Left
-![Right and Left](/docs/guides/reader-settings/tap-zones_right-and-left.webp =247x600)
-== Disabled
-No tap zones to assist with navigation will be active.
-:::
-
-### Invert tap zones <Badge type="info" text="None" /> {#invert-tap-zones-longstrip}
-
-::: tabs
-== None
-TBA
-== Horizontal
-TBA
-== Vertical
-TBA
-== Both
-TBA
-:::
+## Reading - Long strip only
 
 ### Side padding <Badge type="info" text="None" />
-TBA
+Adds the specified padding to the left and right of the screen.
 
 ### Sensitivity for hiding menu on scroll <Badge type="info" text="Low" />
 
@@ -258,25 +225,29 @@ TBA
 TBA
 :::
 
-### Crop borders <Badge type="info" text="Off" /> {#crop-borders-longstrip}
-TBA
-
-### Split wide pages <Badge type="info" text="Off" /> {#split-wide-longstrip}
-TBA
-
 ### Double tap to zoom <Badge type="info" text="On" />
+Zooms into the image on double tap.
+
+### Disable zoom out <Badge type="info" text="Off" />
 TBA
 
 ## Navigation
-TBA
 
 ### Volume keys <Badge type="info" text="Off" />
-TBA
+Turn pages using the volume keys.
+
+### Invert volume keys <Badge type="info" text="Off" />
+Invert the direction of the volume buttons
 
 ## Actions
 
-### Show on long tap <Badge type="info" text="On" />
-TBA
+### Show actions on long tap <Badge type="info" text="On" />
+Shows the following options on long tap while the reader is open.
+
+- Set as cover
+- Copy to clipboard
+- Share
+- Save
 
 ### Save pages into seperate folders <Badge type="info" text="Off" />
 TBA
