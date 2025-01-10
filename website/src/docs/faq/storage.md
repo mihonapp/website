@@ -118,7 +118,7 @@ If you have an existing `downloads` folder, you should be selecting its parent f
 Note the illustrated example above where `downloads` is a folder _within_ the location being set, and the individual source folders are _within_ that `downloads` folder.
 :::
 
-If you need to change your storage location or have moved files around from outside the app, you may need to force the app to recheck for the files by going to <nav to="advanced"> then **Invalidate downloads index**.
+If you need to change your storage location or have moved files around from outside the app, you may need to force the app to recheck for the files by going to <nav to="advanced"> then **Reindex downloads**.
 
 # Scoped Storage
 
