@@ -40,18 +40,24 @@ Consult the [Cloudflare guide](/docs/guides/troubleshooting/#cloudflare) for sol
 If issues persist, the source might have high **Cloudflare** protection.
 
 ### `Unable to resolve host` / `Connection failed` / `Failed to connect to` / `timeout` / `connection reset`
-These errors indicate connection issues. Possible causes include:
+These errors indicate personal connection issues. Possible causes include:
 
+* Your ISP or router has blocked the site.
+* The site is down.
 * Weak internet connection.
 * App lacks internet access.
-* Your ISP has blocked the site.
-* The site is down.
 
 Try these solutions:
 
+* Switch between networks (WiFi, mobile data) and try connecting with a VPN.
 * Enable **DNS over HTTPS** under <nav to="advanced">.
-* Change network (Wi-Fi, mobile data, VPN).
-* Reboot router.
+  * If this is already enabled, change to a different option, or disable the setting for now.
+  * Remember to restart the application after changing this setting.
+* Check the router's protection settings if possible, otherwise, reboot your router.
+
+::: warning Caution with changing router settings
+If you don't understand how or what to change, contact your ISP & ask for assistance before adjusting any settings.
+:::
 
 ### `java.security.cert.CertPathValidatorException` / `Chain validation failed`
 Validation issue with source's certificate.
