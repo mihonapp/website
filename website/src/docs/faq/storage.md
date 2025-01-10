@@ -9,9 +9,10 @@ description: Understanding Storage Permissions.
 Mihon manages several things within a selected storage location, including automatic backups, chapter downloads, and the Local source.
 
 ::: tip Selecting a storage location
-When choosing a storage location for your "Mihon" folder, keep the following in mind:
-* Create a "Mihon" folder at the top-level of your Internal Storage or External Storage (ex. **/Internal Storage/Mihon/**).
-* **Do not** use your device's "Documents" or "Downloads" folder as your storage location, these system folders restrict & cause issues when Mihon tries to access them.
+Keep the following in mind when setting up your Storage location:
+* Create a "Mihon" folder at the top-level of your storage (ex. `/Internal Storage/Mihon/`).
+* **Do not** use your device's "Documents" or "Downloads" folder as your storage location, system folders restrict & cause issues when Mihon tries to access them.
+* When selecting your storage location during the setup process, give access to the "Mihon" folder, not the folders within.
 :::
 
 The following illustrates the folder structure:
