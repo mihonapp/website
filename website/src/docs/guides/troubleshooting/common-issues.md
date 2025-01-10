@@ -18,7 +18,7 @@ Here's how to tackle common challenges.
 * Else, delete **Mihon** downloads folder on SD card.
 
 ### Storage issues with Android 11+
-See [this](/docs/faq/storage) section of the FAQ to learn how Scoped Storage affects **Mihon** in **Android 11+** and how to fix it.
+See [this section](/docs/faq/storage) of the FAQ to learn how Scoped Storage affects **Mihon** in **Android 11+** and how to fix it.
 
 ### Slow loading
 Sources being slow could stem from site slowness, your internet, or source-imposed rate limits/IP bans.
