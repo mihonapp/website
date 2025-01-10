@@ -56,7 +56,7 @@ Try these solutions:
 * Check the router's protection settings if possible, otherwise, reboot your router.
 
 ::: warning Caution with changing router settings
-If you don't understand how or what to change, contact your ISP & ask for assistance before adjusting any settings.
+If you don't understand how or what to change in your router settings, try the other solutions above instead.
 :::
 
 ### `java.security.cert.CertPathValidatorException` / `Chain validation failed`
