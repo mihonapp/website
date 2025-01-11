@@ -33,7 +33,7 @@ You can copy the following example and edit the details as needed:
 }
 ```
 ::: tip
-If you don't want to create the `details.json` file manually, you can use the android app [Koguma](https://github.com/ghostbear/koguma/releases/latest), or [this website](https://local.mihon.tools).
+If you don't want to create the `details.json` file manually, you can use the android app [Koguma](https://github.com/ghostbear/koguma/releases/latest), [Aniyomi/Mihon Local Manager](https://github.com/Secozzi/AniyomiLocalManager/releases/latest), or [this website](https://local.mihon.tools).
 :::
 
 ## Using a custom cover image
