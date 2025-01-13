@@ -11,7 +11,7 @@ Mihon manages several things within a selected storage location, including autom
 ::: tip Selecting a storage location
 Keep the following in mind when setting up your Storage location:
 * Create a "Mihon" folder at the top-level of your storage (ex. `/Internal Storage/Mihon/`).
-* **Do not** use your device's "Documents" or "Downloads" folder as your storage location, system folders restrict & cause issues when Mihon tries to access them.
+* Do not use your device's system folders (such as "**Documents**" or "**Downloads**"), they are restricted by Android and will cause issues when Mihon tries to access them.
 * When selecting your storage location during the setup process, give access to the "Mihon" folder, not the folders within.
 :::
 
