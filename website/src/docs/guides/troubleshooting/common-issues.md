@@ -11,15 +11,6 @@ Here's how to tackle common challenges.
 
 ## Basic issues
 
-### `Cannot Access SD Card`
-* Temporarily switch download location from SD card, then revert and restart the app.
-* Long filenames trigger this. Android file manager doesn't support **>255** characters.
-  * If known, shorten the file/folder name via computer when SD card is connected.
-* Else, delete **Mihon** downloads folder on SD card.
-
-### Storage issues with Android 11+
-See [this section](/docs/faq/storage) of the FAQ to learn how Scoped Storage affects **Mihon** in **Android 11+** and how to fix it.
-
 ### Slow loading
 Sources being slow could stem from site slowness, your internet, or source-imposed rate limits/IP bans.
 
@@ -30,6 +21,31 @@ Sources being slow could stem from site slowness, your internet, or source-impos
 
 ### App not installed
 Refer to "[Unable to install the app or extensions](/docs/guides/troubleshooting/#app-or-extension-installation-issues)" section.
+
+## Storage access issues
+
+### "Invalid location" error
+This error indicates the selected storage location is invalid, possible reasons include:
+* The app lacks Storage permission.
+* The app lacks access or cannot access your Mihon storage location folder.
+
+Try these solutions:
+* (For Android 9 and below) In the Mihon app info or your Phone Settings, under the Permissions section, grant Mihon storage permission.
+* Grant Mihon access to your desired storage location again.
+  * Navigate to <nav to="data-and-storage">, tap on "Storage location", go to your "Mihon" folder and give Mihon access to that folder.
+* Create a new folder or move your existing "Mihon" outside of your device's system folders.
+  * Do not use your device's system folders (such as Documents or Downloads), they are restricted by Android and will cause issues when Mihon tries to access them.
+  * Refer to the [Storage FAQ](/docs/faq/storage) for more details.
+
+### Storage issues with Android 11+
+See [this section](/docs/faq/storage#scoped-storage) of the FAQ to learn how Scoped Storage affects **Mihon** in **Android 11+** and how to fix it.
+
+### `Cannot Access SD Card`
+* Temporarily change the Storage location from your SD card, then change it back to your original storage location and restart the app.
+* Long filepath/filenames could also trigger this, as Android's file manager doesn't support **>255** characters.
+  * If possible, move your "Mihon" to the top-level of your SD card or shorten your "Mihon" folder name.
+  * Remember to set the Storage location after moving or changing your "Mihon" folder.
+* Else, delete **Mihon** "downloads" folder on the SD card.
 
 ## Advanced errors
 
