@@ -45,7 +45,6 @@ See the [Scoped Storage](/docs/faq/storage#scoped-storage) portion of the FAQ to
 * Long filepath/filenames could also trigger this issue, as Android's file manager doesn't support **>255** characters:
   * If possible, move your "Mihon" to the top-level of your SD card or shorten your "Mihon" folder name.
   * Remember to set the Storage location after moving or changing your "Mihon" folder.
-* If the issue persists, delete **Mihon** "downloads" folder on the SD card.
 
 ## Advanced errors
 
