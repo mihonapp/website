@@ -34,7 +34,7 @@ Try these solutions:
 * Grant Mihon access to your desired storage location again.
   * Navigate to <nav to="data-and-storage">, tap on "**Storage location**", go to your "Mihon" folder and give Mihon access to that folder.
 * Create a new folder or move your existing "Mihon" outside of your device's system folders.
-  * Do not use your device's system folders (such as Documents or Downloads), they are restricted by Android and will cause issues when Mihon tries to access them.
+  * Do not use your device's system folders (such as "**Documents**" or "**Downloads**"), they are restricted by Android and will cause issues when Mihon tries to access them.
   * Refer to the [Storage FAQ](/docs/faq/storage) for more details.
 
 ### Storage issues with Android 11+
