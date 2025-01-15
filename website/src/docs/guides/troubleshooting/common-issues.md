@@ -97,6 +97,11 @@ Storage-related error causes:
 ## HTTP errors
 Encountering HTTP errors? Here's what they mean and how to address them.
 
+### `HTTP Error: 400, 401` - Bad request / Unauthorized
+This error suggests that the request could not be processed:
+* (For Trackers) Unlink and relink your Tracking services in **Mihon Settings > Tracking** to refresh your authorization.
+* Use **WebView** to verify if the page or image can be accessed.
+
 ### `HTTP Error: 403` - Forbidden
 Possible reasons for this error:
 * The selected source has Cloudflare protection. Check the [Cloudflare guide](/docs/guides/troubleshooting/#cloudflare) for solutions.
