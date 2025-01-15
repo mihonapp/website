@@ -112,7 +112,7 @@ This error likely indicates a down source or removed series.
 This error suggests the source temporarily banned your IP due to fast downloads/reads.
 
 ### `HTTP Error: 5xx`
-Errors like `500`, `502`, etc., indicate server-side issues on the source's end.
+Errors like `500`, `502`, `520`, `521`, etc., indicate server-side issues on the source's end.
 
 [Check the source in WebView](/docs/guides/troubleshooting/#accessing-websites-via-webview) to confirm if it's down.
 
