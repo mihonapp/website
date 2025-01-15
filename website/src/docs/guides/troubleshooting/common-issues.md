@@ -110,6 +110,7 @@ This error likely indicates a down source or removed series.
 
 ### `HTTP Error: 429` - Too Many Requests
 This error suggests the source temporarily banned your IP due to fast downloads/reads.
+* Take a break from reading and pause any ongoing downloads. Wait a few hours, then try accessing the content again.
 
 ### `HTTP Error: 5xx`
 Errors like `500`, `502`, `520`, `521`, etc., indicate server-side issues on the source's end.
