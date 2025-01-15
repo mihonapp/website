@@ -105,7 +105,7 @@ Possible reasons for this error:
 
 ### `HTTP Error: 404` - Not Found
 This error likely indicates a down source or removed series.
-* Use **WebView** to verify.
+* Use **WebView** to verify if the page or image still exists.
   > Consider switching to a different source for the series.
 
 ### `HTTP Error: 429` - Too Many Requests
