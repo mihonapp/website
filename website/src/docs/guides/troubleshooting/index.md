@@ -101,7 +101,7 @@ Encountering problems while trying to install app or extension `.apk` files?
 Follow these steps:
 
 1. Install the latest version of [Split APK Installer](https://github.com/Aefyr/SAI/releases) from their GitHub Releases page.
-1. Try installing your `.apk` from Split APK Installer.
+1. Open Split APK Installer, then select and install the `.apk` file.
 
 ::: warning
 Split APK Installer is not supported on Android 13+
