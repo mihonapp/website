@@ -100,15 +100,13 @@ To diagnose abnormal app behavior, record device logs using a [Logcat Reader](ht
 Encountering problems while trying to install app or extension `.apk` files?
 Follow these steps:
 
-1. Install the latest version of [Split APK Installer](https://github.com/Aefyr/SAI/releases) from their GitHub Releases page.
+1. Install the latest version of [Split APK Installer](https://github.com/Aefyr/SAI/releases) from their **GitHub Releases** page.
 1. Open Split APK Installer, then select and install the `.apk` file.
 
-::: warning
-Split APK Installer is not supported on Android 13+
-:::
-
+::: info Common errors:
 **Split APK Installer** helps show better error messages or may even successfully install your `.apk` without issue.
 Common errors include:
+<div class ="custom-details">
 
 ::: details `INSTALL_FAILED_UPDATE_INCOMPATIBLE: Package apk.file_name signatures do not match the previously installed version; ignoring!`
 Seeing this error while installing means the `.apk` already exists on the device, indicating a mismatch in signatures.
@@ -124,3 +122,5 @@ Seeing this error points to a corrupted `.apk` file.
 Seeing this error suggests the `.apk` is incompatible with your device's CPU architecture.
 * Download the universal `.apk` version (i.e. the largest `.apk` file size option on **GitHub**), otherwise download the compatible version for your device.
 :::
+</div>
+
