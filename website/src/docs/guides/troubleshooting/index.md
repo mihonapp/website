@@ -94,7 +94,7 @@ For crash investigations, navigate to <nav to="advanced"> and tap **Dump crash l
 ![Dump crashlogs](/docs/guides/troubleshooting/dump-crash-logs.dark.webp =512x386)
 
 ### Obtaining more logs
-To diagnose abnormal app behavior, record device logs using a [Logcat Reader](https://play.google.com/store/apps/details?id=com.dp.logcatapp).
+To diagnose abnormal app behavior, record device logs using a [Logcat Reader](https://github.com/darshanparajuli/LogcatReader/releases).
 
 ### App or extension installation issues
 Encountering problems while trying to install app or extension `.apk` files?
