@@ -112,12 +112,12 @@ Common errors include:
 
 ::: details `INSTALL_FAILED_UPDATE_INCOMPATIBLE: Package apk.file_name signatures do not match the previously installed version; ignoring!`
 Seeing this error while installing means the `.apk` already exists on the device, indicating a mismatch in signatures.
-* Backup any data, uninstall the existing app or extension, then attempt to install the `.apk` file again.
+* Backup any data, uninstall the existing app or extension from your device, then install the `.apk` file again.
 :::
 
 ::: details `DISPLAY_NAME column is null`
-Seeing this error points to a corrupted `.apk`.
-Try redownloading the `.apk`.
+Seeing this error points to a corrupted `.apk` file.
+* Try re-downloading the `.apk`.
 :::
 
 ::: details `INSTALL_FAILED_NO_MATCHING_ABIS`
