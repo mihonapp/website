@@ -100,7 +100,7 @@ To diagnose abnormal app behavior, record device logs using a [Logcat Reader](ht
 Encountering problems while trying to install app or extension `.apk` files?
 Follow these steps:
 
-1. Install [Split APK Installer](https://play.google.com/store/apps/details?id=com.aefyr.sai) from the Google Play Store.
+1. Install the latest version of [Split APK Installer](https://github.com/Aefyr/SAI/releases) from their GitHub Releases page.
 1. Try installing your `.apk` from Split APK Installer.
 
 ::: warning
