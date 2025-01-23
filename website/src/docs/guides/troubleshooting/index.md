@@ -121,6 +121,6 @@ Seeing this error points to a corrupted `.apk` file.
 :::
 
 ::: details `INSTALL_FAILED_NO_MATCHING_ABIS`
-Seeing this error suggests the `.apk` is incompatible with your CPU architecture.
-Obtain the appropriate version or a universal `.apk` (i.e. the option with largest file size on GitHub).
+Seeing this error suggests the `.apk` is incompatible with your device's CPU architecture.
+* Download the universal `.apk` version (i.e. the largest `.apk` file size option on **GitHub**), otherwise download the compatible version for your device.
 :::
