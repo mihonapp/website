@@ -97,6 +97,11 @@ Storage-related error causes:
 ## HTTP errors
 Encountering HTTP errors? Here's what they mean and how to address them.
 
+### `HTTP Error: 400, 401` - Bad request / Unauthorized
+This error suggests that the request could not be processed:
+* (For Trackers) Go to <nav to="tracking">, unlink and relink the tracking service to refresh the authorization.
+* Use **WebView** to verify if the page or image can be accessed.
+
 ### `HTTP Error: 403` - Forbidden
 Possible reasons for this error:
 * The selected source has Cloudflare protection. Check the [Cloudflare guide](/docs/guides/troubleshooting/#cloudflare) for solutions.
@@ -105,14 +110,15 @@ Possible reasons for this error:
 
 ### `HTTP Error: 404` - Not Found
 This error likely indicates a down source or removed series.
-* Use **WebView** to verify.
+* Use **WebView** to verify if the page or image still exists.
   > Consider switching to a different source for the series.
 
 ### `HTTP Error: 429` - Too Many Requests
 This error suggests the source temporarily banned your IP due to fast downloads/reads.
+* Take a break from reading and pause any ongoing downloads. Wait a few hours, then try accessing the content again.
 
 ### `HTTP Error: 5xx`
-Errors like `500`, `502`, etc., indicate server-side issues on the source's end.
+Errors like `500`, `502`, `520`, `521`, etc., indicate server-side issues on the source's end.
 
 [Check the source in WebView](/docs/guides/troubleshooting/#accessing-websites-via-webview) to confirm if it's down.
 
