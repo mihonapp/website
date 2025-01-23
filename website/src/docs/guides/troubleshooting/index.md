@@ -110,9 +110,9 @@ Split APK Installer is not supported on Android 13+
 **Split APK Installer** helps show better error messages or may even successfully install your `.apk` without issue.
 Common errors include:
 
-::: details `INSTALL_FAILED_UPDATE_INCOMPATIBLE: Package app.mihon signatures do not match the previously installed version; ignoring!`
-Seeing this error while installing the `.apk` over an existing **F-Droid** build indicates a mismatch in signatures.
-Data backup, uninstall, and fresh installation are required.
+::: details `INSTALL_FAILED_UPDATE_INCOMPATIBLE: Package apk.file_name signatures do not match the previously installed version; ignoring!`
+Seeing this error while installing means the `.apk` already exists on the device, indicating a mismatch in signatures.
+* Backup any data, uninstall the existing app or extension, then attempt to install the `.apk` file again.
 :::
 
 ::: details `DISPLAY_NAME column is null`
