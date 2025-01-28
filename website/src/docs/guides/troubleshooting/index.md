@@ -123,4 +123,3 @@ Seeing this error suggests the `.apk` is incompatible with your device's CPU arc
 * Download the universal `.apk` version (i.e. the largest `.apk` file size option on **GitHub**), otherwise download the compatible version for your device.
 :::
 </div>
-
