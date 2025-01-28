@@ -94,33 +94,32 @@ For crash investigations, navigate to <nav to="advanced"> and tap **Dump crash l
 ![Dump crashlogs](/docs/guides/troubleshooting/dump-crash-logs.dark.webp =512x386)
 
 ### Obtaining more logs
-To diagnose abnormal app behavior, record device logs using a [Logcat Reader](https://play.google.com/store/apps/details?id=com.dp.logcatapp).
+To diagnose abnormal app behavior, record device logs using a [Logcat Reader](https://github.com/darshanparajuli/LogcatReader/releases).
 
 ### App or extension installation issues
 Encountering problems while trying to install app or extension `.apk` files?
 Follow these steps:
 
-1. Install [Split APK Installer](https://play.google.com/store/apps/details?id=com.aefyr.sai) from the Google Play Store.
-1. Try installing your `.apk` from Split APK Installer.
+1. Install the latest version of [Split APK Installer](https://github.com/Aefyr/SAI/releases) from their **GitHub Releases** page.
+1. Open Split APK Installer, then select and install the `.apk` file.
 
-::: warning
-Split APK Installer is not supported on Android 13+
-:::
-
+::: info Common errors:
 **Split APK Installer** helps show better error messages or may even successfully install your `.apk` without issue.
 Common errors include:
+<div class ="custom-details">
 
-::: details `INSTALL_FAILED_UPDATE_INCOMPATIBLE: Package app.mihon signatures do not match the previously installed version; ignoring!`
-Seeing this error while installing the `.apk` over an existing **F-Droid** build indicates a mismatch in signatures.
-Data backup, uninstall, and fresh installation are required.
+::: details `INSTALL_FAILED_UPDATE_INCOMPATIBLE: Package apk.file_name signatures do not match the previously installed version; ignoring!`
+Seeing this error while installing means the `.apk` already exists on the device, indicating a mismatch in signatures.
+* Backup any data, uninstall the existing app or extension from your device, then install the `.apk` file again.
 :::
 
 ::: details `DISPLAY_NAME column is null`
-Seeing this error points to a corrupted `.apk`.
-Try redownloading the `.apk`.
+Seeing this error points to a corrupted `.apk` file.
+* Try re-downloading the `.apk`.
 :::
 
 ::: details `INSTALL_FAILED_NO_MATCHING_ABIS`
-Seeing this error suggests the `.apk` is incompatible with your CPU architecture.
-Obtain the appropriate version or a universal `.apk` (i.e. the option with largest file size on GitHub).
+Seeing this error suggests the `.apk` is incompatible with your device's CPU architecture.
+* Download the universal `.apk` version (i.e. the largest `.apk` file size option on **GitHub**), otherwise download the compatible version for your device.
 :::
+</div>
