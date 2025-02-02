@@ -3,5 +3,5 @@ contact_links:
     url: https://github.com/mihonapp/mihon/issues/new/choose
     about: Issues and requests about the app itself should be opened in the Mihon repository instead
   - name: 🖥️ Website
-    url: https://mihon.app/help/
+    url: https://mihon.app/docs/guides/getting-started
     about: Guides, troubleshooting, and answers to common questions
