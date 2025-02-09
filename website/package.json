@@ -3,7 +3,7 @@
   "type": "module",
   "version": "3.0.0",
   "private": true,
-  "packageManager": "pnpm@9.14.2",
+  "packageManager": "pnpm@10.2.1",
   "description": "Official website for the Mihon app.",
   "license": "MPL-2.0",
   "repository": {
