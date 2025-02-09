@@ -14,7 +14,7 @@
     "url": "https://github.com/mihonapp/website/issues"
   },
   "engines": {
-    "node": ">=20",
+    "node": ">=22",
     "pnpm": ">=10"
   },
   "scripts": {
