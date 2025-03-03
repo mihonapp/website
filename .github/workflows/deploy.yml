@@ -6,7 +6,7 @@ on:
         branches:
             - main
     repository_dispatch:
-        types: [new_app_version]
+        types: [app_release]
 
 env:
     VITE_BASE: /
