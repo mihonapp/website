@@ -39,12 +39,10 @@ This can lead to stalled updates and downloads, extending the time needed to com
 1. If the warning persists, create another category for infrequently updated entries (such as monthly series, on hiatus), and only include the more frequently updated reading category.
 
 
-## Why aren't library updates working?
-Some Android skins (e.g., **MIUI**) aggressively save battery, potentially shutting down apps in the background.
-
-Whitelist **Mihon** from your battery saver by going to <nav to="advanced"> and tapping **Disable battery optimization**.
-
-If unsuccessful, refer to [Don't Kill My App](https://dontkillmyapp.com/) for how to disable specific battery-saving options for your device.
+## Why aren't library updates working in the background?
+Some Android skins (e.g., **MIUI**) aggressively save battery & limit performance, potentially shutting down apps in the background.
+* Whitelist **Mihon** from your battery saver by going to <nav to="advanced"> and tapping **Disable battery optimization**.
+* If the issue still occurs, refer to [Don't Kill My App](https://dontkillmyapp.com/) for steps on disabling specific battery-saving options for your device's brand.
 
 ## How can I see the number of downloaded chapters?
 Badges can be enabled by navigating to <nav to="main_library">, then going to **Filter** and clicking the **Display** tab.
