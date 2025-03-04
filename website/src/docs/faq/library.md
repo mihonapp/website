@@ -29,15 +29,14 @@ For more information, check out the [Smart Updates](/docs/faq/updates/smart) and
 ## Why am I being warned about bulk updates and downloads?
 **Mihon** provides a reminder when updating multiple titles or bulk downloading chapters, since excessive requests may trigger a source's anti-bot measures.
 This can lead to stalled updates and downloads, extending the time needed to complete your requests, which also impacts your device's battery life.
-### To mitigate these concerns:
+### To mitigate these concerns
 * In <nav to="downloads">, enable "**Auto download while reading**" to download chapters while reading.
 * If possible, download in small batches at a time to avoid excessive requests to avoid slow or incomplete downloads.
 
-**Splitting up your Library into categories**
+#### Splitting up your Library into categories
 1. Go to <nav to="library">, and create categories to segment your library ("Reading", "Plan to Read", "Completed", etc.).
 1. Under the **Global update** settings, tap on **Categories** & select individual categories such as "Reading" to be included.
 1. If the warning persists, create another category for infrequently updated entries (such as monthly series, on hiatus), and only include the more frequently updated reading category.
-
 
 ## Why aren't library updates working in the background?
 Some Android skins (e.g., **MIUI**) aggressively save battery & limit performance, potentially shutting down apps in the background.
