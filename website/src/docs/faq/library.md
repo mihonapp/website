@@ -20,7 +20,7 @@ To manage entries with infrequent or no updates, consider using categories and e
 
 We recommend using the default settings and prioritizing unread chapters for reading.
 
-If you wish to disable the notification about skipped items, you can do so at <nav to="advanced"> and then **Manage notifications** (doing so requires Android 8 or above).
+
 
 ## Why am I warned about large bulk updates and downloads?
 Excessive server load may trigger anti-**Mihon** measures from sources. See the previous question for more context. Long-running update checks and downloads may also impact your device's battery life.
