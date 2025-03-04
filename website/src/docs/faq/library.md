@@ -18,7 +18,7 @@ The app's default behavior is to skip updates for entries that meet the followin
 This strategy helps reduce unnecessary requests which may lead to sources implementing measures against **Mihon** or your extensions.
 * We recommend to prioritize reading your unread chapters, and letting **Mihon** update the library by itself to better adapt & predict chapter releases over time.
 
-:::info TIP
+:::tip
 If an entry has infrequent updates or no updates:
 * Manually update the individual entry if you know there's a new chapter for it.
 * Move the entry into a separate category, and exclude the category from your Global Updates.
@@ -26,14 +26,18 @@ If an entry has infrequent updates or no updates:
 
 For more information, check out the [Smart Updates](/docs/faq/updates/smart) and [Upcoming Calendar](/docs/faq/updates/upcoming) pages.
 
-## Why am I warned about large bulk updates and downloads?
-Excessive server load may trigger anti-**Mihon** measures from sources. See the previous question for more context. Long-running update checks and downloads may also impact your device's battery life.
+## Why am I being warned about bulk updates and downloads?
+**Mihon** provides a reminder when updating multiple titles or bulk downloading chapters, since excessive requests may trigger a source's anti-bot measures.
+This can lead to stalled updates and downloads, extending the time needed to complete your requests, which also impacts your device's battery life.
+### To mitigate these concerns:
+* In <nav to="downloads">, enable "**Auto download while reading**" to download chapters while reading.
+* If possible, download in small batches at a time to avoid excessive requests to avoid slow or incomplete downloads.
 
-To mitigate these concerns:
+**Splitting up your Library into categories**
+1. Go to <nav to="library">, and create categories to segment your library ("Reading", "Plan to Read", "Completed", etc.).
+1. Under the **Global update** settings, tap on **Categories** & select individual categories such as "Reading" to be included.
+1. If the warning persists, create another category for infrequently updated entries (such as monthly series, on hiatus), and only include the more frequently updated reading category.
 
-* Use categories to segment your library ("Reading", "Plan to Read", "Completed", etc.).
-* Update only the Reading category by navigating to <nav to="library">, then tap **Categories** under **Global update**.
-* If the warning persists, create a new category for infrequently updated entries (like monthly series or those on hiatus) and set global updates to target the more frequently updated reading category.
 
 ## Why aren't library updates working?
 Some Android skins (e.g., **MIUI**) aggressively save battery, potentially shutting down apps in the background.
