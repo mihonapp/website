@@ -35,7 +35,7 @@ This can lead to stalled updates and downloads, extending the time needed to com
 
 #### Splitting up your Library into categories
 1. Go to <nav to="library">, and create categories to segment your library ("Reading", "Plan to Read", "Completed", etc.).
-1. Under the **Global update** settings, tap on **Categories** & select individual categories such as "Reading" to be included.
+1. Under the **Global update** settings, tap on **Categories** and select individual categories such as "Reading" to be included.
 1. If the warning persists, create another category for infrequently updated entries (such as monthly series, on hiatus), and only include the more frequently updated reading category.
 
 ## Why aren't library updates working in the background?
