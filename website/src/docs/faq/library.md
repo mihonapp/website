@@ -7,20 +7,24 @@ description: Frequently Asked Questions about the Library.
 # Library
 Frequently Asked Questions about the Library.
 
-## Why is Global Update skipping entries?
+## Why is my Global Update skipping entries?
 The app's default behavior is to skip updates for entries that meet the following criteria:
 
-* Have unread chapters
-* Haven't been initiated
-* Carry a "**Completed**" status
-* Isn't expected to have new chapters yet
+1. Have unread chapters
+1. Hasn't been started
+1. Marked with a "**Completed**" status
+1. Isn't predicted to receive new chapters yet
 
-This strategy prevents unnecessary load which may lead to sources implementing measures against **Mihon**.
-To manage entries with infrequent or no updates, consider using categories and excluding them from updates.
+This strategy helps reduce unnecessary requests which may lead to sources implementing measures against **Mihon** or your extensions.
+* We recommend to prioritize reading your unread chapters, and letting **Mihon** update the library by itself to better adapt & predict chapter releases over time.
 
-We recommend using the default settings and prioritizing unread chapters for reading.
+:::info TIP
+If an entry has infrequent updates or no updates:
+* Manually update the individual entry if you know there's a new chapter for it.
+* Move the entry into a separate category, and exclude the category from your Global Updates.
+:::
 
-
+For more information, check out the [Smart Updates](/docs/faq/updates/smart) and [Upcoming Calendar](/docs/faq/updates/upcoming) pages.
 
 ## Why am I warned about large bulk updates and downloads?
 Excessive server load may trigger anti-**Mihon** measures from sources. See the previous question for more context. Long-running update checks and downloads may also impact your device's battery life.
