@@ -8,6 +8,10 @@ on:
     repository_dispatch:
         types: [app_release]
 
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
 env:
     VITE_BASE: /
     VITE_HOSTNAME: https://mihon.app
