@@ -9,8 +9,9 @@ function renderMarkdown(string: string | null | undefined) {
   const body = string ?? 'No changelog provided.'
   const flavoredString = body
     .split(/---\r\n\r\n### Checksums|---\r\n\r\nMD5/)[0]
-    .replace(/(?<=\(|(, ))@(.*?)(?=\)|(, ))/g, '[@$2](https://github.com/$2)')
-    .replace(/#(\d+)/g, '[#$1](https://github.com/mihonapp/mihon/issues/$1)')
+    .replace(/(?<=\(|(, ))@(.*?)(?=\)|(, ))/g, '[@$2](https://github.com/$2)') // username
+    .replace(/(?<=\(|(, ))([0-9a-f]{7})(?=\)|(, ))/g, '[$2](https://github.com/mihonapp/mihon/commit/$2)') // git hash
+    .replace(/#(\d+)/g, '[#$1](https://github.com/mihonapp/mihon/pull/$1)') // pull request
     .replace(/^Check out the .*past release notes.* if you're.*$/m, '')
     .replace(/https:\/\/github.com\/mihonapp\/mihon\/releases\/tag\/(.*)/g, '#$1')
     .trim()
