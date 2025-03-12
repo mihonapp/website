@@ -12,7 +12,7 @@ const md = new MarkdownIt()
 const changelog = computed(() => {
   const flavoredString = (release[type.value].body ?? '')
     .replace(/(?<=\(|(, ))@(.*?)(?=\)|(, ))/g, '[@$2](https://github.com/$2)') // username
-    .replace(/(?<=\(|(, ))([0-9a-f]{7})(?=\)|(, ))/g, '[$2](https://github.com/mihonapp/mihon/commit/$2)') // git hash
+    .replace(/\b([0-9a-f]{7})\b/g, '[$1](https://github.com/mihonapp/mihon/commit/$1)') // git hash
     .replace(/#(\d+)/g, '[#$1](https://github.com/mihonapp/mihon/pull/$1)') // pull request
     .replace('https://github.com/mihonapp/mihon/releases', '/changelogs/')
 
