@@ -26,7 +26,7 @@ customMetaTitle: Komikku
 
 features:
   - title: Website Suggestions
-    details: Show suggestions / recommendations for current entry from its own website, support all sources.
+    details: Show suggestions and recommendations for the current entry from its own website, supports all sources.
     icon: 📚
   - title: Fast Browsing
     details: Super fast Browsing / Global Search (for whom with large database experiencing slow loading).
