@@ -24,6 +24,10 @@ features:
     details: Takes the best from J2K and enhances it
     icon: <img src="/forks/logo-yokai.webp" alt="Yokai Logo" height="32" width="32">
     link: /forks/Yokai/
+  - title: Komikku
+    details: A fork with features from Sy and Mihon plus added personal flair.
+    icon: <img src="/forks/logo-komikku.webp" alt="Komikku Logo" height="32" width="32">
+    link: /forks/Komikku/
 ---
 
 <script setup>
