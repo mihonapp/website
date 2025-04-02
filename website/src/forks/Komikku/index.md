@@ -35,7 +35,7 @@ features:
     details: Hides your <b>things</b> from <i>nosy</i> people.
     icon: 🕵🏻‍♂️
   - title: Custom Theme
-    details: Unleash your creativity with a fully customizable theme (also come with colorful presets) for endless color lovers.
+    details: Unleash your creativity with a fully customizable theme (also comes with colorful presets) for endless color lovers.
     icon: 🌈
 
 theme: "#FF5555"
