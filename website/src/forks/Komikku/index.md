@@ -8,7 +8,7 @@ pageClass: page-komikku
 
 hero:
   name: Komikku
-  text: Features packed
+  text: Feature-packed
   tagline: A fork with features from Sy and Mihon plus added personal flair.
   image: /forks/logo-komikku.webp
   actions:
