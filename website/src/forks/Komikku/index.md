@@ -29,7 +29,7 @@ features:
     details: Show suggestions and recommendations for the current entry from its own website, supports all sources.
     icon: 📚
   - title: Fast Browsing
-    details: Super fast Browsing / Global Search (for whom with large database experiencing slow loading).
+    details: Super fast Browsing and Global Search (for whom with large database experiencing slow loading).
     icon: 🏎️
   - title: Hidden Categories
     details: Hide yours <b>things</b> from <i>nosy</i> people.
