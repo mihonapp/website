@@ -32,7 +32,7 @@ features:
     details: Super fast Browsing and Global Search (for whom with large database experiencing slow loading).
     icon: 🏎️
   - title: Hidden Categories
-    details: Hide yours <b>things</b> from <i>nosy</i> people.
+    details: Hides your <b>things</b> from <i>nosy</i> people.
     icon: 🕵🏻‍♂️
   - title: Custom Theme
     details: Unleash your creativity with a fully customizable theme (also come with colorful presets) for endless color lovers.
