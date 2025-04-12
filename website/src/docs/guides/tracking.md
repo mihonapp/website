@@ -65,10 +65,6 @@ If you cannot find a series by name, you can look it up on MyAnimeList and then 
 
 You can also search for a series on your MAL profile list by searching in the following format: `my:<series name>`.
 
-::: warning For your information
-Related GitHub issue: [#65](https://git.mihon.tech/tachiyomi/tachiyomi/issues/65)
-:::
-
 ### Finding tracked/untracked series in your library
 Go to <nav to="main_library">, then **Filter (top right) -> Filter tab** then **Toggle Tracked**.
 If you are logged into more than one tracker, toggle the tracker you want to include or exclude.
