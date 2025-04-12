@@ -5,7 +5,9 @@ description: Tracking helps track your library with different online services.
 ---
 
 # Tracking
-Tracking helps you automatically send read chapters to supported trackers, so you can keep track of what and when you read it online.
+Mihon supports various tracking services to help you automatically update your tracking details such as read chapters, scoring, start & finish dates, etc.
+
+You can link supported tracking services in <nav to="tracking">.
 
 ## Services
 
