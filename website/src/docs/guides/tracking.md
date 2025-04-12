@@ -5,21 +5,24 @@ description: Tracking helps track your library with different online services.
 ---
 
 # Tracking
-Mihon supports various tracking services to help you automatically update your tracking details such as read chapters, scoring, start & finish dates, etc.
+**Mihon** supports various tracking services to help you automatically update your tracking details such as read chapters, scoring, start & finish dates, etc.
 
-You can link supported tracking services in <nav to="tracking">.
+Link supported tracking services in <nav to="tracking">.
 
 ## Services
 
-[MyAnimeList](https://myanimelist.net/), [AniList](https://anilist.co/), [Kitsu](https://kitsu.app/), [MangaUpdates](https://www.mangaupdates.com/), [Shikimori](https://shikimori.one/), and [Bangumi](https://bangumi.tv/).
+**Mihon** currently supports tracking with [MyAnimeList](https://myanimelist.net/), [AniList](https://anilist.co/), [Kitsu](https://kitsu.app/), [MangaUpdates](https://www.mangaupdates.com/), [Shikimori](https://shikimori.one/), and [Bangumi](https://bangumi.tv/).
 
-- Tracking is manual for each entry.
-- Reading the last page of a chapter marks it as read.
-- Set chapters by tapping or dragging the ticker.
-- Offline progress syncs when online.
-- Start date is auto-set.
-- Completion status auto-updates.
-- Tracking is one-way: **Mihon -> Tracker**.
+* You must add the desired tracker to each title to begin tracking.
+* Track entries privately with supported tracking services (AniList, Kitsu).
+* You can adjust each field in the tracker entry by tapping on it.
+
+:::info Tracker behavior in Mihon
+- Tracking is one-way: **Mihon -> Tracker**
+- Status, Start & Finish date automatically changes when you start & complete a title.
+- After reading the last page of a chapter, or marking a chapter as read, the tracker's progress will update.
+- Offline progress syncs when back online.
+:::
 
 ## Enhanced services
 
