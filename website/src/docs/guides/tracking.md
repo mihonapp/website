@@ -11,7 +11,7 @@ You can link supported tracking services in <nav to="tracking">.
 
 ## Services
 
-[MyAnimeList](https://myanimelist.net/), [AniList](https://anilist.co/), [MangaUpdates](https://www.mangaupdates.com/), [Shikimori](https://shikimori.one/), [Bangumi](https://bangumi.tv/), and [Kitsu](https://kitsu.io/).
+[MyAnimeList](https://myanimelist.net/), [AniList](https://anilist.co/), [Kitsu](https://kitsu.app/), [MangaUpdates](https://www.mangaupdates.com/), [Shikimori](https://shikimori.one/), and [Bangumi](https://bangumi.tv/).
 
 - Tracking is manual for each entry.
 - Reading the last page of a chapter marks it as read.
