@@ -18,10 +18,10 @@ Link supported tracking services in <nav to="tracking">.
 * You can adjust each field in the tracker entry by tapping on it.
 
 :::info Tracker behavior in Mihon
-- Tracking is one-way: **Mihon -> Tracker**
-- Status, Start & Finish date automatically changes when you start & complete a series.
-- After reading the last page of a chapter, or marking a chapter as read, the tracker's progress will update.
-- Offline progress syncs when back online.
+* Tracking is one-way: **Mihon -> Tracker**
+* Status, Start & Finish date automatically changes when you start & complete a series.
+* After reading the last page of a chapter, or marking a chapter as read, the tracker's progress will update.
+* Offline progress syncs when back online.
 :::
 
 ## Enhanced services
@@ -30,10 +30,10 @@ Link supported tracking services in <nav to="tracking">.
 
 ::::tabs
 ==Komga
-- No separate login required.
-- **Komga** series will automatically track.
-- Two-way sync for local chapters.
-- Manually read chapter syncs with delay.
+* No separate login required.
+* **Komga** series will automatically track.
+* Two-way sync for local chapters.
+* Manually read chapter syncs with delay.
 
 > Learn how to set it up on the [Komga](https://komga.org/) website.
 ==Kavita
