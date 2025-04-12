@@ -13,25 +13,25 @@ Link supported tracking services in <nav to="tracking">.
 
 **Mihon** currently supports tracking with [MyAnimeList](https://myanimelist.net/), [AniList](https://anilist.co/), [Kitsu](https://kitsu.app/), [MangaUpdates](https://www.mangaupdates.com/), [Shikimori](https://shikimori.one/), and [Bangumi](https://bangumi.tv/).
 
-* You must add the desired tracker to each title to begin tracking.
+* You must add the desired tracker to each series to begin tracking.
 * Track entries privately with supported tracking services (AniList, Kitsu).
 * You can adjust each field in the tracker entry by tapping on it.
 
 :::info Tracker behavior in Mihon
 - Tracking is one-way: **Mihon -> Tracker**
-- Status, Start & Finish date automatically changes when you start & complete a title.
+- Status, Start & Finish date automatically changes when you start & complete a series.
 - After reading the last page of a chapter, or marking a chapter as read, the tracker's progress will update.
 - Offline progress syncs when back online.
 :::
 
 ## Enhanced services
 
-**Mihon** also supports various self-hosted services with exclusive features between the service & the self-hosted titles.
+**Mihon** also supports various self-hosted services with exclusive features between the service & the self-hosted series.
 
 ::::tabs
 ==Komga
 - No separate login required.
-- **Komga** titles will automatically track.
+- **Komga** series will automatically track.
 - Two-way sync for local chapters.
 - Manually read chapter syncs with delay.
 
