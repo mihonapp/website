@@ -58,13 +58,12 @@ Search with a different title if there is no match.
 :::
 
 ### How do I log in with Kitsu?
-To log in with Kitsu, you need to use your email address as your username.
+* To log in with Kitsu, you need to use your email address as your username.
 
 ### Can't find a series on MyAnimeList?
-If you cannot find a series by name, you can look it up on MyAnimeList and then search for it in **Mihon** using the following format: `id:<id from series URL>`.
-
-You can also search for a series on your MAL profile list by searching in the following format: `my:<series name>`.
+* If you cannot find a series by name, you can look it up on MyAnimeList and then search for it in **Mihon** using the following format: `id:<id from series URL>`.
+* You can also search for a series on your MAL profile list by searching in the following format: `my:<series name>`.
 
 ### Finding tracked/untracked series in your library
-Go to <nav to="main_library">, then **Filter (top right) -> Filter tab** then **Toggle Tracked**.
-If you are logged into more than one tracker, toggle the tracker you want to include or exclude.
+* On your <nav to="main_library"> page, tap the **Filter** button (three-lines icon), then include or exclude **Tracked**.
+* If you are logged into more than one tracker, toggle each tracker you want to include or exclude.
