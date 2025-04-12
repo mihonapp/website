@@ -49,12 +49,12 @@ Link supported tracking services in <nav to="tracking">.
 1. Tap the desired tracker to begin login.
 
 ### How do I set up tracking for each series?
-1. Open the series.
-1. Tap **Tracking**.
+1. Go into the series.
+1. Tap the **Tracking** button.
 1. Tap **Add tracking** for the desired service.
 
 ::: tip
-You can also change the search query if there is no match.
+Search with a different title if there is no match.
 :::
 
 ### How do I log in with Kitsu?
