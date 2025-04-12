@@ -26,14 +26,14 @@ Link supported tracking services in <nav to="tracking">.
 
 ## Enhanced services
 
+**Mihon** also supports various self-hosted services with exclusive features between the service & the self-hosted titles.
+
 ::::tabs
 ==Komga
 - No separate login required.
-- Automatic tracking.
-- Works with **Komga** sources only.
+- **Komga** titles will automatically track.
 - Two-way sync for local chapters.
 - Manually read chapter syncs with delay.
-- Auto-track on library add: <nav to="tracking">.
 
 > Learn how to set it up on the [Komga](https://komga.org/) website.
 ==Kavita
