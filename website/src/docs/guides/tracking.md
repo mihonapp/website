@@ -5,30 +5,35 @@ description: Tracking helps track your library with different online services.
 ---
 
 # Tracking
-Tracking helps you automatically send read chapters to supported trackers, so you can keep track of what and when you read it online.
+**Mihon** supports various tracking services to help you automatically update your tracking details such as read chapters, scoring, start & finish dates, etc.
+
+Link supported tracking services in <nav to="tracking">.
 
 ## Services
 
-[MyAnimeList](https://myanimelist.net/), [AniList](https://anilist.co/), [MangaUpdates](https://www.mangaupdates.com/), [Shikimori](https://shikimori.one/), [Bangumi](https://bangumi.tv/), and [Kitsu](https://kitsu.io/).
+**Mihon** currently supports tracking with [MyAnimeList](https://myanimelist.net/), [AniList](https://anilist.co/), [Kitsu](https://kitsu.app/), [MangaUpdates](https://www.mangaupdates.com/), [Shikimori](https://shikimori.one/), and [Bangumi](https://bangumi.tv/).
 
-- Tracking is manual for each entry.
-- Reading the last page of a chapter marks it as read.
-- Set chapters by tapping or dragging the ticker.
-- Offline progress syncs when online.
-- Start date is auto-set.
-- Completion status auto-updates.
-- Tracking is one-way: **Mihon -> Tracker**.
+* You must add the desired tracker to each series to begin tracking.
+* Track entries privately with supported tracking services (AniList, Kitsu).
+* You can adjust each field in the tracker entry by tapping on it.
+
+:::info Tracker behavior in Mihon
+* Tracking is one-way: **Mihon -> Tracker**
+* Status, Start & Finish date automatically changes when you start & complete a series.
+* After reading the last page of a chapter, or marking a chapter as read, the tracker's progress will update.
+* Offline progress syncs when back online.
+:::
 
 ## Enhanced services
 
+**Mihon** also supports various self-hosted services with exclusive features between the service & the self-hosted series.
+
 ::::tabs
 ==Komga
-- No separate login required.
-- Automatic tracking.
-- Works with **Komga** sources only.
-- Two-way sync for local chapters.
-- Manually read chapter syncs with delay.
-- Auto-track on library add: <nav to="tracking">.
+* No separate login required.
+* **Komga** series will automatically track.
+* Two-way sync for local chapters.
+* Manually read chapter syncs with delay.
 
 > Learn how to set it up on the [Komga](https://komga.org/) website.
 ==Kavita
@@ -44,26 +49,21 @@ Tracking helps you automatically send read chapters to supported trackers, so yo
 1. Tap the desired tracker to begin login.
 
 ### How do I set up tracking for each series?
-1. Open the series.
-1. Tap **Tracking**.
+1. Go into the series.
+1. Tap the **Tracking** button.
 1. Tap **Add tracking** for the desired service.
 
 ::: tip
-You can also change the search query if there is no match.
+Search with a different title if there is no match.
 :::
 
 ### How do I log in with Kitsu?
-To log in with Kitsu, you need to use your email address as your username.
+* To log in with Kitsu, you need to use your email address as your username.
 
 ### Can't find a series on MyAnimeList?
-If you cannot find a series by name, you can look it up on MyAnimeList and then search for it in **Mihon** using the following format: `id:<id from series URL>`.
-
-You can also search for a series on your MAL profile list by searching in the following format: `my:<series name>`.
-
-::: warning For your information
-Related GitHub issue: [#65](https://git.mihon.tech/tachiyomi/tachiyomi/issues/65)
-:::
+* If you cannot find a series by name, you can look it up on MyAnimeList and then search for it in **Mihon** using the following format: `id:<id from series URL>`.
+* You can also search for a series on your MAL profile list by searching in the following format: `my:<series name>`.
 
 ### Finding tracked/untracked series in your library
-Go to <nav to="main_library">, then **Filter (top right) -> Filter tab** then **Toggle Tracked**.
-If you are logged into more than one tracker, toggle the tracker you want to include or exclude.
+* On your <nav to="main_library"> page, tap the **Filter** button (three-lines icon), then include or exclude **Tracked**.
+* If you are logged into more than one tracker, toggle each tracker you want to include or exclude.
