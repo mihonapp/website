@@ -97,8 +97,8 @@ importers:
         specifier: 9.31.0
         version: 9.31.0(eslint@9.15.0)
       feed:
-        specifier: 4.2.2
-        version: 4.2.2
+        specifier: 5.0.1
+        version: 5.0.1
       lint-staged:
         specifier: 15.2.10
         version: 15.2.10
@@ -2173,9 +2173,9 @@ packages:
   fastq@1.17.1:
     resolution: {integrity: sha512-sRVD3lWVIXWg6By68ZN7vho9a1pQcN/WBFaAAsDDFzlJjvoGx0P8z7V1t72grFJfJhu3YPZBuu25f7Kaw2jN1w==}
 
-  feed@4.2.2:
-    resolution: {integrity: sha512-u5/sxGfiMfZNtJ3OvQpXcvotFpYkL0n9u9mM2vkui2nGo8b4wvDkJ8gAkYqbA8QpGyFCv3RK0Z+Iv+9veCS9bQ==}
-    engines: {node: '>=0.4.0'}
+  feed@5.0.1:
+    resolution: {integrity: sha512-kOveKLHucVZ6RI91bdWAts9O0L1N2mGzRGVCDQPRnHh4HmgqLdN66Cp/5dMeJZGn/qnBslWliwX37FEBq8DCIA==}
+    engines: {node: '>=20', pnpm: '>=10'}
 
   fflate@0.7.4:
     resolution: {integrity: sha512-5u2V/CDW15QM1XbbgS+0DfPxVB+jUKhWEKuuFuHncbk3tEEqzmoXL+2KyOFuKGqOnmdIy0/davWF1CkuwtibCw==}
@@ -5937,7 +5937,7 @@ snapshots:
     dependencies:
       reusify: 1.0.4
 
-  feed@4.2.2:
+  feed@5.0.1:
     dependencies:
       xml-js: 1.6.11
 
