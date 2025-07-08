@@ -79,7 +79,7 @@ Follow these steps:
 
 If you encounter difficulties while searching for a specific series, consider the following points:
 
-* Double-check your spelling and try again, as some sources might use **Japanese romanized** titles instead of **English** ones.
+* Double-check your spelling and try again, as some sources might use **Japanese romanized** titles instead of **português** ones.
   > Example: **Boku no Hero Academia** instead of **My Hero Academia**.
 
 * Some sources may use different spellings or wordings for titles.
