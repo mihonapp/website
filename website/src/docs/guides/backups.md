@@ -34,6 +34,7 @@ Backups (with pre-selected items) will contain the following:
 - **App settings**
 - **Extension repos**
 - **Source settings**
+- **Include sensitive settings** - Tracker login tokens (not included by default)
 
 ### What is not included in a backup?
 - **Extensions**
