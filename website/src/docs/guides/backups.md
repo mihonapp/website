@@ -6,7 +6,8 @@ description: Backups helps you prevent losing your library if something happens.
 
 # Backups
 
-Backups in **Mihon** are compatible between different versions of the app.
+Backups can be created to save your library data and app settings.
+You can transfer and restore backup files between devices and [endorsed forks](/forks).
 
 ::: tip How to create a backup
 1. Go to <nav to="data-and-storage">.
