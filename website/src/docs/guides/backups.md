@@ -95,19 +95,18 @@ or [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.
 ## Additional information for forks
 
 ::: warning
-This section explores some extra details regarding [forks](/forks/).
+This section explores some extra details regarding restoring backups from [forks](/forks/).
 :::
 
 All **Mihon** (and **Tachiyomi**) [forks](/forks/) support the `.tachibk`/`.proto.gz` format to backup/restore your library.
 
-In addition, some forks have specific limitations regarding backup restoration:
+### Fork-specific settings
+All forks have fork-specific settings and changes that are saved in their Backups. There are some limitations when restoring fork-specific backups:
+  > For example: [TachiyomiSY](/forks/TachiyomiSY/) has the option to backup/restore saved searches.
+* Forks of forks (such as [TachiyomiJ2K](/forks/TachiyomiJ2K) and [Yōkai](/forks/Yokai/)) could restore some if not all fork-specific settings, but it is not guaranteed.
+* These fork-specific settings will not be restored in **Mihon** and will be lost after restoring.
 
-- All forks have fork-specific settings and changes that might be saved in Backups.
-  Such settings are not restored in **Mihon** and will get lost when creating a new backup.
-  > For Example: [TachiyomiSY](/forks/TachiyomiSY/) has the option to backup/restore saved searches.
-
-  These will **NOT** be restored to **Mihon** or its forks.
-- Only [TachiyomiAZ](/forks/TachiyomiAZ/) supports creating/restoring both legacy `.json` backups and `.proto.gz` backups.
+Only [TachiyomiAZ](/forks/TachiyomiAZ/) supports creating/restoring both legacy `.json` backups and `.proto.gz` backups.
   > Users are recommended to update their `.json` backups to use the improved and efficient `.tachibk`/`.proto.gz` backups.
 
 Be aware of these limitations when dealing with backups in different **Mihon** and **Tachiyomi** forks.
