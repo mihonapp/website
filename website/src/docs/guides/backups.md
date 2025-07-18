@@ -45,14 +45,16 @@ To convert your backups to JSON or to view and edit the information outside of t
 :::
 
 ## Restoring a backup
-Restoring a backup can be done through the "Data and storage" settings.
+Restore a supported backup file in <nav to="data-and-storage"> settings.
 
+::: tip
 To ensure a smooth restoration process, remember to:
 
-1. Log into the Tracking services you previously used.
+1. Log into the [Tracking services](/docs/guides/tracking) you previously used.
 1. Download any extensions you've used in your backup.
 
-Before starting to import the selected backup, the app will remind the user of these.
+The app will list any missing trackers and/or extensions in the Restore screen.
+:::
 
 ### Transferring downloads to a new installation
 You can transfer downloaded series chapters from one version of **Mihon** to another
