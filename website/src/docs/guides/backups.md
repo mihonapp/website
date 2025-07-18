@@ -46,7 +46,7 @@ To convert your backups to JSON or to view and edit the information outside of t
 :::
 
 ## Restoring a backup
-Restore a supported backup file in <nav to="data-and-storage"> settings.
+Restore a compatible backup file in <nav to="data-and-storage">.
 
 ::: tip
 To ensure a smooth restoration process, remember to:
@@ -58,8 +58,10 @@ The app will list any missing trackers and/or extensions in the Restore screen.
 :::
 
 ### Transferring downloads to a new installation
-You can transfer downloaded series chapters from one version of **Mihon** to another
-by correctly specifying the Download Location.
+During the setup or after restoring a backup to **Mihon**:
+1. In <nav to="data-and-storage">, double-check your specified [Storage location](/docs/faq/storage) that **Mihon** has access to.
+1. Transfer or move your previously downloaded chapters into the "downloads" folder of your set Storage location.
+1. In <nav to="advanced">, tap on "Reindex downloads" to rescan your downloaded chapters.
 
 ## Suggestions for backups
 
