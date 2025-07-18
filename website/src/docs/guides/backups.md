@@ -71,7 +71,8 @@ It is highly recommended to enable automatic backups to ensure you can recover i
 ::: tip How to enable automatic backups
 1. Go to <nav to="data-and-storage">.
 1. Set a **backup frequency** to schedule automatic backups.
-This way, you can recover from catastrophic failures.
+* Automatic backup files can be found in your specified [Storage location](/docs/faq/storage)'s "autobackup" folder.
+* In case of an error or issue, this allows you to retain a recent copy of your library data.
 
 ![Automatic Backups](/docs/guides/backups/automatic_backups.light.webp#light =414x402)
 
@@ -83,9 +84,10 @@ Cross device sync in **Mihon** is not currently available, but users can use
 [Autosync for Google Drive](https://play.google.com/store/apps/details?id=com.ttxapps.drivesync)
 in order to sync backup files to Drive automatically with the following steps:
 
-1. Install the app from the link above
-2. Enable [Automatic Backups](/docs/guides/backups#enabling-automatic-backups) and set it to your desired frequency and storage location.
-3. Download the latest backup from Google Drive and restore to whatever device you have
+1. Install the Autosync app from the link above.
+1. Enable [Automatic Backups](/docs/guides/backups#enabling-automatic-backups) and set it to your desired frequency.
+1. In the Autosync app, navigate and select the "autobackup" folder to begin syncing to Google Drive.
+1. On your second device, download the latest backup from Google Drive to restore into **Mihon**.
 
 Users who are familiar with [FolderSync](https://play.google.com/store/apps/details?id=dk.tacit.android.foldersync.lite)
 or [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm) can setup auto sync of their backups similarly.
