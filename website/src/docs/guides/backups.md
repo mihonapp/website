@@ -20,21 +20,25 @@ You can transfer and restore backup files between devices and [endorsed forks](/
 
 ## General backup details
 
-### What's included in a backup?
-- **Titles**
-- **Categories**
-- **Read chapters** for titles in Library
-- **Tracking settings**
-- **Reading history**
-- **Series information**
-  - Author, Artist, Date Added to Library, Selected Viewer, Read Duration, etc.
-- **Extensions** used
-- **Settings** including app settings and source-specific settings
+### What is included in a backup?
+Backups (with pre-selected items) will contain the following:
 
-### What's NOT included in a backup?
-- **Reading history** of titles NOT in library
-- **Downloaded** chapters including [local source](/docs/guides/local-source/) chapters
-- **Custom covers**
+#### Library data:
+- **Library entries**
+- **Chapters** - Chapter data for saved entries
+- **Tracking** - Trackers added to individual saved entries
+- **History** - Read history for saved entries
+- **Categories**
+- **All read entries** - Keeps unsaved entry data (not included in automatic backups)
+#### Settings data:
+- **App settings**
+- **Extension repos**
+- **Source settings**
+
+### What is not included in a backup?
+- **Extensions**
+- **Downloaded chapter files** including [local source](/docs/guides/local-source/) chapters
+- **Custom covers** applied to entries
 
 ::: tip
 To convert your backups to JSON or to view and edit the information outside of the app, you can use [Mihon Backup Viewer](https://github.com/Animeboynz/Mihon-Backup-Viewer).
