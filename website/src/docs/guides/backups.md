@@ -7,7 +7,7 @@ description: Backups helps you prevent losing your library if something happens.
 # Backups
 
 Backups can be created to save your library data and app settings.
-You can transfer and restore backup files between devices and [endorsed forks](/forks).
+You can transfer and restore backup files between devices and [endorsed forks](/forks/).
 
 ::: tip How to create a backup
 1. Go to <nav to="data-and-storage">.
@@ -23,14 +23,14 @@ You can transfer and restore backup files between devices and [endorsed forks](/
 ### What is included in a backup?
 Backups (with pre-selected items) will contain the following:
 
-#### Library data:
+#### Library data
 - **Library entries**
 - **Chapters** - Chapter data for saved entries
 - **Tracking** - Trackers added to individual saved entries
 - **History** - Read history for saved entries
 - **Categories**
 - **All read entries** - Keeps unsaved entry data (not included in automatic backups)
-#### Settings data:
+#### Settings data
 - **App settings**
 - **Extension repos**
 - **Source settings**
@@ -71,8 +71,8 @@ It is highly recommended to enable automatic backups to ensure you can recover i
 ::: tip How to enable automatic backups
 1. Go to <nav to="data-and-storage">.
 1. Set a **backup frequency** to schedule automatic backups.
-* Automatic backup files can be found in your specified [Storage location](/docs/faq/storage)'s "autobackup" folder.
-* In case of an error or issue, this allows you to retain a recent copy of your library data.
+- Automatic backup files can be found in your specified [Storage location](/docs/faq/storage)'s "autobackup" folder.
+- In case of an error or issue, this allows you to retain a recent copy of your library data.
 
 ![Automatic Backups](/docs/guides/backups/automatic_backups.light.webp#light =414x402)
 
@@ -103,8 +103,8 @@ All **Mihon** (and **Tachiyomi**) [forks](/forks/) support the `.tachibk`/`.prot
 ### Fork-specific settings
 All forks have fork-specific settings and changes that are saved in their Backups. There are some limitations when restoring fork-specific backups:
   > For example: [TachiyomiSY](/forks/TachiyomiSY/) has the option to backup/restore saved searches.
-* Forks of forks (such as [TachiyomiJ2K](/forks/TachiyomiJ2K) and [Yōkai](/forks/Yokai/)) could restore some if not all fork-specific settings, but it is not guaranteed.
-* These fork-specific settings will not be restored in **Mihon** and will be lost after restoring.
+- Forks of forks (such as [TachiyomiJ2K](/forks/TachiyomiJ2K/) and [Yōkai](/forks/Yokai/)) could restore some if not all fork-specific settings, but it is not guaranteed.
+- These fork-specific settings will not be restored in **Mihon** and will be lost after restoring.
 
 Only [TachiyomiAZ](/forks/TachiyomiAZ/) supports creating/restoring both legacy `.json` backups and `.proto.gz` backups.
   > Users are recommended to update their `.json` backups to use the improved and efficient `.tachibk`/`.proto.gz` backups.
