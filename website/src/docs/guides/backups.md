@@ -30,6 +30,7 @@ Backups (with pre-selected items) will contain the following:
 - **History** - Read history for saved entries
 - **Categories**
 - **All read entries** - Keeps unsaved entry data (not included in automatic backups)
+
 #### Settings data
 - **App settings**
 - **Extension repos**
