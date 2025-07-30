@@ -65,7 +65,7 @@ Chapter filenames do not need to be changed, as Mihon is able to check multiple 
 Manga and source directory names, however, need to be updated manually if they contain non-ASCII characters.
 Here is an example:
 
-```
+```text
 ./例 ソース (ALL)/最高のマンガ！/Scanlator Name_始まり_182cce.cbz
 ./e4be8b20e382bde383bce382b9 (ALL)/e69c80e9ab98e381aee3839ee383b3e382acefbc81/Scanlator Name_e5a78be381bee3828a_182cce.cbz
 ```
