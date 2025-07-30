@@ -82,6 +82,9 @@ You can refer to the following example:
 Mihon will see three chapters in a single series.
 The path to the folder with images must contain both the series title and the chapter name (as seen above).
 
+Note that this is the same folder structure used by downloads of non-local sources.
+However, the filename format is not required to be the same; for example, Mihon adds a disambiguating hash based on the chapter URL when downloading chapters, but you do not need to do this.
+
 ### Archive files
 
 Archive files such as `ZIP`/`CBZ` are supported but the folder structure inside is not.
