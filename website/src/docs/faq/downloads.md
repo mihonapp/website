@@ -59,3 +59,16 @@ The special characters mentioned above are still replaced with underscores, if p
 
 None of the above considerations affect the way series and chapters are displayed in Mihon, which is based on their metadata rather than filenames.
 Because the local source reads comic metadata files, if present, its functioning is also not affected by filename changes if you convert an external source download directory into a local source directory.
+
+If you need to change the "Disallow non-English filenames" option, you may need to do some manual work to ensure that Mihon can still find your existing downloads.
+Chapter filenames do not need to be changed, as Mihon is able to check multiple options for a chapter filename, and will find the already-downloaded chapters.
+Manga and source directory names, however, need to be updated manually if they contain non-ASCII characters.
+Here is an example:
+
+```
+./例 ソース (ALL)/最高のマンガ！/Scanlator Name_始まり_182cce.cbz
+./e4be8b20e382bde383bce382b9 (ALL)/e69c80e9ab98e381aee3839ee383b3e382acefbc81/Scanlator Name_e5a78be381bee3828a_182cce.cbz
+```
+
+The inability for a device to handle Unicode characters in filenames is a bug.
+Please consider contacting your device or operating system vendor to report this, or consider using a standards-compliant device in future, if possible.
