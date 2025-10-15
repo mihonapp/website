@@ -94,8 +94,8 @@ importers:
         specifier: 17.1.0
         version: 17.1.0(eslint-plugin-import@2.29.1(@typescript-eslint/parser@8.16.0(eslint@9.15.0)(typescript@5.5.4))(eslint@9.15.0))(eslint-plugin-n@17.10.2(eslint@9.15.0))(eslint-plugin-promise@7.1.0(eslint@9.15.0))(eslint@9.15.0)
       eslint-plugin-vue:
-        specifier: 9.31.0
-        version: 9.31.0(eslint@9.15.0)
+        specifier: 10.5.1
+        version: 10.5.1(@stylistic/eslint-plugin@2.7.2(eslint@9.15.0)(typescript@5.5.4))(@typescript-eslint/parser@8.16.0(eslint@9.15.0)(typescript@5.5.4))(eslint@9.15.0)(vue-eslint-parser@9.4.3(eslint@9.15.0))
       feed:
         specifier: 4.2.2
         version: 4.2.2
@@ -2004,6 +2004,7 @@ packages:
   eslint-plugin-markdown@5.1.0:
     resolution: {integrity: sha512-SJeyKko1K6GwI0AN6xeCDToXDkfKZfXcexA6B+O2Wr2btUS9GrC+YgwSyVli5DJnctUHjFXcQ2cqTaAmVoLi2A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: Please use @eslint/markdown instead
     peerDependencies:
       eslint: '>=8'
 
@@ -2067,6 +2068,20 @@ packages:
       eslint: ^9.0.0 || ^8.0.0
     peerDependenciesMeta:
       '@typescript-eslint/eslint-plugin':
+        optional: true
+
+  eslint-plugin-vue@10.5.1:
+    resolution: {integrity: sha512-SbR9ZBUFKgvWAbq3RrdCtWaW0IKm6wwUiApxf3BVTNfqUIo4IQQmreMg2iHFJJ6C/0wss3LXURBJ1OwS/MhFcQ==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    peerDependencies:
+      '@stylistic/eslint-plugin': ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0
+      '@typescript-eslint/parser': ^7.0.0 || ^8.0.0
+      eslint: ^8.57.0 || ^9.0.0
+      vue-eslint-parser: ^10.0.0
+    peerDependenciesMeta:
+      '@stylistic/eslint-plugin':
+        optional: true
+      '@typescript-eslint/parser':
         optional: true
 
   eslint-plugin-vue@9.31.0:
@@ -2928,6 +2943,7 @@ packages:
 
   oniguruma-to-js@0.4.3:
     resolution: {integrity: sha512-X0jWUcAlxORhOqqBREgPMgnshB7ZGYszBNspP+tS9hPD3l13CdaXcHbgImoHUHlrvGx/7AvFEkTRhAGYh+jzjQ==}
+    deprecated: use oniguruma-to-es instead
 
   optionator@0.9.4:
     resolution: {integrity: sha512-6IpQ7mKUxRcZNLIObR0hz7lxsapSSIYNZJwXPGeF0mTVqGKFIXj1DQcMoT22S3ROcLyY/rz0PWaWZ9ayWmad9g==}
@@ -5789,6 +5805,20 @@ snapshots:
       eslint: 9.15.0
     optionalDependencies:
       '@typescript-eslint/eslint-plugin': 8.16.0(@typescript-eslint/parser@8.16.0(eslint@9.15.0)(typescript@5.5.4))(eslint@9.15.0)(typescript@5.5.4)
+
+  eslint-plugin-vue@10.5.1(@stylistic/eslint-plugin@2.7.2(eslint@9.15.0)(typescript@5.5.4))(@typescript-eslint/parser@8.16.0(eslint@9.15.0)(typescript@5.5.4))(eslint@9.15.0)(vue-eslint-parser@9.4.3(eslint@9.15.0)):
+    dependencies:
+      '@eslint-community/eslint-utils': 4.4.0(eslint@9.15.0)
+      eslint: 9.15.0
+      natural-compare: 1.4.0
+      nth-check: 2.1.1
+      postcss-selector-parser: 6.1.2
+      semver: 7.6.3
+      vue-eslint-parser: 9.4.3(eslint@9.15.0)
+      xml-name-validator: 4.0.0
+    optionalDependencies:
+      '@stylistic/eslint-plugin': 2.7.2(eslint@9.15.0)(typescript@5.5.4)
+      '@typescript-eslint/parser': 8.16.0(eslint@9.15.0)(typescript@5.5.4)
 
   eslint-plugin-vue@9.31.0(eslint@9.15.0):
     dependencies:
