@@ -38,6 +38,8 @@ const changelog = computed(() => {
       },
     )
     .replace('https://github.com/mihonapp/mihon/releases', '/changelogs/')
+    .replace(/https:\/\/github.com\/mihonapp\/mihon\/releases\/tag\/(.*)/g, '#$1')
+    .trim()
 
   return md.render(flavoredString)
 })

@@ -15,6 +15,4 @@ const { page } = useData()
 const tag = page.value.params.tag as string
 </script>
 
-# {{ tag }}
-
 <ChangelogByTag :tag="tag" />

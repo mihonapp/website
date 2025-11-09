@@ -39,6 +39,7 @@ function renderMarkdown(string: string | null | undefined) {
         return `\n\n<div class="${cls} custom-block" style="display: contents"><p class="custom-block-title">${title}</p>${inner}</div>\n\n`
       },
     )
+    .replace('https://github.com/mihonapp/mihon/releases', '/changelogs/')
     .replace(/https:\/\/github.com\/mihonapp\/mihon\/releases\/tag\/(.*)/g, '#$1')
     .trim()
 
@@ -50,10 +51,19 @@ const release = computed(() => changelogs.find(r => r.tag_name === tag.value))
 
 <template>
   <div v-if="release">
-    <h2 :id="release!.tag_name">
-      <a :href="release!.html_url" target="_blank">{{ release!.tag_name.substring(1) }}</a>
-      <a class="header-anchor" :href="`#${release!.tag_name}`" :aria-label="`Permalink to &quot;${release!.tag_name}&quot;`" />
-    </h2>
+    <h1 :id="index === 0 ? 'latest' : release.tag_name">
+      <a
+        :href="`/changelogs/${release.tag_name}`"
+      >
+        {{ release.tag_name.substring(1) }}
+      </a>
+      <Badge v-if="index === 0" type="tip" text="Latest" />
+      <a
+        class="header-anchor"
+        :href="index === 0 ? '#latest' : `#${release.tag_name}`"
+        :aria-label="`Permalink to &quot;${release.tag_name}&quot;`"
+      />
+    </h1>
     <time :datetime="release!.published_at!">{{ new Date(release!.published_at!).toLocaleDateString('en', { dateStyle: 'medium' }) }}</time>
     <div v-html="renderMarkdown(release!.body)" />
     <Contributors :body="release!.body!" :author="release!.author.login" :tag="release!.tag_name" />

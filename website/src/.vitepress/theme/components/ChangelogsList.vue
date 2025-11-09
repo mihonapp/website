@@ -37,6 +37,7 @@ function renderMarkdown(string: string | null | undefined) {
       },
     )
     .replace("Check out the [past release notes](https://github.com/mihonapp/mihon/releases) if you’re upgrading from an earlier version. ", "")
+    .replace('https://github.com/mihonapp/mihon/releases', '/changelogs/')
     .replace(/https:\/\/github.com\/mihonapp\/mihon\/releases\/tag\/(.*)/g, '#$1')
     .trim()
 
