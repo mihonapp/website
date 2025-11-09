@@ -59,14 +59,13 @@ function generateMeta(context: TransformContext, hostname: string) {
     addMetaTag('twitter:image', imageUrl)
   }
   else {
-    const url = pageData.filePath.replace('index.md', '').replace('.md', '')
-    const imageUrl = `${url}/__og_image__/og.png`.replace(/\/\//g, '/').replace(/^\//, '')
-    addPropertyTag('og:image', `${hostname}/${imageUrl}`)
+    const imageFinal = `${url.replace(/\/$/, '')}/__og_image__/og.png`
+    addPropertyTag('og:image', imageFinal)
     addPropertyTag('og:image:width', '1200')
     addPropertyTag('og:image:height', '628')
     addPropertyTag('og:image:type', 'image/png')
     addPropertyTag('og:image:alt', pageData.frontmatter.title)
-    addMetaTag('twitter:image', `${hostname}/${imageUrl}`)
+    addMetaTag('twitter:image', imageFinal)
     addMetaTag('twitter:image:width', '1200')
     addMetaTag('twitter:image:height', '628')
     addMetaTag('twitter:image:alt', pageData.frontmatter.title)
