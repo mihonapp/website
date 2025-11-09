@@ -1,6 +1,6 @@
-import { defineLoader } from 'vitepress'
-import { Octokit } from '@octokit/rest'
 import type { GetResponseDataTypeFromEndpointMethod } from '@octokit/types'
+import { Octokit } from '@octokit/rest'
+import { defineLoader } from 'vitepress'
 
 const octokit = new Octokit()
 

@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
-import { type DefaultTheme, useData } from 'vitepress'
+import type { DefaultTheme } from 'vitepress'
+import { useData } from 'vitepress'
+import VPNavScreenMenuGroup from 'vitepress/dist/client/theme-default/components/VPNavScreenMenuGroup.vue'
 
 import VPNavScreenMenuLink from 'vitepress/dist/client/theme-default/components/VPNavScreenMenuLink.vue'
-import VPNavScreenMenuGroup from 'vitepress/dist/client/theme-default/components/VPNavScreenMenuGroup.vue'
+import { computed, onMounted, ref } from 'vue'
 
 import { data as release } from '../data/release.data'
 

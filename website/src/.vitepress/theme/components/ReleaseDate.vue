@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, toRefs } from 'vue'
+import type { AppRelease } from '../data/release.data'
 import moment from 'moment'
-import { type AppRelease, data as release } from '../data/release.data'
+import { computed, onMounted, ref, toRefs } from 'vue'
+import { data as release } from '../data/release.data'
 
 const props = defineProps<{ type: keyof AppRelease }>()
 const { type } = toRefs(props)

@@ -6,10 +6,10 @@ export interface ChangelogFormatOptions {
 
 function convertCallouts(md: MarkdownIt, input: string): string {
   return input.replace(
-    /^> \[!(TIP|NOTE|IMPORTANT|WARNING|CAUTION)]\r?\n((?:^>.*\r?\n?)+)/gim,
+    /^> \[!(TIP|NOTE|IMPORTANT|WARNING|CAUTION)\]\r?\n((?:^>.*\r?\n?)+)/gim,
     (_match, typeRaw: string, block: string) => {
       const type = (typeRaw as string).toUpperCase()
-      const map: Record<string, { cls: string; title: string }> = {
+      const map: Record<string, { cls: string, title: string }> = {
         TIP: { cls: 'tip', title: 'TIP' },
         NOTE: { cls: 'info', title: 'INFO' },
         IMPORTANT: { cls: 'warning', title: 'WARNING' },

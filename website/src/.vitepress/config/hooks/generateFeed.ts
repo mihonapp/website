@@ -1,7 +1,9 @@
-import path from 'node:path'
+import type { Item } from 'feed'
+import type { SiteConfig } from 'vitepress'
 import { writeFileSync } from 'node:fs'
-import { Feed, type Item } from 'feed'
-import { type SiteConfig, createContentLoader } from 'vitepress'
+import path from 'node:path'
+import { Feed } from 'feed'
+import { createContentLoader } from 'vitepress'
 
 async function generateFeed(config: SiteConfig, hostname: string) {
   const feed = new Feed({

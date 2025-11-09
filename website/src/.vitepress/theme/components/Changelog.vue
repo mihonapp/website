@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { computed, toRefs } from 'vue'
+import type { AppRelease } from '../data/release.data'
 import MarkdownIt from 'markdown-it'
-import { type AppRelease, data as release } from '../data/release.data'
-import Contributors from './Contributors.vue'
+import { computed, toRefs } from 'vue'
+import { data as release } from '../data/release.data'
 import { formatChangelog } from '../utils/formatChangelog'
+import Contributors from './Contributors.vue'
 
 const props = defineProps<{ type: keyof AppRelease }>()
 const { type } = toRefs(props)
