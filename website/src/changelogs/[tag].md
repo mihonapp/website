@@ -6,7 +6,9 @@ editLink: false
 prev:
   text: 'Changelogs'
   link: '/changelogs'
-next: false
+next:
+  text: 'Download'
+  link: '/download'
 ---
 
 <script setup lang="ts">
