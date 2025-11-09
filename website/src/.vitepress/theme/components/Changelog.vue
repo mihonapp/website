@@ -28,7 +28,7 @@ const changelog = computed(() => formatChangelog(md, release[type.value].body))
   </div>
   <div class="fullChangelog">
     <p>
-      View the full release
+      View the release page
       <a :href="`/changelogs/${release[type].tag_name}`">
         here
       </a>
