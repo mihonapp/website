@@ -20,6 +20,11 @@ $themeColor = #818cf8
   --vp-c-brand-dimm: alpha($themeColor, 0.08)
 }
 
+// Rounded corners for content images inserted via HTML (our converted images)
+.vp-doc img[loading="lazy"][decoding="async"] {
+  border-radius: 12px
+}
+
 /**
  * Dark/Light Theme Overrides
  * -------------------------------------------------------------------------- */
