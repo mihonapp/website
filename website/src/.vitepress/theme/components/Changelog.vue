@@ -12,6 +12,8 @@ const md = new MarkdownIt()
 const changelog = computed(() => {
   const flavoredString = (release[type.value].body ?? '')
     .replace(/(?<=\(|(, ))@(.*?)(?=\)|(, ))/g, '[@$2](https://github.com/$2)')
+    .replace(/#(\d+)/g, '[#$1](https://github.com/mihonapp/mihon/issues/$1)')
+    .replace(/\b([0-9a-f]{7,10})\b/gi, '[$1](https://github.com/mihonapp/mihon/commit/$1)')
     .replace('https://github.com/mihonapp/mihon/releases', '/changelogs/')
 
   return md.render(flavoredString)
