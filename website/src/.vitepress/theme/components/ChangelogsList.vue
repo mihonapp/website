@@ -7,6 +7,7 @@ const md = new MarkdownIt({ html: true })
 
 function renderMarkdown(string: string | null | undefined) {
   const body = string ?? 'No changelog provided.'
+  console.log(body)
   const flavoredString = body
     .split(/---\r\n\r\n### Checksums|---\r\n\r\nMD5/)[0]
     .replace(/(?<=\(|(, ))@(.*?)(?=\)|(, ))/g, '[@$2](https://github.com/$2)')
@@ -26,16 +27,16 @@ function renderMarkdown(string: string | null | undefined) {
         }
         const { cls, title } = map[type] ?? map.TIP
         const text = block
-          .split(/\r?\n/)
-          .map((l: string) => l.replace(/^>\s?/, ''))
-          .join('\n')
-          .replace(/^###\s*/, '')
-          .trim()
+        .split(/\r?\n/)
+        .map((l: string) => l.replace(/^>\s?/, ''))
+        .join('\n')
+        .replace(/^###\s*/, '')
+        .trim()
         const inner = md.render(text).trim()
-        return `\n\n<div class="${cls} custom-block"><p class="custom-block-title">${title}</p>${inner}</div>\n\n`
+        return `\n\n<div class="${cls} custom-block"><div class="custom-block-body" style="display: flex; flex-direction: column"><p class="custom-block-title">${title}</p>${inner}</div></div>\n\n`
       },
     )
-    .replace(/^Check out the .*past release notes.* if you're.*$/m, '')
+    .replace("Check out the [past release notes](https://github.com/mihonapp/mihon/releases) if you’re upgrading from an earlier version. ", "")
     .replace(/https:\/\/github.com\/mihonapp\/mihon\/releases\/tag\/(.*)/g, '#$1')
     .trim()
 
@@ -54,8 +55,7 @@ const dateFormatter = new Intl.DateTimeFormat('en', {
   >
     <h2 :id="index === 0 ? 'latest' : release.tag_name">
       <a
-        :href="release.html_url"
-        target="_blank"
+        :href="`/changelogs/${release.tag_name}`"
       >
         {{ release.tag_name.substring(1) }}
       </a>

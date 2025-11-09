@@ -59,7 +59,7 @@ const changelog = computed(() => {
   <div class="fullChangelog">
     <p>
       View the full release
-      <a href="https://github.com/mihonapp/mihon/releases/latest" target="_blank" rel="noopener">
+      <a :href="`/changelogs/${release[type].tag_name}`">
         here
       </a>
     </p>
