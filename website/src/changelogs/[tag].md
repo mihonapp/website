@@ -3,7 +3,9 @@
 outline: false
 lastUpdated: false
 editLink: false
-prev: false
+prev:
+  text: 'Changelogs'
+  link: '/changelogs'
 next: false
 ---
 
