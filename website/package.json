@@ -28,8 +28,8 @@
     "lint:es": "eslint . ",
     "lint:es:fix": "eslint . --fix",
     "lint:mdl": "markdownlint \"**/*.md\" \".github/**/*.md\" --enable sentences-per-line --disable MD025 MD033",
-    "lint:style": "stylelint '**/*.{styl,vue}' 'src/.vitepress/**/*.{styl,vue}'",
-    "lint:style:fix": "stylelint --fix '**/*.{styl,vue}' 'src/.vitepress/**/*.{styl,vue}'"
+    "lint:style": "cross-env NODE_OPTIONS='--no-deprecation' stylelint '**/*.{styl,vue}' 'src/.vitepress/**/*.{styl,vue}'",
+    "lint:style:fix": "cross-env NODE_OPTIONS='--no-deprecation' stylelint --fix '**/*.{styl,vue}' 'src/.vitepress/**/*.{styl,vue}'"
   },
   "dependencies": {
     "@iconify-prerendered/vue-mdi": "0.28.1737398331",
@@ -60,6 +60,7 @@
     "@types/node": "24.10.0",
     "@typescript-eslint/eslint-plugin": "8.46.3",
     "@typescript-eslint/parser": "8.46.3",
+    "cross-env": "^10.1.0",
     "eslint": "9.39.1",
     "eslint-config-standard": "17.1.0",
     "eslint-plugin-vue": "10.5.1",
