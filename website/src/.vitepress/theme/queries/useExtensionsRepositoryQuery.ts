@@ -23,8 +23,8 @@ export interface Source {
   versionId: number
 }
 
-type UseExtensionsRepositoryQueryOptions<S = Extension[]> =
-  UseQueryOptions<Extension[], Error, S>
+type UseExtensionsRepositoryQueryOptions<S = Extension[]>
+  = UseQueryOptions<Extension[], Error, S>
 
 export default function useExtensionsRepositoryQuery<S = Extension[]>(options: UseExtensionsRepositoryQueryOptions<S> = {}) {
   return useQuery<Extension[], Error, S>({

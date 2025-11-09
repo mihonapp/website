@@ -37,4 +37,4 @@ Projects using the **Mihon** name for anime streaming aren't affiliated with the
 
 ## What's a fork?
 Forks are alternate **Mihon** versions with distinct features.
-Get more details [here](/forks/).
+Get more details [here on forks](/forks/).

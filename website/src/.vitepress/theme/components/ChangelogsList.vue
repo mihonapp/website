@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import MarkdownIt from 'markdown-it'
 import { data as changelogs } from '../data/changelogs.data'
-import Contributors from './Contributors.vue'
 import { formatChangelog } from '../utils/formatChangelog'
+import Contributors from './Contributors.vue'
 
 const md = new MarkdownIt({ html: true })
 
 function renderMarkdown(string: string | null | undefined) {
   const pre = (string ?? '').replace(
-    "Check out the [past release notes](https://github.com/mihonapp/mihon/releases) if you’re upgrading from an earlier version. ",
+    'Check out the [past release notes](https://github.com/mihonapp/mihon/releases) if you’re upgrading from an earlier version. ',
     '',
   )
   return formatChangelog(md, pre, { stripChecksums: true })

@@ -12,7 +12,7 @@ Turn off **Secure Screen** in <nav to="security-and-privacy">.
 
 ## What is DNS over HTTPS?
 **DNS over HTTPS (DoH)** (in <nav to="advanced">) offers secure DNS resolution through HTTPS, preventing attacks.
-Learn more [here](https://www.cloudflare.com/learning/dns/dns-over-tls/). This may help bypass some basic website blocking.
+Learn more [here on DNS over HTTPS](https://www.cloudflare.com/learning/dns/dns-over-tls/). This may help bypass some basic website blocking.
 
 ## What are the different installers?
 Three installer options are available (in <nav to="advanced">):

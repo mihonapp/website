@@ -32,7 +32,7 @@ Now, they are doing the same thing with Mihon. Their misrepresentation and misus
 
 ### What to do from now on
 
-iiTachiyomi claims to serve the community, but their actions prove otherwise. To protect Mihon: 
+iiTachiyomi claims to serve the community, but their actions prove otherwise. To protect Mihon:
 - Report iiTachiyomi or Miyomi pages that mislead users
 - Correct people who confuse Mihon with iiTachiyomi or Miyomi
 - Don’t share or support unofficial Mihon merchandise

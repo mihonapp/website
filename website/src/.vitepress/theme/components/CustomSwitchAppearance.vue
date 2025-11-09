@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { inject } from 'vue'
 import { useData } from 'vitepress'
-
 import VPIconMoon from 'vitepress/dist/client/theme-default/components/icons/VPIconMoon.vue'
+
 import VPIconSun from 'vitepress/dist/client/theme-default/components/icons/VPIconSun.vue'
+import { inject } from 'vue'
 
 const { isDark } = useData()
 
