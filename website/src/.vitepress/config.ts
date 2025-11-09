@@ -2,6 +2,7 @@ import process from 'node:process'
 import { URL, fileURLToPath } from 'node:url'
 import { defineConfig, loadEnv } from 'vitepress'
 import ElementPlus from 'unplugin-element-plus/vite'
+import { Octokit } from '@octokit/rest'
 
 import markdownConfig from './config/markdownConfig'
 
@@ -21,6 +22,9 @@ import generateFeed from './config/hooks/generateFeed'
 // Allows generation of RSS feed
 import generateOgImages from './config/hooks/generateOgImages'
 
+const octokit = new Octokit()
+const releaseDateCache = new Map<string, string>()
+
 const title = 'Mihon'
 const description = 'Discover and read manga, webtoons, comics, and more – easier than ever on your Android device.'
 
@@ -39,6 +43,40 @@ export default defineConfig({
   head: headConfig,
   markdown: markdownConfig,
   themeConfig,
+  transformPageData: async (pageData) => {
+    if (pageData.filePath === 'changelogs/[tag].md') {
+      const tag = (pageData as any).params?.tag as string | undefined
+      if (tag) {
+        const version = tag.startsWith('v') ? tag.slice(1) : tag
+        pageData.frontmatter ||= {}
+        pageData.frontmatter.title = `v${version}`
+
+        let publishedAt = releaseDateCache.get(tag)
+        if (!publishedAt) {
+          try {
+            const { data } = await octokit.repos.getReleaseByTag({ owner: 'mihonapp', repo: 'mihon', tag })
+            publishedAt = data.published_at || data.created_at || ''
+            if (publishedAt) releaseDateCache.set(tag, publishedAt)
+          }
+          catch {}
+        }
+
+        const prettyDate = publishedAt
+          ? new Date(publishedAt).toLocaleDateString('en', { month: 'short', day: 'numeric', year: 'numeric' })
+          : undefined
+
+        const versionLabel = tag
+        const desc = prettyDate
+          ? `Changelog for Mihon ${versionLabel}, released on ${prettyDate}`
+          : `Changelog for Mihon ${versionLabel}`
+
+        pageData.frontmatter.description = pageData.frontmatter.description || desc
+        pageData.title = pageData.frontmatter.title
+        pageData.description = pageData.frontmatter.description
+      }
+    }
+    return pageData
+  },
   transformHead: async context => generateMeta(context, hostname),
   buildEnd: async (context) => {
     generateFeed(context, hostname)
