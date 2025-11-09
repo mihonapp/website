@@ -28,7 +28,7 @@ const themeConfig: DefaultTheme.Config = {
     },
     {
       icon: 'x',
-      link: 'https://twitter.com/mihonapp',
+      link: 'https://x.com/mihonapp',
       ariaLabel: 'X Page',
     },
     {
