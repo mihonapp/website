@@ -2,20 +2,16 @@
 import MarkdownIt from 'markdown-it'
 import { data as changelogs } from '../data/changelogs.data'
 import Contributors from './Contributors.vue'
+import { formatChangelog } from '../utils/formatChangelog'
 
-const md = new MarkdownIt()
+const md = new MarkdownIt({ html: true })
 
 function renderMarkdown(string: string | null | undefined) {
-  const body = string ?? 'No changelog provided.'
-  const flavoredString = body
-    .split(/---\r\n\r\n### Checksums|---\r\n\r\nMD5/)[0]
-    .replace(/(?<=\(|(, ))@(.*?)(?=\)|(, ))/g, '[@$2](https://github.com/$2)')
-    .replace(/#(\d+)/g, '[#$1](https://github.com/mihonapp/mihon/issues/$1)')
-    .replace(/^Check out the .*past release notes.* if you're.*$/m, '')
-    .replace(/https:\/\/github.com\/mihonapp\/mihon\/releases\/tag\/(.*)/g, '#$1')
-    .trim()
-
-  return md.render(flavoredString)
+  const pre = (string ?? '').replace(
+    "Check out the [past release notes](https://github.com/mihonapp/mihon/releases) if you’re upgrading from an earlier version. ",
+    '',
+  )
+  return formatChangelog(md, pre, { stripChecksums: true })
 }
 
 const dateFormatter = new Intl.DateTimeFormat('en', {
@@ -30,8 +26,7 @@ const dateFormatter = new Intl.DateTimeFormat('en', {
   >
     <h2 :id="index === 0 ? 'latest' : release.tag_name">
       <a
-        :href="release.html_url"
-        target="_blank"
+        :href="`/changelogs/${release.tag_name}`"
       >
         {{ release.tag_name.substring(1) }}
       </a>

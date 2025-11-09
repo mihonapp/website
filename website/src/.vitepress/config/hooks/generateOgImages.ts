@@ -40,7 +40,10 @@ async function generateOgImages(config: SiteConfig) {
     },
   ]
 
-  const filteredPages = pages.filter(p => p.frontmatter.image === undefined)
+  const filteredPages = pages.filter(p => 
+    p.frontmatter.image === undefined && 
+    !p.url.startsWith('/changelogs/')
+  )
 
   for (const page of filteredPages) {
     await generateImage({

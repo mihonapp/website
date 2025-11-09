@@ -3,19 +3,14 @@ import { computed, toRefs } from 'vue'
 import MarkdownIt from 'markdown-it'
 import { type AppRelease, data as release } from '../data/release.data'
 import Contributors from './Contributors.vue'
+import { formatChangelog } from '../utils/formatChangelog'
 
 const props = defineProps<{ type: keyof AppRelease }>()
 const { type } = toRefs(props)
 
-const md = new MarkdownIt()
+const md = new MarkdownIt({ html: true })
 
-const changelog = computed(() => {
-  const flavoredString = (release[type.value].body ?? '')
-    .replace(/(?<=\(|(, ))@(.*?)(?=\)|(, ))/g, '[@$2](https://github.com/$2)')
-    .replace('https://github.com/mihonapp/mihon/releases', '/changelogs/')
-
-  return md.render(flavoredString)
-})
+const changelog = computed(() => formatChangelog(md, release[type.value].body))
 </script>
 
 <template>
@@ -33,8 +28,8 @@ const changelog = computed(() => {
   </div>
   <div class="fullChangelog">
     <p>
-      View the full release
-      <a href="https://github.com/mihonapp/mihon/releases/latest" target="_blank" rel="noopener">
+      View the release page
+      <a :href="`/changelogs/${release[type].tag_name}`">
         here
       </a>
     </p>
