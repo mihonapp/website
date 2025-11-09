@@ -31,7 +31,7 @@ const changelog = computed(() => {
           .split(/\r?\n/)
           .map((l: string) => l.replace(/^>\s?/, ''))
           .join('\n')
-          .replace(/^###\s*/, '')
+          .replace(/###\s*/, '')
           .trim()
         const inner = md.render(text).trim()
         return `\n\n<div class="${cls} custom-block"><p class="custom-block-title">${title}</p>${inner}</div>\n\n`
