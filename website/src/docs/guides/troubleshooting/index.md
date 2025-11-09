@@ -91,7 +91,24 @@ Wait for the source to lower its protection or switch to different sources.
 ### Obtaining crash/error logs
 For crash investigations, navigate to <nav to="advanced"> and tap **Dump crash logs**.
 
-![Dump crashlogs](/docs/guides/troubleshooting/dump-crash-logs.dark.webp =512x386)
+<img
+  class="only-light"
+  src="/docs/guides/troubleshooting/dump-crash-logs.dark.webp"
+  alt="Dump crashlogs"
+  width="512"
+  height="386"
+  loading="lazy"
+  decoding="async"
+/>
+<img
+  class="only-dark"
+  src="/docs/guides/troubleshooting/dump-crash-logs.dark.webp"
+  alt="Dump crashlogs"
+  width="512"
+  height="386"
+  loading="lazy"
+  decoding="async"
+/>
 
 ### Obtaining more logs
 To diagnose abnormal app behavior, record device logs using a [Logcat Reader](https://github.com/darshanparajuli/LogcatReader/releases).

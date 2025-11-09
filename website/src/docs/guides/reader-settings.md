@@ -44,11 +44,11 @@ Double tap animation speed changes the speed in which the zoom happens when doub
 
 ::: tabs
 == No animation
-![No Animation](/docs/guides/reader-settings/animation-speed_off.webp =288x618)
+<img src="/docs/guides/reader-settings/animation-speed_off.webp" alt="No Animation" width="288" height="618" loading="lazy" decoding="async" />
 == Normal
-![Normal](/docs/guides/reader-settings/animation-speed_normal.webp =288x618)
+<img src="/docs/guides/reader-settings/animation-speed_normal.webp" alt="Normal" width="288" height="618" loading="lazy" decoding="async" />
 == Fast
-![Fast](/docs/guides/reader-settings/animation-speed_fast.webp =288x618)
+<img src="/docs/guides/reader-settings/animation-speed_fast.webp" alt="Fast" width="288" height="618" loading="lazy" decoding="async" />
 :::
 
 ### Show reading mode <Badge type="info" text="On" />
@@ -85,11 +85,11 @@ TBA
 
 ::: tabs
 == Black
-![Black](/docs/guides/reader-settings/background-color_black.webp =512x788)
+<img src="/docs/guides/reader-settings/background-color_black.webp" alt="Black" width="512" height="788" loading="lazy" decoding="async" />
 == Gray
-![Gray](/docs/guides/reader-settings/background-color_gray.webp =512x788)
+<img src="/docs/guides/reader-settings/background-color_gray.webp" alt="Gray" width="512" height="788" loading="lazy" decoding="async" />
 == White
-![White](/docs/guides/reader-settings/background-color_white.webp =512x788)
+<img src="/docs/guides/reader-settings/background-color_white.webp" alt="White" width="512" height="788" loading="lazy" decoding="async" />
 == Automatic
 Automatically sets the color based on the content of your page.
 :::
@@ -128,15 +128,15 @@ Shows chapter transitions regardless of whether the next chapter is loaded or no
 
 ::: tabs
 == Default
-![Right and Left](/docs/guides/reader-settings/tap-zones_right-and-left.webp =247x600)
+<img src="/docs/guides/reader-settings/tap-zones_right-and-left.webp" alt="Right and Left" width="247" height="600" loading="lazy" decoding="async" />
 == L shaped
-![L shaped](/docs/guides/reader-settings/tap-zones_l-shaped.webp =247x600)
+<img src="/docs/guides/reader-settings/tap-zones_l-shaped.webp" alt="L shaped" width="247" height="600" loading="lazy" decoding="async" />
 == Kindle-ish
-![Kindle-ish](/docs/guides/reader-settings/tap-zones_kindle-ish.webp =247x600)
+<img src="/docs/guides/reader-settings/tap-zones_kindle-ish.webp" alt="Kindle-ish" width="247" height="600" loading="lazy" decoding="async" />
 == Edge
-![Edge](/docs/guides/reader-settings/tap-zones_edge.webp =247x600)
+<img src="/docs/guides/reader-settings/tap-zones_edge.webp" alt="Edge" width="247" height="600" loading="lazy" decoding="async" />
 == Right and Left
-![Right and Left](/docs/guides/reader-settings/tap-zones_right-and-left.webp =247x600)
+<img src="/docs/guides/reader-settings/tap-zones_right-and-left.webp" alt="Right and Left" width="247" height="600" loading="lazy" decoding="async" />
 == Disabled
 No tap zones to assist with navigation will be active.
 :::
@@ -158,9 +158,9 @@ Changes so that the tap zones are flipped horizontally and vertically.
 
 :::tabs
 == Off
-![Not cropping borders](/docs/guides/reader-settings/crop-borders_off.webp =512x788)
+<img src="/docs/guides/reader-settings/crop-borders_off.webp" alt="Not cropping borders" width="512" height="788" loading="lazy" decoding="async" />
 == On
-![Cropping borders](/docs/guides/reader-settings/crop-borders_on.webp =512x788)
+<img src="/docs/guides/reader-settings/crop-borders_on.webp" alt="Cropping borders" width="512" height="788" loading="lazy" decoding="async" />
 :::
 
 ### Split wide pages <Badge type="info" text="Off" /> {#split-wide-pages}
@@ -175,30 +175,30 @@ TBA
 
 ::: tabs
 == Fit screen
-![Fit screen](/docs/guides/reader-settings/scale-type_fit-screen.webp =512x788)
+<img src="/docs/guides/reader-settings/scale-type_fit-screen.webp" alt="Fit screen" width="512" height="788" loading="lazy" decoding="async" />
 == Stretch
-![Stretch](/docs/guides/reader-settings/scale-type_stretch.webp =512x788)
+<img src="/docs/guides/reader-settings/scale-type_stretch.webp" alt="Stretch" width="512" height="788" loading="lazy" decoding="async" />
 == Fit width
-![Fit width](/docs/guides/reader-settings/scale-type_fit-width.webp =512x788)
+<img src="/docs/guides/reader-settings/scale-type_fit-width.webp" alt="Fit width" width="512" height="788" loading="lazy" decoding="async" />
 == Fit height
-![Fit height](/docs/guides/reader-settings/scale-type_fit-height.webp =512x788)
+<img src="/docs/guides/reader-settings/scale-type_fit-height.webp" alt="Fit height" width="512" height="788" loading="lazy" decoding="async" />
 == Original size
-![Original size](/docs/guides/reader-settings/scale-type_original-size.webp =512x788)
+<img src="/docs/guides/reader-settings/scale-type_original-size.webp" alt="Original size" width="512" height="788" loading="lazy" decoding="async" />
 == Smart fit
-![Smart fit](/docs/guides/reader-settings/scale-type_smart-fit.webp =512x788)
+<img src="/docs/guides/reader-settings/scale-type_smart-fit.webp" alt="Smart fit" width="512" height="788" loading="lazy" decoding="async" />
 :::
 
 ### Zoom start position <Badge type="info" text="Automatic" />
 
 ::: tabs
 == Automatic
-![Center (TBA Default Image)](/docs/guides/reader-settings/zoom-start-position_center.webp =512x788)
+<img src="/docs/guides/reader-settings/zoom-start-position_center.webp" alt="Center (TBA Default Image)" width="512" height="788" loading="lazy" decoding="async" />
 == Left
-![Left](/docs/guides/reader-settings/zoom-start-position_left.webp =512x788)
+<img src="/docs/guides/reader-settings/zoom-start-position_left.webp" alt="Left" width="512" height="788" loading="lazy" decoding="async" />
 == Right
-![Right](/docs/guides/reader-settings/zoom-start-position_right.webp =512x788)
+<img src="/docs/guides/reader-settings/zoom-start-position_right.webp" alt="Right" width="512" height="788" loading="lazy" decoding="async" />
 == Center
-![Center](/docs/guides/reader-settings/zoom-start-position_center.webp =512x788)
+<img src="/docs/guides/reader-settings/zoom-start-position_center.webp" alt="Center" width="512" height="788" loading="lazy" decoding="async" />
 :::
 
 ### Automatically zoom into wide images <Badge type="info" text="On" />

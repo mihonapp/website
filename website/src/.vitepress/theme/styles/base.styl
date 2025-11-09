@@ -25,6 +25,7 @@ $themeColor = #818cf8
  * -------------------------------------------------------------------------- */
 
 html:not(.dark) {
+  .only-dark,
   img[data-mode="darkmode-only"] {
     display: none !important
 
@@ -39,6 +40,7 @@ html:not(.dark) {
 }
 
 .dark {
+  .only-light,
   img[data-mode="lightmode-only"] {
     display: none !important
 
