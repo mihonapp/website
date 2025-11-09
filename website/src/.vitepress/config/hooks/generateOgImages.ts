@@ -5,6 +5,7 @@ import { createContentLoader } from 'vitepress'
 import type { ContentData, SiteConfig } from 'vitepress'
 import { type SatoriOptions, satoriVue } from 'x-satori/vue'
 import { renderAsync } from '@resvg/resvg-js'
+import { Octokit } from '@octokit/rest'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const __fonts = resolve(__dirname, '../../fonts')
@@ -53,12 +54,39 @@ async function generateOgImages(config: SiteConfig) {
       fonts,
     })
   }
+
+  // Generate OG images for dynamic changelog pages
+  const octokit = new Octokit()
+  const releases = await octokit.paginate(octokit.repos.listReleases, {
+    owner: 'mihonapp',
+    repo: 'mihon',
+    per_page: 100,
+  })
+
+  for (const r of releases) {
+    if (!r.tag_name) continue
+    const pageLike: Pick<ContentData, 'url' | 'frontmatter'> = {
+      url: `/changelogs/${r.tag_name}`,
+      frontmatter: {
+        // Prefer release name; fallback to tag
+        title: r.name || `Mihon ${r.tag_name.substring(1)}`,
+        description: r.body ? 'Release notes' : undefined,
+      } as any,
+    }
+
+    await generateImage({
+      page: pageLike,
+      template,
+      outDir: config.outDir,
+      fonts,
+    })
+  }
 }
 
 export default generateOgImages
 
 interface GenerateImagesOptions {
-  page: ContentData
+  page: Pick<ContentData, 'url' | 'frontmatter'>
   template: string
   outDir: string
   fonts: SatoriOptions['fonts']
