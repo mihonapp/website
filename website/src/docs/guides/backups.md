@@ -13,9 +13,24 @@ You can transfer and restore backup files between devices and [endorsed forks](/
 1. Go to <nav to="data-and-storage">.
 1. Select **Create backup** and choose a location to save it.
 
-![Backup and Restore](/docs/guides/backups/backup.light.webp#light =414x194)
-
-![Backup and Restore](/docs/guides/backups/backup.dark.webp#dark =414x194)
+<img
+  class="only-light"
+  src="/docs/guides/backups/backup.light.webp"
+  alt="Backup and Restore"
+  width="414"
+  height="194"
+  loading="lazy"
+  decoding="async"
+/> 
+<img
+  class="only-dark"
+  src="/docs/guides/backups/backup.dark.webp"
+  alt="Backup and Restore"
+  width="414"
+  height="194"
+  loading="lazy"
+  decoding="async"
+/>
 :::
 
 ## General backup details
@@ -75,9 +90,24 @@ It is highly recommended to enable automatic backups to ensure you can recover i
 - Automatic backup files can be found in your specified [Storage location](/docs/faq/storage)'s "autobackup" folder.
 - In case of an error or issue, this allows you to retain a recent copy of your library data.
 
-![Automatic Backups](/docs/guides/backups/automatic_backups.light.webp#light =414x402)
-
-![Automatic Backups](/docs/guides/backups/automatic_backups.dark.webp#dark =414x402)
+<img
+  class="only-light"
+  src="/docs/guides/backups/automatic_backups.light.webp"
+  alt="Automatic Backups"
+  width="414"
+  height="402"
+  loading="lazy"
+  decoding="async"
+/> 
+<img
+  class="only-dark"
+  src="/docs/guides/backups/automatic_backups.dark.webp"
+  alt="Automatic Backups"
+  width="414"
+  height="402"
+  loading="lazy"
+  decoding="async"
+/>
 :::
 
 ### Syncing backups with external cloud services

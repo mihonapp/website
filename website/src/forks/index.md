@@ -13,7 +13,7 @@ features:
     icon: <img src="/forks/logo-j2k.webp" alt="TachiyomiJ2K Logo" height="32" width="32">
     link: /forks/TachiyomiJ2K/
   - title: TachiyomiSY
-    details: Keeping up-to-date with Tachiyomi while also adding exclusive features
+    details: Keeping up-to-date with Mihon while also adding exclusive features
     icon: <img src="/forks/logo-sy.webp" alt="TachiyomiSY Logo" height="32" width="32">
     link: /forks/TachiyomiSY/
   - title: TachiyomiAZ
