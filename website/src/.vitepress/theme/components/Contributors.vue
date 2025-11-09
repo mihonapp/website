@@ -21,7 +21,9 @@ const contributors = computed(() => {
     ? notMentioned.value
     : [author.value, ...notMentioned.value]
 
-  return [...new Set([...uncredited, ...list])].filter(user => !nonExistent.value.includes(user))
+  return [...new Set([...uncredited, ...list])]
+    .filter(user => user !== 'mihon-bot')
+    .filter(user => !nonExistent.value.includes(user))
 })
 
 const listFormatter = new Intl.ListFormat('en', {
