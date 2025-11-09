@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { inject, onMounted, ref } from 'vue'
+import { inject } from 'vue'
 import { useData } from 'vitepress'
 
 import VPIconMoon from 'vitepress/dist/client/theme-default/components/icons/VPIconMoon.vue'
@@ -10,13 +10,6 @@ const { isDark } = useData()
 const toggleAppearance = inject('toggle-appearance', () => {
   isDark.value = !isDark.value
 })
-
-const supportsViewTransition = ref(false)
-
-onMounted(() => {
-  supportsViewTransition.value = 'startViewTransition' in document
-  && window.matchMedia('(prefers-reduced-motion: no-preference)').matches
-})
 </script>
 
 <template>
@@ -26,14 +19,11 @@ onMounted(() => {
     title="Toggle dark mode"
     class="CustomSwitchAppearance"
     :aria-checked="isDark"
-    :data-view-transition="supportsViewTransition"
     @click="toggleAppearance"
   >
     <ClientOnly>
-      <Transition name="fade" mode="out-in">
-        <VPIconSun v-if="!isDark" class="sun" />
-        <VPIconMoon v-else class="moon" />
-      </Transition>
+      <VPIconSun v-if="!isDark" class="sun" />
+      <VPIconMoon v-else class="moon" />
     </ClientOnly>
   </button>
 </template>
@@ -57,18 +47,6 @@ onMounted(() => {
     width: 20px
     height: 20px
     fill: currentColor
-  }
-
-  &[data-view-transition="false"] {
-    .fade-enter-active,
-    .fade-leave-active {
-      transition: opacity 0.1s ease
-    }
-
-    .fade-enter-from,
-    .fade-leave-to {
-      opacity: 0
-    }
   }
 }
 </style>
