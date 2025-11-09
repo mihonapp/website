@@ -3,6 +3,7 @@ import { computed, toRefs } from 'vue'
 import MarkdownIt from 'markdown-it'
 import { data as changelogs } from '../data/changelogs.data'
 import Contributors from './Contributors.vue'
+import { formatChangelog } from '../utils/formatChangelog'
 
 const props = defineProps<{ tag: string }>()
 const { tag } = toRefs(props)
@@ -10,41 +11,7 @@ const { tag } = toRefs(props)
 const md = new MarkdownIt({ html: true })
 
 function renderMarkdown(string: string | null | undefined) {
-  const body = string ?? 'No changelog provided.'
-  const flavoredString = body
-    .split(/---\r\n\r\n### Checksums|---\r\n\r\nMD5/)[0]
-    .replace(/(?<=\(|(, ))@(.*?)(?=\)|(, ))/g, '[@$2](https://github.com/$2)')
-    .replace(/#(\d+)/g, '[#$1](https://github.com/mihonapp/mihon/issues/$1)')
-    .replace(/\b([0-9a-f]{7,10})\b/gi, '[$1](https://github.com/mihonapp/mihon/commit/$1)')
-    .replace(/<!-->/g, '')
-    .replace(
-      /^> \[!(TIP|NOTE|IMPORTANT|WARNING|CAUTION)]\r?\n((?:^>.*\r?\n?)+)/gim,
-      (_match, typeRaw: string, block: string) => {
-        const type = typeRaw.toUpperCase()
-        const map: Record<string, { cls: string; title: string }> = {
-          TIP: { cls: 'tip', title: 'TIP' },
-          NOTE: { cls: 'info', title: 'INFO' },
-          IMPORTANT: { cls: 'warning', title: 'WARNING' },
-          WARNING: { cls: 'warning', title: 'WARNING' },
-          CAUTION: { cls: 'danger', title: 'DANGER' },
-        }
-        const { cls, title } = map[type] ?? map.TIP
-        const text = block
-          .split(/\r?\n/)
-          .map((l: string) => l.replace(/^>\s?/, ''))
-          .join('\n')
-          .replace(/###\s*/, '')
-          .trim()
-        console.log(block)
-        const inner = md.render(text).trim()
-        return `\n\n<div class="${cls} custom-block"><div class="custom-block-body" style="display: flex; flex-direction: column"><p class="custom-block-title">${title}</p>${inner}</div></div>\n\n`
-      },
-    )
-    .replace('https://github.com/mihonapp/mihon/releases', '/changelogs/')
-    .replace(/https:\/\/github.com\/mihonapp\/mihon\/releases\/tag\/(.*)/g, '#$1')
-    .trim()
-
-  return md.render(flavoredString)
+  return formatChangelog(md, string, { stripChecksums: true })
 }
 
 const release = computed(() => changelogs.find(r => r.tag_name === tag.value))

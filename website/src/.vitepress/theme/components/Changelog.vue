@@ -3,46 +3,14 @@ import { computed, toRefs } from 'vue'
 import MarkdownIt from 'markdown-it'
 import { type AppRelease, data as release } from '../data/release.data'
 import Contributors from './Contributors.vue'
+import { formatChangelog } from '../utils/formatChangelog'
 
 const props = defineProps<{ type: keyof AppRelease }>()
 const { type } = toRefs(props)
 
 const md = new MarkdownIt({ html: true })
 
-const changelog = computed(() => {
-  const flavoredString = (release[type.value].body ?? '')
-    .replace(/(?<=\(|(, ))@(.*?)(?=\)|(, ))/g, '[@$2](https://github.com/$2)')
-    .replace(/#(\d+)/g, '[#$1](https://github.com/mihonapp/mihon/issues/$1)')
-    .replace(/\b([0-9a-f]{7,10})\b/gi, '[$1](https://github.com/mihonapp/mihon/commit/$1)')
-    .replace(/<!-->/g, '')
-    .replace(
-      /^> \[!(TIP|NOTE|IMPORTANT|WARNING|CAUTION)]\r?\n((?:^>.*\r?\n?)+)/gim,
-      (_match, typeRaw: string, block: string) => {
-        const type = typeRaw.toUpperCase()
-        const map: Record<string, { cls: string; title: string }> = {
-          TIP: { cls: 'tip', title: 'TIP' },
-          NOTE: { cls: 'info', title: 'INFO' },
-          IMPORTANT: { cls: 'warning', title: 'WARNING' },
-          WARNING: { cls: 'warning', title: 'WARNING' },
-          CAUTION: { cls: 'danger', title: 'DANGER' },
-        }
-        const { cls, title } = map[type] ?? map.TIP
-        const text = block
-          .split(/\r?\n/)
-          .map((l: string) => l.replace(/^>\s?/, ''))
-          .join('\n')
-          .replace(/###\s*/, '')
-          .trim()
-        const inner = md.render(text).trim()
-        return `\n\n<div class="${cls} custom-block"><p class="custom-block-title">${title}</p>${inner}</div>\n\n`
-      },
-    )
-    .replace('https://github.com/mihonapp/mihon/releases', '/changelogs/')
-    .replace(/https:\/\/github.com\/mihonapp\/mihon\/releases\/tag\/(.*)/g, '#$1')
-    .trim()
-
-  return md.render(flavoredString)
-})
+const changelog = computed(() => formatChangelog(md, release[type.value].body))
 </script>
 
 <template>
