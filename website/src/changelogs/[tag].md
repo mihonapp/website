@@ -19,4 +19,5 @@ const { page } = useData()
 const tag = page.value.params.tag as string
 </script>
 
+<!-- markdownlint-disable-file -->
 <ChangelogByTag :tag="tag" />

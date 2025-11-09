@@ -64,7 +64,7 @@ async function generateOgImages(config: SiteConfig) {
     // Cut off checksum sections to avoid noise
     const cleaned = src.split(/---\n\n###\s*Checksums|---\n\nMD5/i)[0] || src
     // Find first H3 section
-    const match = cleaned.match(/^###\s+(.+)\n([\s\S]*?)(?=^#{1,3}\s+|Z)/m)
+    const match = cleaned.match(/^###\s+(\S[^\n]*)\n([\s\S]*?)(?=^#{1,3}\s|Z)/m)
     if (!match)
       return undefined
     const headingRaw = match[1].trim()

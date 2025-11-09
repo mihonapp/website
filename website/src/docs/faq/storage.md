@@ -125,7 +125,7 @@ If you need to change your storage location or have moved files around from outs
 Since Android 11, most apps are enforced to use [Scoped Storage](https://developer.android.com/about/versions/11/privacy/storage) for better security for users so that apps cannot read everything on the device.
 
 **Scoped Storage**'s introduction affects various storage-related functions in **Mihon**.
-These functions may become slower due to **Scoped Storage**'s inherent latency, as discussed in detail [here](https://www.xda-developers.com/android-q-storage-access-framework-scoped-storage/).
+These functions may become slower due to **Scoped Storage**'s inherent latency, as discussed in detail [here on Scoped Storage](https://www.xda-developers.com/android-q-storage-access-framework-scoped-storage/).
 
 This can impact tasks like deleting chapters, library loading times, accessing local files like downloads or the local source, and more. As always, using internal storage is recommended over SD cards if latency is of concern.
 
