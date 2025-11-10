@@ -57,41 +57,13 @@ async function generateOgImages(config: SiteConfig) {
   }
 
   // Extract first H3 section title and its bullet points from a changelog body
-  function extractChangelogSnippet(body: string | null | undefined, options: { includeHeading?: boolean } = {}): string | undefined {
-    const { includeHeading = true } = options
+  function extractChangelogSnippet(body: string | null | undefined): string | undefined {
     if (!body)
       return undefined
     const src = body.replace(/\r/g, '')
     // Cut off checksum sections to avoid noise
     const cleaned = src.split(/---\n\n###\s*Checksums|---\n\nMD5/i)[0] || src
-
-    const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;')
-
-    if (!includeHeading) {
-      // For beta changelogs: extract first 3 bullet points from anywhere in the body
-      let bullets = cleaned
-        .split('\n')
-        .map(l => l.trim())
-        .filter(l => /^[-*]\s+/.test(l))
-        .map(l => l.replace(/^[-*]\s+/, ''))
-
-      // Sanitize bullets: remove images, links (keep label), inline code, and parenthetical content
-      bullets = bullets.map((b) => {
-        const t = b
-          .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
-          .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
-          .replace(/`([^`]+)`/g, '$1')
-          .trim()
-        return stripParens(t)
-      }).filter(Boolean)
-
-      const top = bullets.slice(0, 3)
-      if (top.length === 0)
-        return undefined
-      return top.map(b => `<div>• ${esc(b)}</div>`).join('')
-    }
-
-    // Find first H3 section for stable changelogs
+    // Find first H3 section
     const match = cleaned.match(/^###\s+(\S[^\n]*)\n([\s\S]*?)(?=^#{1,3}\s|Z)/m)
     if (!match)
       return undefined
@@ -104,6 +76,7 @@ async function generateOgImages(config: SiteConfig) {
       .map(l => l.trim())
       .filter(l => /^[-*]\s+/.test(l))
       .map(l => l.replace(/^[-*]\s+/, ''))
+    const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;')
     if (bullets.length === 0) {
       return `<div style="font-weight:700">${esc(heading.slice(0, 220))}</div>`
     }
@@ -131,7 +104,7 @@ async function generateOgImages(config: SiteConfig) {
     return s.replace(/\s*\([^)]*\)/g, '').trim()
   }
 
-  // Generate OG images for dynamic changelog pages (stable)
+  // Generate OG images for dynamic changelog pages
   const octokit = new Octokit()
   const releases = await octokit.paginate(octokit.repos.listReleases, {
     owner: 'mihonapp',
@@ -148,33 +121,6 @@ async function generateOgImages(config: SiteConfig) {
         // Prefer release name; fallback to tag
         title: r.name || `Mihon ${r.tag_name.substring(1)}`,
         description: extractChangelogSnippet(r.body),
-      } as any,
-    }
-
-    await generateImage({
-      page: pageLike,
-      template,
-      outDir: config.outDir,
-      fonts,
-    })
-  }
-
-  // Generate OG images for dynamic changelog pages (beta)
-  const betaReleases = await octokit.paginate(octokit.repos.listReleases, {
-    owner: 'mihonapp',
-    repo: 'mihon-preview',
-    per_page: 100,
-  })
-
-  for (const r of betaReleases) {
-    if (!r.tag_name)
-      continue
-    const pageLike: Pick<ContentData, 'url' | 'frontmatter'> = {
-      url: `/changelogs/beta/${r.tag_name}`,
-      frontmatter: {
-        // Prefer release name; fallback to tag
-        title: r.name || `Mihon ${r.tag_name}`,
-        description: extractChangelogSnippet(r.body, { includeHeading: false }),
       } as any,
     }
 

@@ -1,16 +1,8 @@
 <script setup lang="ts">
 import MarkdownIt from 'markdown-it'
-import { computed } from 'vue'
-import { data as betaChangelogs } from '../data/changelogs-beta.data'
-import { data as stableChangelogs } from '../data/changelogs.data'
+import { data as changelogs } from '../data/changelogs.data'
 import { formatChangelog } from '../utils/formatChangelog'
 import Contributors from './Contributors.vue'
-
-const props = defineProps<{ repo?: string }>()
-
-const changelogs = computed(() => {
-  return props.repo === 'mihon-preview' ? betaChangelogs : stableChangelogs
-})
 
 const md = new MarkdownIt({ html: true })
 
@@ -34,9 +26,9 @@ const dateFormatter = new Intl.DateTimeFormat('en', {
   >
     <h2 :id="index === 0 ? 'latest' : release.tag_name">
       <a
-        :href="props.repo === 'mihon-preview' ? `/changelogs/beta/${release.tag_name}` : `/changelogs/${release.tag_name}`"
+        :href="`/changelogs/${release.tag_name}`"
       >
-        {{ props.repo === 'mihon-preview' ? release.tag_name : release.tag_name.substring(1) }}
+        {{ release.tag_name.substring(1) }}
       </a>
       <Badge v-if="index === 0" type="tip" text="Latest" />
       <a

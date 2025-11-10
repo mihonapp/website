@@ -21,10 +21,6 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
         {
           text: 'Changelogs',
           link: '/changelogs/',
-          collapsed: true,
-          items: [
-            { text: 'Beta', link: '/changelogs/beta/' },
-          ],
         },
         {
           text: 'Forks',

@@ -2,17 +2,12 @@
 import MarkdownIt from 'markdown-it'
 import moment from 'moment'
 import { computed, toRefs } from 'vue'
-import { data as betaChangelogs } from '../data/changelogs-beta.data'
-import { data as stableChangelogs } from '../data/changelogs.data'
+import { data as changelogs } from '../data/changelogs.data'
 import { formatChangelog } from '../utils/formatChangelog'
 import Contributors from './Contributors.vue'
 
-const props = defineProps<{ tag: string, repo?: string }>()
-const { tag, repo } = toRefs(props)
-
-const changelogs = computed(() => {
-  return repo?.value === 'mihon-preview' ? betaChangelogs : stableChangelogs
-})
+const props = defineProps<{ tag: string }>()
+const { tag } = toRefs(props)
 
 const md = new MarkdownIt({ html: true })
 
@@ -20,9 +15,9 @@ function renderMarkdown(string: string | null | undefined) {
   return formatChangelog(md, string, { stripChecksums: true })
 }
 
-const release = computed(() => changelogs.value.find(r => r.tag_name === tag.value))
+const release = computed(() => changelogs.find(r => r.tag_name === tag.value))
 const latestStableTag = computed(() => {
-  const stable = changelogs.value
+  const stable = changelogs
     .filter(r => !r.draft && !r.prerelease)
     .toSorted((a, b) => new Date(b.published_at!).getTime() - new Date(a.published_at!).getTime())
   return stable[0]?.tag_name
@@ -52,7 +47,7 @@ function assetDate(dateStr?: string) {
 <template>
   <div v-if="release">
     <h1 :id="isLatest ? 'latest' : release.tag_name">
-      {{ repo === 'mihon-preview' ? release.tag_name : release.tag_name.substring(1) }}
+      {{ release.tag_name.substring(1) }}
       <Badge v-if="isLatest" type="tip" text="Latest" />
       <a
         class="header-anchor"
