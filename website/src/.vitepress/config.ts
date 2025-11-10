@@ -76,6 +76,37 @@ export default defineConfig({
         pageData.description = pageData.frontmatter.description
       }
     }
+    else if (pageData.filePath === 'changelogs/beta/[tag].md') {
+      const tag = (pageData as any).params?.tag as string | undefined
+      if (tag) {
+        pageData.frontmatter ||= {}
+        pageData.frontmatter.title = tag
+
+        let publishedAt = releaseDateCache.get(`beta-${tag}`)
+        if (!publishedAt) {
+          try {
+            const { data } = await octokit.repos.getReleaseByTag({ owner: 'mihonapp', repo: 'mihon-preview', tag })
+            publishedAt = data.published_at || data.created_at || ''
+            if (publishedAt)
+              releaseDateCache.set(`beta-${tag}`, publishedAt)
+          }
+          catch {}
+        }
+
+        const prettyDate = publishedAt
+          ? new Date(publishedAt).toLocaleDateString('en', { month: 'short', day: 'numeric', year: 'numeric' })
+          : undefined
+
+        const versionLabel = tag
+        const desc = prettyDate
+          ? `Beta changelog for Mihon ${versionLabel}, released on ${prettyDate}`
+          : `Beta changelog for Mihon ${versionLabel}`
+
+        pageData.frontmatter.description = pageData.frontmatter.description || desc
+        pageData.title = pageData.frontmatter.title
+        pageData.description = pageData.frontmatter.description
+      }
+    }
     return pageData
   },
   transformHead: async context => generateMeta(context, hostname),
