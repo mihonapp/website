@@ -82,6 +82,16 @@ While some sources have specific user agent strings, most rely on the app's defa
 1. After changing the user agent string, remember to restart the app & check WebView to see if it passes verification.
 :::
 
+### Changing your extension mirror
+Another way of getting past **Cloudflare**'s bot detection is to change the extension's mirror URL if the extension supports it.
+
+::: info Changing your extension mirror
+1. Navigate to <nav to="extensions">.
+1. Click on the settings icon next to the extension.
+1. Click on the settings icon next to the language.
+1. Click on Mirror and select another URL.
+:::
+
 ::: tip Did these methods not work?
 Wait for the source to lower its protection or switch to different sources.
 :::
