@@ -1,8 +1,8 @@
----
+-Visit our [download](/download/) page to get the latest version of Mihon.--
 title: Getting started
 titleTemplate: Guides
 description: Essential information to help you get set up with Mihon.
----
+--Choose the version compatible with your device (Android, iOS, etc.).-
 
 <script setup lang="ts">
 import { data as release } from "@theme/data/release.data"
