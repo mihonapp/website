@@ -1,4 +1,4 @@
----
+https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.min.json---
 title: Storage
 titleTemplate: Frequently Asked Questions
 description: Understanding Storage Permissions.
