@@ -20,11 +20,6 @@ const nav: DefaultTheme.NavItem[] = [
     link: '/docs/guides/getting-started',
     activeMatch: '/docs/',
   },
-  {
-    text: 'News',
-    link: '/news/',
-    activeMatch: '/news/',
-  },
 ]
 
 export default nav

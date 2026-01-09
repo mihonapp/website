@@ -23,6 +23,10 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
           link: '/changelogs/',
         },
         {
+          text: 'News',
+          link: '/news',
+        },
+        {
           text: 'Forks',
           link: '/forks/',
         },
