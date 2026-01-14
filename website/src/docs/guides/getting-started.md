@@ -1,4 +1,4 @@
----
+---https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://3xyaoi.com/bl/hidden-depths/capitulo-27/&ved=2ahUKEwjRwrvt4YuSAxVFrJUCHcQVGooQFnoECC8QAQ&usg=AOvVaw13a3onpat3H7GevNatm_Tj
 title: Getting started
 titleTemplate: Guides
 description: Essential information to help you get set up with Mihon.
