@@ -1,4 +1,4 @@
-<div align="center">
+mihon<div align="center">
 
 <a href="https://mihon.app">
     <img src="./.github/assets/logo.png" alt="Mihon logo" title="Mihon logo" width="80"/>
@@ -10,7 +10,7 @@
 Discover and read manga, webtoons, comics, and more – easier than ever on your Android device.
 
 [![Discord server](https://img.shields.io/discord/1195734228319617024.svg?label=&labelColor=6A7EC2&color=7389D8&logo=discord&logoColor=FFFFFF)](https://discord.gg/mihon)
-[![GitHub downloads](https://img.shields.io/github/downloads/mihonapp/mihon/total?label=downloads&labelColor=27303D&color=0D1117&logo=github&logoColor=FFFFFF&style=flat)](https://github.com/mihonapp/mihon/releases)
+[![GitHub downloads]https://img.shields.io/github/downloads/mihonapp/mihon/total?label=downloads&labelColor=27303D&color=0D1117&logo=github&logoColor=FFFFFF&style=flat)](https://github.com/mihonapp/mihon/releases)
 
 ## Contributing
 
