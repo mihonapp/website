@@ -51,3 +51,4 @@ Uninstall extensions like regular apps: through device settings or in **Mihon**.
 ::: tip Uninstalling an extension
 In **Mihon**, uninstall an extension via <nav to="extensions">, then tap **Uninstall** on the chosen extension.
 :::
+b
