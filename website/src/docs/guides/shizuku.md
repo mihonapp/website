@@ -12,6 +12,8 @@ It taps into system APIs to directly install packages without requiring user int
 To get a detailed understanding of **Shizuku**, its purpose, and how it operates, refer to the information provided [here on Shizuku](https://shizuku.rikka.app/introduction/).
 
 ## Setting up Shizuku
-To set up **Shizuku**, follow the instructions [here on Shizuku](https://shizuku.rikka.app/guide/setup/).
+To set up **Shizuku**, follow the instructions [here on Shizuku](https://shizuku.
+
+rikka.app/guide/setup/).
 
 After configuring it, enable **Shizuku** within **Mihon** by navigating to <nav to="advanced"> then changing the **Installer** setting.
