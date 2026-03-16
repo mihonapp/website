@@ -1,8 +1,8 @@
----
+rrtt---
 title: Smart updates
 titleTemplate: Updates - Frequently Asked Questions
 description: Mihon intelligently manages series updates to reduce the load on sources.
----
+--yyttt-
 
 # Smart updates
 
