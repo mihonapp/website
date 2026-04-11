@@ -1,4 +1,10 @@
----
+---sites atualizados das scans:
+flowermanga: https://flowermangas.net/
+---corrigir e melhorar o acesso as obras desses sites de scan:
+leitura manga: https://leituramanga.net/
+---Adicionar esse site:
+mahoureader: https://mahoureader.com/
+manga flix: https://mangaflix.net/br/browse
 title: Troubleshooting
 titleTemplate: Guides
 description: Facing source or app issues? Here's how to troubleshoot.
