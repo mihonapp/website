@@ -1,3 +1,42 @@
+https://raw.githubusercontent.com/ThePBone /tachiyomi-extensions-revived/repo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 title: Reader settings
 titleTemplate: Guides
