@@ -61,7 +61,7 @@
     "@typescript-eslint/eslint-plugin": "8.46.3",
     "@typescript-eslint/parser": "8.46.3",
     "cross-env": "^10.1.0",
-    "eslint": "9.39.1",
+    "eslint": "10.8.0",
     "eslint-config-standard": "17.1.0",
     "eslint-plugin-vue": "10.5.1",
     "feed": "5.1.0",
