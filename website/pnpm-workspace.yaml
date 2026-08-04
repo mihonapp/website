@@ -1,3 +1,12 @@
 allowBuilds:
   esbuild: true
   vue-demi: true
+
+publicHoistPattern:
+  - '*eslint-plugin-*'
+  - '@typescript-eslint/eslint-plugin'
+  - '@antfu/*'
+
+shellEmulator: true
+trustPolicy: no-downgrade
+trustPolicyIgnoreAfter: 43200

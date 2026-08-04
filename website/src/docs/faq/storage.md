@@ -120,7 +120,7 @@ Note the illustrated example above where `downloads` is a folder _within_ the lo
 
 If you need to change your storage location or have moved files around from outside the app, you may need to force the app to recheck for the files by going to <nav to="advanced"> then **Reindex downloads**.
 
-# Scoped Storage
+## Scoped Storage
 
 Since Android 11, most apps are enforced to use [Scoped Storage](https://developer.android.com/about/versions/11/privacy/storage) for better security for users so that apps cannot read everything on the device.
 
