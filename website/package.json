@@ -49,7 +49,7 @@
     "@eslint/eslintrc": "^3.3.1",
     "@mdit/plugin-attrs": "0.25.2",
     "@mdit/plugin-figure": "0.23.2",
-    "@mdit/plugin-img-lazyload": "0.23.2",
+    "@mdit/plugin-img-lazyload": "1.0.2",
     "@mdit/plugin-img-mark": "0.23.2",
     "@mdit/plugin-img-size": "0.23.2",
     "@mdit/plugin-include": "0.23.2",
