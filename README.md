@@ -22,7 +22,8 @@ If you got any questions, [join our Discord server](https://discord.gg/mihon).
 
 ### Repositories
 
-[![mihonapp/mihon - GitHub](https://github-readme-stats.vercel.app/api/pin/?username=mihonapp&repo=mihon&bg_color=161B22&text_color=c9d1d9&title_color=0877d2&icon_color=0877d2&border_radius=8&hide_border=true)](https://github.com/mihonapp/mihon/)
+[![mihonapp/mihon - GitHub](https://github-stats-extended.vercel.app/api/pin/?username=mihonapp&repo=mihon&bg_color=161B22&text_color=c9d1d9&title_color=0877d2&icon_color=0877d2&border_radius=8&hide_border=true&description_lines_count=2)](https://github.com/mihonapp/mihon/)
+[![mihonapp/bitmap.kt - GitHub](https://github-stats-extended.vercel.app/api/pin/?username=mihonapp&repo=bitmap.kt&bg_color=161B22&text_color=c9d1d9&title_color=0877d2&icon_color=0877d2&border_radius=8&hide_border=true&description_lines_count=2)](https://github.com/mihonapp/bitmap.kt/)
 
 ### Credits
 
