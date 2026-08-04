@@ -51,7 +51,7 @@
     "@mdit/plugin-figure": "0.23.2",
     "@mdit/plugin-img-lazyload": "1.0.2",
     "@mdit/plugin-img-mark": "0.23.2",
-    "@mdit/plugin-img-size": "0.23.2",
+    "@mdit/plugin-img-size": "1.0.2",
     "@mdit/plugin-include": "0.23.2",
     "@resvg/resvg-js": "2.6.2",
     "@types/gtag.js": "0.0.20",
