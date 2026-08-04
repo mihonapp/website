@@ -29,7 +29,8 @@
     "lint:es:fix": "eslint . --fix",
     "lint:mdl": "markdownlint \"**/*.md\" \".github/**/*.md\" --enable sentences-per-line --disable MD025 MD033",
     "lint:style": "cross-env NODE_OPTIONS='--no-deprecation' stylelint '**/*.{styl,vue}' 'src/.vitepress/**/*.{styl,vue}'",
-    "lint:style:fix": "cross-env NODE_OPTIONS='--no-deprecation' stylelint --fix '**/*.{styl,vue}' 'src/.vitepress/**/*.{styl,vue}'"
+    "lint:style:fix": "cross-env NODE_OPTIONS='--no-deprecation' stylelint --fix '**/*.{styl,vue}' 'src/.vitepress/**/*.{styl,vue}'",
+    "refresh:releases": "node --experimental-strip-types src/.vitepress/config/releaseData.ts"
   },
   "dependencies": {
     "@iconify-prerendered/vue-mdi": "0.28.1737398331",

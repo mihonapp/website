@@ -3,10 +3,10 @@ import type { SatoriOptions } from 'x-satori/vue'
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { Octokit } from '@octokit/rest'
 import { renderAsync } from '@resvg/resvg-js'
 import { createContentLoader } from 'vitepress'
 import { satoriVue } from 'x-satori/vue'
+import { getStableReleases } from '../releaseData'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const __fonts = resolve(__dirname, '../../fonts')
@@ -105,12 +105,7 @@ async function generateOgImages(config: SiteConfig) {
   }
 
   // Generate OG images for dynamic changelog pages
-  const octokit = new Octokit()
-  const releases = await octokit.paginate(octokit.repos.listReleases, {
-    owner: 'mihonapp',
-    repo: 'mihon',
-    per_page: 100,
-  })
+  const releases = await getStableReleases()
 
   for (const r of releases) {
     if (!r.tag_name)

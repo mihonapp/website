@@ -1,6 +1,5 @@
 import process from 'node:process'
 import { fileURLToPath, URL } from 'node:url'
-import { Octokit } from '@octokit/rest'
 import ElementPlus from 'unplugin-element-plus/vite'
 import { defineConfig, loadEnv } from 'vitepress'
 
@@ -19,11 +18,10 @@ import generateOgImages from './config/hooks/generateOgImages'
 
 import markdownConfig from './config/markdownConfig'
 
+import { getStableRelease } from './config/releaseData'
+
 // For use with loading Markdown plugins
 import themeConfig from './config/themeConfig'
-
-const octokit = new Octokit()
-const releaseDateCache = new Map<string, string>()
 
 const title = 'Mihon'
 const description = 'Discover and read manga, webtoons, comics, and more – easier than ever on your Android device.'
@@ -51,16 +49,8 @@ export default defineConfig({
         pageData.frontmatter ||= {}
         pageData.frontmatter.title = `v${version}`
 
-        let publishedAt = releaseDateCache.get(tag)
-        if (!publishedAt) {
-          try {
-            const { data } = await octokit.repos.getReleaseByTag({ owner: 'mihonapp', repo: 'mihon', tag })
-            publishedAt = data.published_at || data.created_at || ''
-            if (publishedAt)
-              releaseDateCache.set(tag, publishedAt)
-          }
-          catch {}
-        }
+        const release = await getStableRelease(tag)
+        const publishedAt = release?.published_at || release?.created_at || ''
 
         const prettyDate = publishedAt
           ? new Date(publishedAt).toLocaleDateString('en', { month: 'short', day: 'numeric', year: 'numeric' })

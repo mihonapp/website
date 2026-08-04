@@ -29,7 +29,19 @@ $ pnpm dev
 ``` bash
 # This command will generate a static site inside a dist directory in your project.
 $ pnpm build
+```
 
+### GitHub release cache
+
+The build caches GitHub release data locally, so repeated builds do not consume API requests. Refresh it before testing release-related changes:
+
+``` powershell
+# Set GITHUB_TOKEN first to avoid GitHub's unauthenticated API rate limit.
+$env:GITHUB_TOKEN = gh auth token
+pnpm refresh:releases
+```
+
+``` bash
 # Run this command to preview the built files in a local server.
 $ pnpm preview
 ```
