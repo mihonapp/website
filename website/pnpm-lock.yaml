@@ -64,8 +64,8 @@ importers:
         specifier: 1.0.2
         version: 1.0.2(markdown-it@15.0.0)
       '@mdit/plugin-include':
-        specifier: 0.23.2
-        version: 0.23.2(markdown-it@15.0.0)
+        specifier: 1.0.3
+        version: 1.0.3(markdown-it@15.0.0)
       '@resvg/resvg-js':
         specifier: 2.6.2
         version: 2.6.2
@@ -837,15 +837,6 @@ packages:
   '@keyv/serialize@1.1.1':
     resolution: {integrity: sha512-dXn3FZhPv0US+7dtJsIi2R+c7qWYiReoEh5zUntWCf4oSpMNib8FDhSoed6m3QyZdx5hK7iLFkYk3rNxwt8vTA==}
 
-  '@mdit/helper@0.23.2':
-    resolution: {integrity: sha512-w4oja7kZYnkSiodfn4Neg1gmlIkvQtmCBJTLvLFOaET7xt8KomDNPQeumpGobQ9dWkXFqBKHlxjTYgroPH+CvA==}
-    engines: {node: '>= 20'}
-    peerDependencies:
-      markdown-it: ^14.1.0
-    peerDependenciesMeta:
-      markdown-it:
-        optional: true
-
   '@mdit/helper@1.0.1':
     resolution: {integrity: sha512-zAzShsRZmkqjuoOFg6/zTCYVpvghj9a30Cl/eOGkE0xzRJJJG8T18eqb2lgceQhjVLWHK02HNVkzyfNHc429lQ==}
     engines: {node: '>=22'}
@@ -900,11 +891,11 @@ packages:
       markdown-it:
         optional: true
 
-  '@mdit/plugin-include@0.23.2':
-    resolution: {integrity: sha512-wU+b1AITt3iCb70d9GpY8/BsEkf18XPeO3vdcU6pmAOrFo1GyWAf21KTE0+g/Zh7n3DdyqdjpPCjEJbW73xzzg==}
-    engines: {node: '>= 20'}
+  '@mdit/plugin-include@1.0.3':
+    resolution: {integrity: sha512-5ubZjnHWyC/q8lvTR7t0s1cXJf3EVzPZxWr+Jiduk4qrLr7Cw6EKBJXqjgUByTDucPev+1UPUEm0olhydqURyQ==}
+    engines: {node: '>=22'}
     peerDependencies:
-      markdown-it: ^14.1.0
+      markdown-it: ^14.2.0
     peerDependenciesMeta:
       markdown-it:
         optional: true
@@ -4108,9 +4099,9 @@ packages:
     resolution: {integrity: sha512-nwNCjxJTjNuLCgFr42fEak5OcLuB3ecca+9ksPFNvtfYSLpjf+iJqSIaSnIile6ZPbKYxI5k2AfXqeopGudK/g==}
     hasBin: true
 
-  upath@2.0.1:
-    resolution: {integrity: sha512-1uEe95xksV1O0CYKXo8vQvN1JEbtJp7lb7C5U9HMsIp6IVwntkH/oNUzyVNQSd4S1sYk2FpSSW44FqMc8qee5w==}
-    engines: {node: '>=4'}
+  upath@3.0.8:
+    resolution: {integrity: sha512-YAsrLMIlhfSCm9rga5TZsJ1mXgahs7N0qOTokzU8mFz35hUrYMvVkaEPefI3rEb/vkAWAOj1Km/qdije9RC1kQ==}
+    engines: {node: '>=20'}
 
   update-browserslist-db@1.2.3:
     resolution: {integrity: sha512-Js0m9cx+qOgDxo0eMiFGEueWztz+d4+M3rGlmKPT+T4IS/jP4ylw3Nwpu6cpTTP8R1MAC1kF4VbdLt3ARf209w==}
@@ -4901,12 +4892,6 @@ snapshots:
 
   '@keyv/serialize@1.1.1': {}
 
-  '@mdit/helper@0.23.2(markdown-it@15.0.0)':
-    dependencies:
-      '@types/markdown-it': 14.1.2
-    optionalDependencies:
-      markdown-it: 15.0.0
-
   '@mdit/helper@1.0.1(markdown-it@15.0.0)':
     dependencies:
       '@types/markdown-it': 14.1.2
@@ -4944,11 +4929,11 @@ snapshots:
     optionalDependencies:
       markdown-it: 15.0.0
 
-  '@mdit/plugin-include@0.23.2(markdown-it@15.0.0)':
+  '@mdit/plugin-include@1.0.3(markdown-it@15.0.0)':
     dependencies:
-      '@mdit/helper': 0.23.2(markdown-it@15.0.0)
+      '@mdit/helper': 1.0.1(markdown-it@15.0.0)
       '@types/markdown-it': 14.1.2
-      upath: 2.0.1
+      upath: 3.0.8
     optionalDependencies:
       markdown-it: 15.0.0
 
@@ -8703,7 +8688,7 @@ snapshots:
       knitwork: 1.2.0
       scule: 1.3.0
 
-  upath@2.0.1: {}
+  upath@3.0.8: {}
 
   update-browserslist-db@1.2.3(browserslist@4.28.7):
     dependencies:
