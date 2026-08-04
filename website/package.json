@@ -47,7 +47,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^6.2.0",
     "@eslint/eslintrc": "^3.3.1",
-    "@mdit/plugin-attrs": "0.25.2",
+    "@mdit/plugin-attrs": "1.1.1",
     "@mdit/plugin-figure": "0.23.2",
     "@mdit/plugin-img-lazyload": "0.23.2",
     "@mdit/plugin-img-mark": "0.23.2",
