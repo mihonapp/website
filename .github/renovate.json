@@ -1,6 +1,6 @@
 {
 	"extends": [
-		"config:base"
+		"config:recommended"
 	],
 	"labels": [
 		"Dependencies"
@@ -12,5 +12,5 @@
 			"automerge": true
 		}
 	],
-	"schedule": ["every sunday"]
+	"schedule": ["on sunday"]
 }
