@@ -18,7 +18,7 @@ const changelog = computed(() => formatChangelog(md, release[type.value].body))
   <div class="changelog">
     <header>
       <IconNewspaperVariant />
-      <h2>Changelog <span className="version-name">{{release[type].tag_name}}</span></h2>
+      <h2>Changelog <span className="version-name">{{ release[type].tag_name }}</span></h2>
     </header>
     <div v-html="changelog" />
     <Contributors
