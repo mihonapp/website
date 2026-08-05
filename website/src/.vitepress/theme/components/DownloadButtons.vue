@@ -68,13 +68,17 @@ function handleAnalytics(type: 'beta' | 'stable') {
           <dl class="release-details">
             <div>
               <IconTagOutline aria-hidden="true" />
-              <dt>Latest release:</dt>
-              <dd>{{ downloadInformation.stable.tagName }}</dd>
+              <div class="release-detail-copy">
+                <dt>Latest release:</dt>
+                <dd>{{ downloadInformation.stable.tagName }}</dd>
+              </div>
             </div>
             <div>
               <IconCalendarOutline aria-hidden="true" />
-              <dt>Released:</dt>
-              <dd><ReleaseDate type="stable" /></dd>
+              <div class="release-detail-copy">
+                <dt>Released</dt>
+                <dd><ReleaseDate type="stable" /></dd>
+              </div>
             </div>
           </dl>
           <div class="release-actions">
@@ -105,13 +109,17 @@ function handleAnalytics(type: 'beta' | 'stable') {
           <dl class="release-details">
             <div>
               <IconTagOutline aria-hidden="true" />
-              <dt>Latest preview:</dt>
-              <dd>{{ downloadInformation.beta.tagName }}</dd>
+              <div class="release-detail-copy">
+                <dt>Latest release:</dt>
+                <dd>{{ downloadInformation.beta.tagName }}</dd>
+              </div>
             </div>
             <div>
               <IconCalendarOutline aria-hidden="true" />
-              <dt>Released</dt>
-              <dd><ReleaseDate type="beta" /></dd>
+              <div class="release-detail-copy">
+                <dt>Released</dt>
+                <dd><ReleaseDate type="beta" /></dd>
+              </div>
             </div>
           </dl>
           <div class="release-actions">
@@ -263,8 +271,7 @@ html:not(.dark) {
   display: flex
   align-items: center
   gap: 1rem
-  padding-bottom: 1.25rem
-  border-bottom: 1px solid var(--vp-c-divider)
+  padding-bottom: 0.75rem
 
   h3 {
     margin: 0
@@ -314,6 +321,13 @@ html:not(.dark) {
     display: flex
     align-items: center
     gap: 0.75rem
+  }
+
+  .release-detail-copy {
+    display: inline-flex
+    align-items: baseline
+    gap: 0.25rem
+    min-width: 0
   }
 
   svg {
@@ -370,8 +384,7 @@ html:not(.dark) {
 
 .release-actions {
   margin-top: auto
-  padding-top: 1.25rem
-  border-top: 1px solid var(--vp-c-divider)
+  padding-top: 0.75rem
 }
 
 .download-button {
