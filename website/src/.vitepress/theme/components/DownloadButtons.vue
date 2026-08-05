@@ -55,7 +55,7 @@ function handleAnalytics(type: 'beta' | 'stable') {
         Read the <a href="/docs/faq/general">General FAQ</a> for more information.
       </p>
     </div>
-    <section class="release-selector" aria-labelledby="release-selector-title">
+    <section class="release-selector" aria-label="Choose your release">
       <div class="release-cards">
         <article class="release-card stable">
           <div class="release-card-header">
@@ -147,50 +147,6 @@ function handleAnalytics(type: 'beta' | 'stable') {
 <style lang="stylus">
 .release-selector {
   margin: 1.5rem auto 0
-}
-
-.os-caution {
-  display: flex
-  align-items: flex-start
-  gap: 0.65rem
-  margin: 0.75rem 0 1rem
-  border-left: 3px solid var(--vp-c-warning-1)
-  border-radius: 8px
-  padding: 0.75rem 1rem
-  color: var(--vp-c-text-1)
-  background: var(--vp-custom-block-warning-bg)
-  font-size: 0.875rem
-  line-height: 1.5
-
-  svg {
-    margin-top: 0.1rem
-    flex: 0 0 auto
-    color: var(--vp-c-warning-1)
-    font-size: 1.2rem
-  }
-
-  p {
-    margin: 0 !important
-  }
-
-  a {
-    font-weight: 600
-  }
-}
-
-.release-selector-heading {
-  h2 {
-    margin: 0
-    border: 0
-    padding: 0
-    font-size: 1.75rem
-  }
-
-  p {
-    margin: 0.25rem 0 1.25rem
-    color: var(--vp-c-text-2)
-    font-size: 1rem
-  }
 }
 
 .release-cards {
