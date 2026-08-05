@@ -208,6 +208,58 @@ function handleAnalytics(type: 'beta' | 'stable') {
   }
 }
 
+html:not(.dark) {
+  .release-card {
+    border-color: #d8d8df
+    background: #f5f5f7
+    box-shadow: 0 1px 2px rgba(31, 35, 45, 0.08)
+
+    &.stable {
+      border-color: var(--vp-c-brand)
+      background: linear-gradient(135deg, #dce1ff, #eef0ff)
+      box-shadow: 0 8px 24px rgba(88, 101, 190, 0.16)
+    }
+  }
+
+  .release-card.stable .release-icon {
+    color: #34437e
+    background: #bfc9ff
+  }
+
+  .release-card:not(.stable) .release-icon {
+    color: #4b4f5c
+    background: #d9dbe2
+  }
+
+  .release-card.stable .release-details svg {
+    color: #405091
+    background: #cbd3ff
+  }
+
+  .release-card:not(.stable) .release-details svg {
+    color: #555a68
+    background: #dfe1e7
+  }
+
+  .download-button.secondary {
+    border-color: #c4c7d0
+    color: #383d4a
+    background-color: #e1e3e9
+
+    &:hover {
+      border-color: #adb1bd
+      color: #272b35
+      background-color: #d5d8e0
+    }
+
+    &:active {
+      border-color: #a2a6b2
+      color: #272b35
+      background-color: #cbced7
+    }
+  }
+}
+
 .release-card-header {
   display: flex
   align-items: center
@@ -268,6 +320,11 @@ function handleAnalytics(type: 'beta' | 'stable') {
     background: var(--vp-c-default-soft)
 
     .stable & {
+      color: var(--vp-c-brand-darker)
+      background: var(--vp-c-brand-dimm)
+    }
+
+    .dark .stable & {
       color: #bfceff
       background: rgba(88, 112, 223, 0.35)
     }
