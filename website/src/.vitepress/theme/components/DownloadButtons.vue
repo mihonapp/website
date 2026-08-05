@@ -6,7 +6,6 @@ import {
   IconAndroid,
   IconCalendarOutline,
   IconFlaskOutline,
-  IconShieldOutline,
   IconTagOutline,
 } from '@iconify-prerendered/vue-mdi'
 import { computed, onMounted, ref } from 'vue'
@@ -60,7 +59,7 @@ function handleAnalytics(type: 'beta' | 'stable') {
       <div class="release-cards">
         <article class="release-card stable">
           <div class="release-card-header">
-            <span class="release-icon" aria-hidden="true"><IconShieldOutline /></span>
+            <span class="release-icon" aria-hidden="true"><span class="mihon-logo" /></span>
             <div>
               <h3>Stable</h3>
               <p>Recommended for most users</p>
@@ -291,6 +290,13 @@ html:not(.dark) {
 
   svg {
     font-size: 2rem
+  }
+
+  .mihon-logo {
+    width: 2.25rem
+    height: 2.25rem
+    background: currentColor
+    mask: url('/img/mihon.svg') center / contain no-repeat
   }
 
   .stable & {
