@@ -1,8 +1,17 @@
 <script setup lang="ts">
 /// <reference types="@types/gtag.js" />
 
+import {
+  IconAlertOutline,
+  IconAndroid,
+  IconCalendarOutline,
+  IconFlaskOutline,
+  IconShieldOutline,
+  IconTagOutline,
+} from '@iconify-prerendered/vue-mdi'
 import { computed, onMounted, ref } from 'vue'
 import { data as release } from '../data/release.data'
+import ReleaseDate from './ReleaseDate.vue'
 
 const downloadInformation = computed(() => ({
   beta: {
@@ -41,73 +50,280 @@ function handleAnalytics(type: 'beta' | 'stable') {
         Unsupported operating system
       </p>
       <p>
-        <strong>Mihon</strong> is an <strong>Android app</strong> only.
-        Use an <strong>Android device</strong> to download and install the app.
-      </p>
-    </div>
-    <div v-if="!isAndroid" class="custom-block warning">
-      <p class="custom-block-title">
-        Caution
+        <strong>Mihon</strong> is only available on Android. Any non-Android app named <strong>Mihon</strong> is unaffiliated with this project.
       </p>
       <p>
-        Any app for any operating systems other than Android called
-        <strong>Mihon</strong> is not affiliated with this project.
+        Read the <a href="/docs/faq/general">General FAQ</a> for more information.
       </p>
-      <blockquote>
-        For more information, read the
-        <a href="/docs/faq/general">General FAQ</a>.
-      </blockquote>
     </div>
-    <div class="download-buttons">
-      <a
-        class="download-button primary"
-        :download="downloadInformation.stable.asset?.name"
-        :href="downloadInformation.stable.asset?.browser_download_url"
-        @click="handleAnalytics('stable')"
-      >
-        <IconDownload />
-        <span class="text">Mihon</span>
-        <span class="version">{{ downloadInformation.stable.tagName }}</span>
-      </a>
-      <a
-        class="download-button secondary"
-        :download="downloadInformation.beta.asset?.name"
-        :href="downloadInformation.beta.asset?.browser_download_url"
-        @click="handleAnalytics('beta')"
-      >
-        <IconBugReport />
-        <span class="text">Mihon Beta</span>
-        <span class="version">{{ downloadInformation.beta.tagName }}</span>
-      </a>
-    </div>
-    <span class="version-disclaimer">
-      Requires <strong>Android 8.0</strong> or higher.
-    </span>
+    <section class="release-selector" aria-labelledby="release-selector-title">
+      <div class="release-cards">
+        <article class="release-card stable">
+          <div class="release-card-header">
+            <span class="release-icon" aria-hidden="true"><IconShieldOutline /></span>
+            <div>
+              <h3>Stable</h3>
+              <p>Recommended for most users</p>
+            </div>
+          </div>
+          <dl class="release-details">
+            <div>
+              <IconTagOutline aria-hidden="true" />
+              <dt>Latest release:</dt>
+              <dd>{{ downloadInformation.stable.tagName }}</dd>
+            </div>
+            <div>
+              <IconCalendarOutline aria-hidden="true" />
+              <dt>Released:</dt>
+              <dd><ReleaseDate type="stable" /></dd>
+            </div>
+          </dl>
+          <div class="release-actions">
+            <a
+              class="download-button primary"
+              :download="downloadInformation.stable.asset?.name"
+              :href="downloadInformation.stable.asset?.browser_download_url"
+              @click="handleAnalytics('stable')"
+            >
+              <IconDownload />
+              <span class="text">Download Mihon</span>
+              <span class="version">{{ downloadInformation.stable.tagName }}</span>
+            </a>
+            <span class="release-action-note">
+              <IconAndroid aria-hidden="true" />
+              <span>Requires <strong>Android 8.0</strong> or higher.</span>
+            </span>
+          </div>
+        </article>
+        <article class="release-card beta">
+          <div class="release-card-header">
+            <span class="release-icon" aria-hidden="true"><IconFlaskOutline /></span>
+            <div>
+              <h3>Beta</h3>
+              <p>Preview upcoming changes</p>
+            </div>
+          </div>
+          <dl class="release-details">
+            <div>
+              <IconTagOutline aria-hidden="true" />
+              <dt>Latest preview:</dt>
+              <dd>{{ downloadInformation.beta.tagName }}</dd>
+            </div>
+            <div>
+              <IconCalendarOutline aria-hidden="true" />
+              <dt>Released</dt>
+              <dd><ReleaseDate type="beta" /></dd>
+            </div>
+          </dl>
+          <div class="release-actions">
+            <a
+              class="download-button secondary"
+              :download="downloadInformation.beta.asset?.name"
+              :href="downloadInformation.beta.asset?.browser_download_url"
+              @click="handleAnalytics('beta')"
+            >
+              <IconDownload />
+              <span class="text">Download Mihon Beta</span>
+              <span class="version">{{ downloadInformation.beta.tagName }}</span>
+            </a>
+            <span class="release-action-note">
+              <IconAlertOutline aria-hidden="true" />
+              <span>May contain unfinished features or stability issues.</span>
+            </span>
+          </div>
+        </article>
+      </div>
+    </section>
   </div>
 </template>
 
 <style lang="stylus">
-.download-buttons {
+.release-selector {
+  margin: 1.5rem auto 0
+}
+
+.os-caution {
   display: flex
-  gap: 0.75em
-  justify-content: center
+  align-items: flex-start
+  gap: 0.65rem
+  margin: 0.75rem 0 1rem
+  border-left: 3px solid var(--vp-c-warning-1)
+  border-radius: 8px
+  padding: 0.75rem 1rem
+  color: var(--vp-c-text-1)
+  background: var(--vp-custom-block-warning-bg)
+  font-size: 0.875rem
+  line-height: 1.5
+
+  svg {
+    margin-top: 0.1rem
+    flex: 0 0 auto
+    color: var(--vp-c-warning-1)
+    font-size: 1.2rem
+  }
+
+  p {
+    margin: 0 !important
+  }
+
+  a {
+    font-weight: 600
+  }
+}
+
+.release-selector-heading {
+  h2 {
+    margin: 0
+    border: 0
+    padding: 0
+    font-size: 1.75rem
+  }
+
+  p {
+    margin: 0.25rem 0 1.25rem
+    color: var(--vp-c-text-2)
+    font-size: 1rem
+  }
+}
+
+.release-cards {
+  display: grid
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+  gap: 1.5rem
+}
+
+.release-card {
+  display: flex
+  min-width: 0
+  flex-direction: column
+  border: 1px solid var(--vp-c-divider)
+  border-radius: 14px
+  padding: 1.5rem
+  background: var(--vp-c-bg-soft)
+
+  &.stable {
+    border-color: #6d86ff
+    background: linear-gradient(135deg, rgba(78, 103, 205, 0.25), var(--vp-c-bg-soft) 75%)
+    box-shadow: 0 12px 32px rgba(45, 59, 137, 0.18)
+  }
+}
+
+.release-card-header {
+  display: flex
   align-items: center
-  margin: 0.75em auto
+  gap: 1rem
+  padding-bottom: 1.25rem
+  border-bottom: 1px solid var(--vp-c-divider)
+
+  h3 {
+    margin: 0
+    font-size: 1.5rem
+  }
+
+  p {
+    margin: 0.15rem 0 0
+    color: var(--vp-c-text-2)
+    font-size: 1rem
+  }
+}
+
+.release-icon {
+  display: grid
+  width: 4rem
+  height: 4rem
+  flex: 0 0 auto
+  place-items: center
+  border-radius: 50%
+  color: var(--vp-c-text-1)
+  background: var(--vp-c-default-soft)
+
+  svg {
+    font-size: 2rem
+  }
+
+  .stable & {
+    color: #dce4ff
+    background: rgba(88, 112, 223, 0.6)
+  }
+}
+
+.release-details {
+  display: grid
+  gap: 0.5rem
+  margin: 0.75rem 0
+
+  div {
+    display: flex
+    align-items: center
+    gap: 0.75rem
+  }
+
+  svg {
+    width: 2rem
+    height: 2rem
+    flex: 0 0 auto
+    padding: 0.5rem
+    border-radius: 50%
+    color: var(--vp-c-text-2)
+    background: var(--vp-c-default-soft)
+
+    .stable & {
+      color: #bfceff
+      background: rgba(88, 112, 223, 0.35)
+    }
+  }
+
+  dt,
+  dd {
+    margin: 0
+    font-size: 1rem
+  }
+
+  dt {
+    color: var(--vp-c-text-2)
+  }
+
+  dd {
+    color: var(--vp-c-text-1)
+    font-weight: 600
+  }
+}
+
+.release-action-note {
+  display: flex
+  align-items: flex-start
+  gap: 0.5rem
+  margin: 0.75rem 0 0
+  color: var(--vp-c-text-2)
+  font-size: 0.9rem
+  line-height: 1.5
+
+  svg {
+    margin-top: 0.1rem
+    flex: 0 0 auto
+    font-size: 1.2rem
+  }
+}
+
+.release-actions {
+  margin-top: auto
+  padding-top: 1.25rem
+  border-top: 1px solid var(--vp-c-divider)
 }
 
 .download-button {
-  display: inline-block
+  display: block
+  width: 100%
   border: 1px solid transparent
   text-align: center
   font-weight: 600
   white-space: nowrap
-  transition: color 0.25s, border-color 0.25s, background-color 0.25s
   cursor: pointer
-  transition: all 0.3s ease
-  border-radius: 20px
-  padding: 0 20px
-  line-height: 38px
-  font-size: 14px
+  transition: color 0.25s, border-color 0.25s, background-color 0.25s
+  border-radius: 9px
+  padding: 0 16px
+  line-height: 3.75rem
+  font-size: 1rem
 
   &:hover {
     text-decoration: none !important
@@ -157,7 +373,7 @@ function handleAnalytics(type: 'beta' | 'stable') {
   }
 
   .text {
-    margin-right: 10px
+    margin-right: 0.5rem
   }
 
   .version {
@@ -165,10 +381,17 @@ function handleAnalytics(type: 'beta' | 'stable') {
   }
 }
 
-.version-disclaimer {
-  display: block
-  text-align: center
-  margin: 0.75em auto
-  font-size: 0.75rem
+@media (max-width 640px) {
+  .release-cards {
+    grid-template-columns: 1fr
+  }
+
+  .release-card {
+    padding: 1.25rem
+  }
+
+  .release-selector-heading h2 {
+    font-size: 1.5rem
+  }
 }
 </style>
