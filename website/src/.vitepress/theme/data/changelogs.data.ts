@@ -1,22 +1,14 @@
-import type { GetResponseDataTypeFromEndpointMethod } from '@octokit/types'
-import { Octokit } from '@octokit/rest'
+import type { Release } from '../../config/releaseData'
 import { defineLoader } from 'vitepress'
+import { getStableReleases } from '../../config/releaseData'
 
-const octokit = new Octokit()
-
-type GitHubReleaseList = GetResponseDataTypeFromEndpointMethod<typeof octokit.repos.listReleases>
+type GitHubReleaseList = Release[]
 
 declare const data: GitHubReleaseList
 export { data }
 
 export default defineLoader({
   async load(): Promise<GitHubReleaseList> {
-    const releases = await octokit.paginate(octokit.repos.listReleases, {
-      owner: 'mihonapp',
-      repo: 'mihon',
-      per_page: 100,
-    })
-
-    return releases
+    return getStableReleases()
   },
 })

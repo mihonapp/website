@@ -46,7 +46,7 @@ jobs:
             - name: Install pnpm
               uses: pnpm/action-setup@v6
               with:
-                version: 10
+                version: 11
                 run_install: false
 
             - name: Get pnpm store directory
@@ -67,6 +67,8 @@ jobs:
 
             - name: Build
               run: pnpm build
+              env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Configure pages
               uses: actions/configure-pages@v6
