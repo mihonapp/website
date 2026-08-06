@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { DateTime } from 'luxon'
 import MarkdownIt from 'markdown-it'
-import moment from 'moment'
 import { computed, toRefs } from 'vue'
 import { data as changelogs } from '../data/changelogs.data'
 import { formatChangelog } from '../utils/formatChangelog'
@@ -45,11 +45,11 @@ function formatBytes(bytes: number) {
 }
 
 function assetDate(dateStr?: string) {
-  const d = dateStr ?? ''
+  const date = DateTime.fromISO(dateStr ?? '', { zone: 'utc' })
   return {
-    relative: d ? moment(d).fromNow() : '',
-    exact: d ? moment(d).format('dddd, MMMM Do YYYY [at] HH:mm') : '',
-    iso: d || undefined,
+    relative: date.isValid ? date.toRelative() ?? '' : '',
+    exact: date.isValid ? date.toLocaleString(DateTime.DATETIME_FULL) : '',
+    iso: dateStr || undefined,
   }
 }
 </script>

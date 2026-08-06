@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { DateTime } from 'luxon'
 import { computed, onMounted, ref } from 'vue'
 
 const props = defineProps<{ value: string }>()
@@ -8,26 +9,12 @@ onMounted(() => {
   locale.value = navigator.language
 })
 
-const date = computed(() => new Date(props.value))
+const date = computed(() => DateTime.fromISO(props.value, { zone: 'utc' }).setLocale(locale.value))
 const includesTime = computed(() => props.value.includes('T'))
 
-const formattedDate = computed(() => new Intl.DateTimeFormat(locale.value, {
-  dateStyle: 'medium',
-  timeZone: 'UTC',
-}).format(date.value))
+const formattedDate = computed(() => date.value.toLocaleString(DateTime.DATE_MED))
 
-const exactDateOptions = computed<Intl.DateTimeFormatOptions>(() => includesTime.value
-  ? {
-      dateStyle: 'full',
-      timeStyle: 'short',
-      timeZone: 'UTC',
-    }
-  : {
-      dateStyle: 'full',
-      timeZone: 'UTC',
-    })
-
-const exactDate = computed(() => new Intl.DateTimeFormat(locale.value, exactDateOptions.value).format(date.value))
+const exactDate = computed(() => date.value.toLocaleString(includesTime.value ? DateTime.DATETIME_FULL : DateTime.DATE_FULL))
 </script>
 
 <template>
