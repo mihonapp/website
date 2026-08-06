@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { IconDownload, IconNewspaperVariant } from '@iconify-prerendered/vue-mdi'
+import { IconDownload } from '@iconify-prerendered/vue-mdi'
 import { data as stableRelease } from '../data/latestStableRelease.data'
 import LocalizedDate from './LocalizedDate.vue'
 </script>
