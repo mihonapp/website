@@ -197,7 +197,7 @@ function handleAnalytics(type: 'beta' | 'foss' | 'stable') {
   background: var(--vp-c-bg-soft)
 
   &.stable {
-    border-color: #414971
+    border-color: var(--vp-c-brand-border)
     background: linear-gradient(135deg, rgba(78, 103, 205, 0.25), rgba(43, 57, 128, 0.18))
     box-shadow: 0 12px 32px rgba(45, 59, 137, 0.18)
   }
@@ -220,7 +220,7 @@ html:not(.dark) {
     box-shadow: 0 1px 2px rgba(31, 35, 45, 0.08)
 
     &.stable {
-      border-color: var(--vp-c-brand)
+      border-color: var(--vp-c-brand-border)
       background: linear-gradient(135deg, #dce1ff, #eef0ff)
       box-shadow: 0 8px 24px rgba(88, 101, 190, 0.16)
     }
