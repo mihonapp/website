@@ -6,6 +6,8 @@ import {
   IconAndroid,
   IconCalendarOutline,
   IconFlaskOutline,
+  IconInformationOutline,
+  IconLeaf,
   IconTagOutline,
 } from '@iconify-prerendered/vue-mdi'
 import { computed, onMounted, ref } from 'vue'
@@ -17,6 +19,11 @@ const downloadInformation = computed(() => ({
     tagName: release.beta.tag_name ?? 'r0000',
     asset: (release.beta.assets ?? [])
       .find(a => /^mihon-r\d{4,}.apk/.test(a.name)),
+  },
+  foss: {
+    tagName: release.stable.tag_name ?? 'v0.00.0',
+    asset: (release.stable.assets ?? [])
+      .find(a => /^mihon-v\d+\.\d+\.\d+-foss\.apk/.test(a.name)),
   },
   stable: {
     tagName: release.stable.tag_name ?? 'v0.00.0',
@@ -31,13 +38,13 @@ onMounted(() => {
   isAndroid.value = !!navigator.userAgent.match(/android/i)
 })
 
-function handleAnalytics(type: 'beta' | 'stable') {
+function handleAnalytics(type: 'beta' | 'foss' | 'stable') {
   window.gtag?.('event', 'Download', {
     event_category: 'App',
-    event_label: type === 'stable' ? 'Stable' : 'Beta',
-    version: type === 'stable'
-      ? release.stable.tag_name
-      : release.beta.tag_name,
+    event_label: type === 'stable' ? 'Stable' : type === 'beta' ? 'Beta' : 'FOSS',
+    version: type === 'beta'
+      ? release.beta.tag_name
+      : release.stable.tag_name,
   })
 }
 </script>
@@ -76,7 +83,7 @@ function handleAnalytics(type: 'beta' | 'stable') {
             <div>
               <IconCalendarOutline aria-hidden="true" />
               <div class="release-detail-copy">
-                <dt>Released</dt>
+                <dt>Released:</dt>
                 <dd><ReleaseDate type="stable" /></dd>
               </div>
             </div>
@@ -89,7 +96,7 @@ function handleAnalytics(type: 'beta' | 'stable') {
               @click="handleAnalytics('stable')"
             >
               <IconDownload />
-              <span class="text">Download Mihon</span>
+              <span class="text">Mihon</span>
               <span class="version">{{ downloadInformation.stable.tagName }}</span>
             </a>
             <span class="release-action-note">
@@ -117,7 +124,7 @@ function handleAnalytics(type: 'beta' | 'stable') {
             <div>
               <IconCalendarOutline aria-hidden="true" />
               <div class="release-detail-copy">
-                <dt>Released</dt>
+                <dt>Released:</dt>
                 <dd><ReleaseDate type="beta" /></dd>
               </div>
             </div>
@@ -130,7 +137,7 @@ function handleAnalytics(type: 'beta' | 'stable') {
               @click="handleAnalytics('beta')"
             >
               <IconDownload />
-              <span class="text">Download Mihon Beta</span>
+              <span class="text">Mihon Beta</span>
               <span class="version">{{ downloadInformation.beta.tagName }}</span>
             </a>
             <span class="release-action-note">
@@ -138,6 +145,31 @@ function handleAnalytics(type: 'beta' | 'stable') {
               <span>May contain unfinished features or stability issues.</span>
             </span>
           </div>
+        </article>
+        <article v-if="downloadInformation.foss.asset" class="release-card foss">
+          <div class="foss-copy">
+            <span class="foss-icon" aria-hidden="true"><IconLeaf /></span>
+            <div>
+              <h3>FOSS</h3>
+              <p class="foss-description">
+                A fully FOSS-compliant build of Mihon, compiled from the publicly available source code.
+              </p>
+              <p class="foss-note">
+                <IconInformationOutline aria-hidden="true" />
+                <span><strong>Note:</strong> Features that rely on proprietary components or commercial services are excluded.</span>
+              </p>
+            </div>
+          </div>
+          <a
+            class="download-button tertiary"
+            :download="downloadInformation.foss.asset.name"
+            :href="downloadInformation.foss.asset.browser_download_url"
+            @click="handleAnalytics('foss')"
+          >
+            <IconDownload />
+            <span class="text">Mihon FOSS</span>
+            <span class="version">{{ downloadInformation.foss.tagName }}</span>
+          </a>
         </article>
       </div>
     </section>
@@ -165,9 +197,19 @@ function handleAnalytics(type: 'beta' | 'stable') {
   background: var(--vp-c-bg-soft)
 
   &.stable {
-    border-color: #6d86ff
-    background: linear-gradient(135deg, rgba(78, 103, 205, 0.25), var(--vp-c-bg-soft) 75%)
+    border-color: #414971
+    background: linear-gradient(135deg, rgba(78, 103, 205, 0.25), rgba(43, 57, 128, 0.18))
     box-shadow: 0 12px 32px rgba(45, 59, 137, 0.18)
+  }
+
+  &.beta {
+    border-color: #514328
+    background: linear-gradient(135deg, rgba(171, 132, 36, 0.16), rgba(105, 78, 21, 0.11))
+  }
+
+  &.foss {
+    border-color: #35453f
+    background: linear-gradient(135deg, rgba(63, 132, 77, 0.12), rgba(35, 88, 47, 0.09))
   }
 }
 
@@ -181,6 +223,16 @@ html:not(.dark) {
       border-color: var(--vp-c-brand)
       background: linear-gradient(135deg, #dce1ff, #eef0ff)
       box-shadow: 0 8px 24px rgba(88, 101, 190, 0.16)
+    }
+
+    &.beta {
+      border-color: #d5c9a1
+      background: linear-gradient(135deg, #fff2c9, #fffaf0)
+    }
+
+    &.foss {
+      border-color: #c7dbc3
+      background: linear-gradient(135deg, #e3f3e0, #f5fbf3)
     }
   }
 
@@ -204,22 +256,49 @@ html:not(.dark) {
     background: #dfe1e7
   }
 
-  .download-button.secondary {
-    border-color: #c4c7d0
-    color: #383d4a
-    background-color: #e1e3e9
+  .release-card.beta .release-icon {
+    color: #765d09
+    background: #f4e2a5
+  }
+
+  .release-card.beta .release-details svg {
+    color: #806510
+    background: #faedc4
+  }
+
+  .release-card.beta .download-button.secondary {
+    color: #604900
+    background-color: #f5df95
 
     &:hover {
-      border-color: #adb1bd
-      color: #272b35
-      background-color: #d5d8e0
+      color: #4d3a00
+      background-color: #edcf6d
     }
 
     &:active {
-      border-color: #a2a6b2
-      color: #272b35
-      background-color: #cbced7
+      color: #413100
+      background-color: #e4bf50
     }
+  }
+
+  .release-card.foss .download-button.tertiary {
+    color: #365f32
+    background-color: #dcefd8
+
+    &:hover {
+      color: #294b26
+      background-color: #cbe6c6
+    }
+
+    &:active {
+      color: #203d1e
+      background-color: #bcdbb6
+    }
+  }
+
+  .foss-icon {
+    color: #4f6a42
+    background: #dce9d7
   }
 }
 
@@ -264,7 +343,7 @@ html:not(.dark) {
 
   .stable & {
     color: #dce4ff
-    background: rgba(88, 112, 223, 0.6)
+    background: rgba(88, 112, 223, 0.35)
   }
 }
 
@@ -282,7 +361,7 @@ html:not(.dark) {
   .release-detail-copy {
     display: inline-flex
     align-items: baseline
-    gap: 0.25rem
+    gap: 0.5rem
     min-width: 0
   }
 
@@ -322,6 +401,76 @@ html:not(.dark) {
   }
 }
 
+.release-card.foss {
+  grid-column: 1 / -1
+  display: flex
+  align-items: center
+  flex-direction: row
+  gap: 1.25rem
+  padding: 1rem 1.25rem
+
+  .download-button {
+    width: auto
+    min-width: 13.5rem
+    flex: 0 0 auto
+  }
+}
+
+.foss-copy {
+  display: flex
+  align-items: center
+  gap: 0.85rem
+  flex: 1 1 auto
+  min-width: 0
+
+  h3,
+  p {
+    margin: 0
+  }
+
+  h3 {
+    font-size: 1rem
+  }
+
+  .foss-description {
+    margin-top: 0.15rem
+    color: var(--vp-c-text-2)
+    font-size: 0.85rem
+    line-height: 1.45
+  }
+}
+
+.foss-note {
+  margin-top: 0.55rem !important
+  color: var(--vp-c-text-2)
+  font-size: 0.78rem
+  font-style: italic
+  line-height: 1.4
+
+  svg {
+    display: inline-block
+    margin-right: 0.4rem
+    color: #8bbd91
+    font-size: 1rem
+    vertical-align: -0.15em
+  }
+}
+
+.foss-icon {
+  display: grid
+  width: 2.75rem
+  height: 2.75rem
+  flex: 0 0 auto
+  place-items: center
+  border-radius: 50%
+  color: var(--vp-c-text-2)
+  background: var(--vp-c-default-soft)
+
+  svg {
+    font-size: 1.35rem
+  }
+}
+
 .release-action-note {
   display: flex
   align-items: flex-start
@@ -346,7 +495,6 @@ html:not(.dark) {
 .download-button {
   display: block
   width: 100%
-  border: 1px solid transparent
   text-align: center
   font-weight: 600
   white-space: nowrap
@@ -362,38 +510,75 @@ html:not(.dark) {
   }
 
   &.primary {
-    border-color: var(--vp-button-brand-border)
     color: var(--vp-button-brand-text)
     background-color: var(--vp-button-brand-bg)
 
     &:hover {
-      border-color: var(--vp-button-brand-hover-border)
       color: var(--vp-button-brand-hover-text)
       background-color: var(--vp-button-brand-hover-bg)
     }
 
     &:active {
-      border-color: var(--vp-button-brand-active-border)
       color: var(--vp-button-brand-active-text)
       background-color: var(--vp-button-brand-active-bg)
     }
   }
 
   &.secondary {
-    border-color: var(--vp-button-alt-border)
     color: var(--vp-button-alt-text)
     background-color: var(--vp-button-alt-bg)
 
     &:hover {
-      border-color: var(--vp-button-alt-hover-border)
       color: var(--vp-button-alt-hover-text)
       background-color: var(--vp-button-alt-hover-bg)
     }
 
     &:active {
-      border-color: var(--vp-button-alt-active-border)
       color: var(--vp-button-alt-active-text)
       background-color: var(--vp-button-alt-active-bg)
+    }
+  }
+
+  .release-card.beta &.secondary {
+    color: #fff1c7
+    background-color: #765d19
+
+    &:hover {
+      color: #fff7de
+      background-color: #8b701e
+    }
+
+    &:active {
+      color: #fff7de
+      background-color: #9c7e22
+    }
+  }
+
+  &.tertiary {
+    color: var(--vp-c-text-1)
+    background-color: var(--vp-c-bg-soft)
+
+    &:hover {
+      background-color: var(--vp-c-default-soft)
+    }
+
+    &:active {
+      background-color: var(--vp-c-divider)
+    }
+  }
+
+  .release-card.foss &.tertiary {
+    color: #d9f0d3
+    background-color: #345d3c
+
+    &:hover {
+      color: #ecfae8
+      background-color: #407348
+    }
+
+    &:active {
+      color: #ecfae8
+      background-color: #4d8656
     }
   }
 
@@ -422,8 +607,14 @@ html:not(.dark) {
     padding: 1.25rem
   }
 
-  .release-selector-heading h2 {
-    font-size: 1.5rem
+  .release-card.foss {
+    align-items: flex-start
+    flex-direction: column
+
+    .download-button {
+      width: 100%
+      min-width: 0
+    }
   }
 }
 </style>
