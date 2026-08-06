@@ -1,10 +1,11 @@
 <script setup lang="ts">
+import { DateTime } from 'luxon'
 import MarkdownIt from 'markdown-it'
-import moment from 'moment'
 import { computed, toRefs } from 'vue'
 import { data as changelogs } from '../data/changelogs.data'
 import { formatChangelog } from '../utils/formatChangelog'
 import Contributors from './Contributors.vue'
+import LocalizedDate from './LocalizedDate.vue'
 
 const props = defineProps<{ tag: string }>()
 const { tag } = toRefs(props)
@@ -12,10 +13,19 @@ const { tag } = toRefs(props)
 const md = new MarkdownIt({ html: true })
 
 function renderMarkdown(string: string | null | undefined) {
-  return formatChangelog(md, string, { stripChecksums: true })
+  return formatChangelog(md, string, {
+    hideAssetSelectionTip: true,
+    stripChecksums: true,
+  })
 }
 
 const release = computed(() => changelogs.find(r => r.tag_name === tag.value))
+const assetSelectionTip = computed(() => {
+  const body = release.value?.body ?? ''
+  const callouts = body.match(/^> \[!TIP\]\r?\n((?:^>.*\r?\n?)+)/gim) ?? []
+  const tip = callouts.find(callout => /if you are unsure which version to download/i.test(callout))
+  return tip ? formatChangelog(md, tip) : undefined
+})
 const latestStableTag = computed(() => {
   const stable = changelogs
     .filter(r => !r.draft && !r.prerelease)
@@ -35,11 +45,11 @@ function formatBytes(bytes: number) {
 }
 
 function assetDate(dateStr?: string) {
-  const d = dateStr ?? ''
+  const date = DateTime.fromISO(dateStr ?? '', { zone: 'utc' })
   return {
-    relative: d ? moment(d).fromNow() : '',
-    exact: d ? moment(d).format('dddd, MMMM Do YYYY [at] HH:mm') : '',
-    iso: d || undefined,
+    relative: date.isValid ? date.toRelative() ?? '' : '',
+    exact: date.isValid ? date.toLocaleString(DateTime.DATETIME_FULL) : '',
+    iso: dateStr || undefined,
   }
 }
 </script>
@@ -55,7 +65,7 @@ function assetDate(dateStr?: string) {
         :aria-label="`Permalink to &quot;${release.tag_name}&quot;`"
       />
     </h1>
-    <time :datetime="release!.published_at!">{{ new Date(release!.published_at!).toLocaleDateString('en', { dateStyle: 'medium' }) }}</time>
+    <LocalizedDate :value="release!.published_at!" />
     <div v-html="renderMarkdown(release!.body)" />
     <Contributors :body="release!.body!" :author="release!.author.login" :tag="release!.tag_name" />
     <details v-if="release!.assets && release!.assets.length" class="assets mt-4">
@@ -81,6 +91,7 @@ function assetDate(dateStr?: string) {
           </div>
         </li>
       </ul>
+      <div v-if="assetSelectionTip" class="asset-selection-tip" v-html="assetSelectionTip" />
     </details>
   </div>
   <div v-else>
@@ -93,6 +104,11 @@ h1 {
   display: flex
   align-items: center
   gap: 0.5rem
+}
+
+time {
+  font-size: 1rem
+  color: var(--vp-c-text-2)
 }
 
 .assets {
@@ -182,5 +198,9 @@ h1 {
       text-align: right
     }
   }
+}
+
+.asset-selection-tip :deep(.custom-block) {
+  margin: 0.75rem 0 0
 }
 </style>

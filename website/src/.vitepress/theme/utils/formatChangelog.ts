@@ -1,10 +1,11 @@
 import type MarkdownIt from 'markdown-it'
 
 export interface ChangelogFormatOptions {
+  hideAssetSelectionTip?: boolean
   stripChecksums?: boolean
 }
 
-function convertCallouts(md: MarkdownIt, input: string): string {
+function convertCallouts(md: MarkdownIt, input: string, options: ChangelogFormatOptions): string {
   return input.replace(
     /^> \[!(TIP|NOTE|IMPORTANT|WARNING|CAUTION)\]\r?\n((?:^>.*\r?\n?)+)/gim,
     (_match, typeRaw: string, block: string) => {
@@ -23,6 +24,8 @@ function convertCallouts(md: MarkdownIt, input: string): string {
         .join('\n')
         .replace(/###\s*/, '')
         .trim()
+      if (options.hideAssetSelectionTip && type === 'TIP' && /if you are unsure which version to download/i.test(text))
+        return ''
       const inner = md.render(text).trim()
       return `\n\n<div class="${cls} custom-block"><p class="custom-block-title">${title}</p>${inner}</div>\n\n`
     },
@@ -44,6 +47,6 @@ export function formatChangelog(md: MarkdownIt, body: string | null | undefined,
     .replace(/https:\/\/github.com\/mihonapp\/mihon\/releases\/tag\/(.*)/g, '#$1')
     .trim()
 
-  const withCallouts = convertCallouts(md, flavored)
+  const withCallouts = convertCallouts(md, flavored, options)
   return md.render(withCallouts)
 }

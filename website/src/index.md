@@ -15,8 +15,8 @@ hero:
       text: Get started
       link: /docs/guides/getting-started
     - theme: alt
-      text: Download
-      link: /download/
+      text: Help center
+      link: /docs/faq/general
 
 customMetaTitle: Mihon
 

@@ -6,12 +6,19 @@ import { data as release } from '../data/release.data'
 import { formatChangelog } from '../utils/formatChangelog'
 import Contributors from './Contributors.vue'
 
-const props = defineProps<{ type: keyof AppRelease }>()
+const props = withDefaults(defineProps<{
+  hideAssetSelectionTip?: boolean
+  type: keyof AppRelease
+}>(), {
+  hideAssetSelectionTip: false,
+})
 const { type } = toRefs(props)
 
 const md = new MarkdownIt({ html: true })
 
-const changelog = computed(() => formatChangelog(md, release[type.value].body))
+const changelog = computed(() => formatChangelog(md, release[type.value].body, {
+  hideAssetSelectionTip: props.hideAssetSelectionTip,
+}))
 </script>
 
 <template>
