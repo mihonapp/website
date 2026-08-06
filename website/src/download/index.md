@@ -17,4 +17,4 @@ import Changelog from "@theme/components/Changelog.vue";
 
 <DownloadButtons />
 
-<Changelog type="stable" />
+<Changelog type="stable" hide-asset-selection-tip />

@@ -11,7 +11,10 @@ function renderMarkdown(string: string | null | undefined) {
     'Check out the [past release notes](https://github.com/mihonapp/mihon/releases) if you’re upgrading from an earlier version. ',
     '',
   )
-  return formatChangelog(md, pre, { stripChecksums: true })
+  return formatChangelog(md, pre, {
+    hideAssetSelectionTip: true,
+    stripChecksums: true,
+  })
 }
 
 const dateFormatter = new Intl.DateTimeFormat('en', {

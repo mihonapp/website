@@ -12,10 +12,19 @@ const { tag } = toRefs(props)
 const md = new MarkdownIt({ html: true })
 
 function renderMarkdown(string: string | null | undefined) {
-  return formatChangelog(md, string, { stripChecksums: true })
+  return formatChangelog(md, string, {
+    hideAssetSelectionTip: true,
+    stripChecksums: true,
+  })
 }
 
 const release = computed(() => changelogs.find(r => r.tag_name === tag.value))
+const assetSelectionTip = computed(() => {
+  const body = release.value?.body ?? ''
+  const callouts = body.match(/^> \[!TIP\]\r?\n((?:^>.*\r?\n?)+)/gim) ?? []
+  const tip = callouts.find(callout => /if you are unsure which version to download/i.test(callout))
+  return tip ? formatChangelog(md, tip) : undefined
+})
 const latestStableTag = computed(() => {
   const stable = changelogs
     .filter(r => !r.draft && !r.prerelease)
@@ -81,6 +90,7 @@ function assetDate(dateStr?: string) {
           </div>
         </li>
       </ul>
+      <div v-if="assetSelectionTip" class="asset-selection-tip" v-html="assetSelectionTip" />
     </details>
   </div>
   <div v-else>
@@ -182,5 +192,9 @@ h1 {
       text-align: right
     }
   }
+}
+
+.asset-selection-tip :deep(.custom-block) {
+  margin: 0.75rem 0 0
 }
 </style>
