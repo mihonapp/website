@@ -106,6 +106,11 @@ h1 {
   gap: 0.5rem
 }
 
+time {
+  font-size: 1rem
+  color: var(--vp-c-text-2)
+}
+
 .assets {
   summary {
     // keep the native disclosure marker and align content

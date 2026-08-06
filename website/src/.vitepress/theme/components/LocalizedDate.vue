@@ -8,12 +8,28 @@ onMounted(() => {
   locale.value = navigator.language
 })
 
+const date = computed(() => new Date(props.value))
+const includesTime = computed(() => props.value.includes('T'))
+
 const formattedDate = computed(() => new Intl.DateTimeFormat(locale.value, {
   dateStyle: 'medium',
   timeZone: 'UTC',
-}).format(new Date(props.value)))
+}).format(date.value))
+
+const exactDateOptions = computed<Intl.DateTimeFormatOptions>(() => includesTime.value
+  ? {
+      dateStyle: 'full',
+      timeStyle: 'short',
+      timeZone: 'UTC',
+    }
+  : {
+      dateStyle: 'full',
+      timeZone: 'UTC',
+    })
+
+const exactDate = computed(() => new Intl.DateTimeFormat(locale.value, exactDateOptions.value).format(date.value))
 </script>
 
 <template>
-  <time :datetime="value">{{ formattedDate }}</time>
+  <time :datetime="value" :title="exactDate">{{ formattedDate }}</time>
 </template>

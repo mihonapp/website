@@ -1,20 +1,7 @@
 <script setup lang="ts">
 import { IconChevronRight } from '@iconify-prerendered/vue-mdi'
 import { data as newsList } from '../data/news.data'
-
-const dateFormatter = new Intl.DateTimeFormat('en', {
-  dateStyle: 'medium',
-  timeZone: 'UTC',
-})
-
-function formatDate(date: string) {
-  const [year, month, day] = date
-    .substring(0, 10)
-    .split('-')
-    .map(number => Number.parseInt(number, 10))
-  const utcDate = Date.UTC(year, month - 1, day)
-  return dateFormatter.format(utcDate)
-}
+import LocalizedDate from './LocalizedDate.vue'
 </script>
 
 <template>
@@ -31,9 +18,7 @@ function formatDate(date: string) {
         </a>
         <div class="background" />
       </h3>
-      <time :datetime="news.date">
-        {{ formatDate(news.date) }}
-      </time>
+      <LocalizedDate :value="news.date" />
     </div>
     <p>{{ news.description }}</p>
     <div class="readPrompt" aria-hidden="true">
