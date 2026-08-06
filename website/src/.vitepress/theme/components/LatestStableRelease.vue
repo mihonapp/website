@@ -6,7 +6,7 @@ import LocalizedDate from './LocalizedDate.vue'
 
 <template>
   <aside class="latest-stable-release" aria-label="Latest stable release">
-    <div class="release-summary">
+    <div class="latest-release-summary">
       <span class="release-kicker">Latest stable release</span>
       <strong>{{ stableRelease.name }}</strong>
       <span v-if="stableRelease.publishedAt" class="release-date">
@@ -15,13 +15,9 @@ import LocalizedDate from './LocalizedDate.vue'
     </div>
 
     <div class="latest-release-actions">
-      <a class="changelog-link" :href="`/changelogs/${stableRelease.tagName}`">
-        <IconNewspaperVariant aria-hidden="true" />
-        Changelog
-      </a>
-      <a class="download-link" href="/download/">
+      <a class="download-link" href="/download/" aria-label="Download latest stable release">
         <IconDownload aria-hidden="true" />
-        Download
+        <span class="download-label">Download</span>
       </a>
     </div>
   </aside>
@@ -37,13 +33,13 @@ import LocalizedDate from './LocalizedDate.vue'
   max-width: 100%
   margin-top: 1.5rem
   padding: 0.8rem 0.9rem 0.8rem 1rem
-  border: 1px solid var(--vp-c-brand)
+  border: 1px solid var(--vp-c-brand-border)
   border-radius: 12px
   background: var(--vp-c-brand-dimm)
   box-shadow: 0 8px 24px var(--vp-c-brand-dimm)
 }
 
-.release-summary {
+.latest-release-summary {
   display: grid
   gap: 0.1rem
   min-width: 11rem
@@ -91,31 +87,33 @@ import LocalizedDate from './LocalizedDate.vue'
   }
 }
 
-.changelog-link {
-  display: inline-flex
-  align-items: center
-  gap: 0.35rem
-  color: var(--vp-c-text-2)
-  font-size: 0.82rem
-  text-decoration: none
-
-  &:hover {
-    color: var(--vp-c-brand-1)
-  }
-
-  svg {
-    font-size: 1rem
-  }
-}
-
 @media (max-width 640px) {
   .latest-stable-release {
+    position: relative
     width: 100%
-    align-items: stretch
+    align-items: center
+    gap: 0.75rem
+    padding-right: 10.25rem
   }
 
   .latest-release-actions {
-    justify-content: space-between
+    position: absolute
+    top: 50%
+    right: 0.85rem
+    width: auto
+    gap: 0.35rem
+    transform: translateY(-50%)
+  }
+
+  .latest-release-summary {
+    width: 100%
+    text-align: left
+  }
+
+  .download-link {
+    justify-content: center
+    min-height: 2.35rem
+    padding: 0 0.75rem
   }
 }
 </style>
