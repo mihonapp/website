@@ -9,7 +9,7 @@ pageClass: page-tachiyomi-az
 hero:
   name: TachiyomiAZ
   text: Classic UI
-  tagline: Android 5+ support, Backported features, and Reliable updates
+  tagline: Android 7+ support, Backported features, and Reliable updates
   image: /forks/logo-az.webp
   actions:
     - theme: brand
