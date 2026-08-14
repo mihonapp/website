@@ -154,11 +154,11 @@ function handleAnalytics(type: 'beta' | 'foss' | 'stable') {
             <div>
               <h3>FOSS</h3>
               <p class="foss-description">
-                A fully FOSS-compliant build of Mihon, compiled from the publicly available source code.
+                A fully FOSS-compliant build of Mihon, compiled from GitHub source code.
               </p>
               <p class="foss-note">
                 <IconInformationOutline aria-hidden="true" />
-                <span><strong>Note:</strong> Features that rely on proprietary components or commercial services are excluded.</span>
+                <span><strong>Note:</strong> Features that rely on proprietary components are excluded.</span>
               </p>
             </div>
           </div>
