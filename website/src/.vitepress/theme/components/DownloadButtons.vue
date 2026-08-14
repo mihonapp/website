@@ -32,6 +32,12 @@ interface DownloadCard {
   useMihonLogo?: boolean
 }
 
+const props = withDefaults(defineProps<{
+  group?: 'all' | 'other' | 'primary'
+}>(), {
+  group: 'all',
+})
+
 const downloadInformation = computed(() => ({
   // The preview-release feed is Nightly until Beta has its own endpoint.
   nightly: {
@@ -84,9 +90,22 @@ const downloadCards = computed<DownloadCard[]>(() => [
   },
 ].filter(card => card.asset))
 
+const visibleDownloadCards = computed(() => downloadCards.value.filter((card) => {
+  if (props.group === 'primary')
+    return card.isPrimary
+
+  if (props.group === 'other')
+    return !card.isPrimary
+
+  return true
+}))
+
 const isAndroid = ref(true)
 
 onMounted(() => {
+  if (props.group === 'other')
+    return
+
   isAndroid.value = !!navigator.userAgent.match(/android/i)
 })
 
@@ -106,7 +125,7 @@ function handleAnalytics(type: ReleaseId) {
 
 <template>
   <div>
-    <div v-if="!isAndroid" class="custom-block danger">
+    <div v-if="props.group !== 'other' && !isAndroid" class="custom-block danger">
       <p class="custom-block-title">
         Unsupported operating system
       </p>
@@ -118,9 +137,9 @@ function handleAnalytics(type: ReleaseId) {
       </p>
     </div>
     <section class="release-selector" aria-label="Choose your release">
-      <div class="release-cards" :class="{ 'has-beta': downloadCards.some(card => card.id === 'beta') }">
+      <div class="release-cards" :class="{ 'has-beta': visibleDownloadCards.some(card => card.id === 'beta') }">
         <article
-          v-for="card in downloadCards"
+          v-for="card in visibleDownloadCards"
           :key="card.id"
           class="release-card"
           :class="[card.id, { 'is-primary': card.isPrimary }]"

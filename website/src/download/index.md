@@ -15,6 +15,10 @@ import Changelog from "@theme/components/Changelog.vue";
 
 # Download
 
-<DownloadButtons />
+<DownloadButtons group="primary" />
 
 <Changelog type="stable" hide-asset-selection-tip />
+
+## Other downloads
+
+<DownloadButtons group="other" />
