@@ -33,6 +33,8 @@ const downloadInformation = computed(() => ({
 }))
 
 const isAndroid = ref(true)
+// Beta downloads are temporarily unavailable.
+const showBeta = false
 
 onMounted(() => {
   isAndroid.value = !!navigator.userAgent.match(/android/i)
@@ -63,7 +65,7 @@ function handleAnalytics(type: 'beta' | 'foss' | 'stable') {
       </p>
     </div>
     <section class="release-selector" aria-label="Choose your release">
-      <div class="release-cards">
+      <div class="release-cards" :class="{ 'stable-only': !showBeta }">
         <article class="release-card stable">
           <div class="release-card-header">
             <span class="release-icon" aria-hidden="true"><span class="mihon-logo" /></span>
@@ -105,7 +107,7 @@ function handleAnalytics(type: 'beta' | 'foss' | 'stable') {
             </span>
           </div>
         </article>
-        <article class="release-card beta">
+        <article v-if="showBeta" class="release-card beta">
           <div class="release-card-header">
             <span class="release-icon" aria-hidden="true"><IconFlaskOutline /></span>
             <div>
@@ -185,6 +187,48 @@ function handleAnalytics(type: 'beta' | 'foss' | 'stable') {
   display: grid
   grid-template-columns: repeat(2, minmax(0, 1fr))
   gap: 1.5rem
+
+  &.stable-only {
+    grid-template-columns: 1fr
+
+    .release-card.stable {
+      display: grid
+      grid-template-columns: minmax(13rem, 0.9fr) minmax(17rem, 1fr) minmax(14rem, auto)
+      grid-template-rows: auto auto
+      align-items: center
+      column-gap: 1.5rem
+      padding: 1rem 1.25rem
+
+      .release-card-header {
+        grid-column: 1
+        grid-row: 1
+        padding-bottom: 0
+      }
+
+      .release-details {
+        grid-column: 2
+        grid-row: 1 / span 2
+        margin: 0
+      }
+
+      .release-actions {
+        display: contents
+      }
+
+      .download-button {
+        grid-column: 3
+        grid-row: 1 / span 2
+        min-width: 14rem
+        line-height: 3.25rem
+      }
+
+      .release-action-note {
+        grid-column: 1 / span 2
+        grid-row: 2
+        margin: 0.5rem 0 0
+      }
+    }
+  }
 }
 
 .release-card {
@@ -598,6 +642,39 @@ html:not(.dark) {
   }
 }
 
+@media (max-width 960px) {
+  .release-cards.stable-only .release-card.stable {
+    grid-template-columns: minmax(0, 1fr) auto
+    grid-template-rows: auto auto auto
+
+    .release-card-header,
+    .release-details {
+      grid-column: 1
+    }
+
+    .release-card-header {
+      grid-row: 1
+    }
+
+    .release-details {
+      grid-row: 2
+      grid-template-columns: repeat(2, minmax(0, 1fr))
+      margin: 0.5rem 0 0
+    }
+
+    .download-button {
+      grid-column: 2
+      grid-row: 1 / span 2
+      min-width: 15rem
+    }
+
+    .release-action-note {
+      grid-column: 1
+      grid-row: 3
+    }
+  }
+}
+
 @media (max-width 640px) {
   .release-cards {
     grid-template-columns: 1fr
@@ -605,6 +682,42 @@ html:not(.dark) {
 
   .release-card {
     padding: 1.25rem
+  }
+
+  .release-cards.stable-only .release-card.stable {
+    display: flex
+    align-items: stretch
+    flex-direction: column
+    padding: 1.25rem
+
+    .release-card-header,
+    .release-details,
+    .release-action-note {
+      grid-column: auto
+    }
+
+    .release-card-header {
+      padding-bottom: 0.75rem
+    }
+
+    .release-details {
+      grid-template-columns: 1fr
+      margin: 0.75rem 0
+    }
+
+    .release-actions {
+      display: block
+    }
+
+    .download-button {
+      width: 100%
+      min-width: 0
+      line-height: 3.75rem
+    }
+
+    .release-action-note {
+      margin: 0.75rem 0 0
+    }
   }
 
   .release-card.foss {
