@@ -14,6 +14,6 @@ import ChangelogsList from "@theme/components/ChangelogsList.vue";
 # Changelogs
 
 Changelogs of all Mihon stable releases, which are also available [on GitHub](https://github.com/mihonapp/mihon/releases).<br>
-Beta releases can be seen [on GitHub](https://github.com/mihonapp/mihon-preview/releases).
+Nightly releases can be seen [on GitHub](https://github.com/mihonapp/mihon-preview/releases).
 
 <ChangelogsList />
