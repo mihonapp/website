@@ -64,7 +64,7 @@
     "cross-env": "^10.1.0",
     "eslint": "10.10.0",
     "eslint-config-standard": "17.1.0",
-    "eslint-plugin-vue": "10.10.0",
+    "eslint-plugin-vue": "10.11.0",
     "feed": "6.0.0",
     "lint-staged": "17.5.0",
     "markdownlint": "0.41.1",
