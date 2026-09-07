@@ -35,7 +35,7 @@
   "dependencies": {
     "@iconify-prerendered/vue-mdi": "0.28.1737398331",
     "@octokit/rest": "22.0.1",
-    "@octokit/types": "17.0.0",
+    "@octokit/types": "18.0.0",
     "@tanstack/vue-query": "5.102.8",
     "@vueuse/core": "14.4.0",
     "axios": "1.20.0",
