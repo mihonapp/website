@@ -11,10 +11,10 @@ Link supported tracking services in <nav to="tracking">.
 
 ## Services
 
-**Mihon** currently supports tracking with [MyAnimeList](https://myanimelist.net/), [AniList](https://anilist.co/), [Kitsu](https://kitsu.app/), [MangaUpdates](https://www.mangaupdates.com/), [Shikimori](https://shikimori.one/), and [Bangumi](https://bangumi.tv/).
+**Mihon** currently supports tracking with [MangaBaka](https://mangabaka.org), [MyAnimeList](https://myanimelist.net/), [AniList](https://anilist.co/), [Kitsu](https://kitsu.app/), [MangaUpdates](https://www.mangaupdates.com/), [Shikimori](https://shikimori.one/), [Bangumi](https://bangumi.tv/), and [Hikka](https://hikka.io).
 
 * You must add the desired tracker to each series to begin tracking.
-* Track entries privately with supported tracking services (AniList, Kitsu).
+* Track entries privately with supported tracking services (AniList, Bangumi, Kitsu, MangaBaka).
 * You can adjust each field in the tracker entry by tapping on it.
 
 :::info Tracker behavior in Mihon
@@ -22,6 +22,7 @@ Link supported tracking services in <nav to="tracking">.
 * Status, Start & Finish date automatically changes when you start & complete a series.
 * After reading the last page of a chapter, or marking a chapter as read, the tracker's progress will update.
 * Offline progress syncs when back online.
+* Mihon uses the scoring system you selected on the tracker if the tracker allows you to pick different scoring systems (AniList, Kitsu, MangaBaka)
 :::
 
 ## Enhanced services
