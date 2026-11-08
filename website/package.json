@@ -70,7 +70,7 @@
     "markdownlint": "0.42.1",
     "markdownlint-cli": "0.50.0",
     "sentences-per-line": "0.5.6",
-    "stylelint": "17.16.0",
+    "stylelint": "18.0.0",
     "stylelint-stylus": "1.0.0",
     "stylus": "0.64.0",
     "unplugin-element-plus": "0.11.2",
