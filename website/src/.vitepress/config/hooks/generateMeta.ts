@@ -71,6 +71,64 @@ function generateMeta(context: TransformContext, hostname: string) {
     addMetaTag('twitter:image:alt', pageData.frontmatter.title)
   }
 
+  const title = pageData.frontmatter.customMetaTitle || pageData.frontmatter.title || pageData.title
+  const description = pageData.frontmatter.description || pageData.description
+  const imageUrl = pageData.frontmatter.image
+    ? `${hostname}/${pageData.frontmatter.image.replace(/^\//, '')}`
+    : `${url.replace(/\/$/, '')}/__og_image__/og.png`
+
+  const truncateUtf8 = (value: string, maxBytes: number) => {
+    let result = ''
+    let bytes = 0
+
+    for (const character of value) {
+      const characterBytes = Buffer.byteLength(character, 'utf8')
+      if (bytes + characterBytes > maxBytes)
+        break
+      result += character
+      bytes += characterBytes
+    }
+
+    return result
+  }
+
+  const componentEmbed = {
+    component: {
+      type: 17,
+      accent_color: 22688,
+      components: [
+        {
+          type: 9,
+          components: [{
+            type: 10,
+            content: `# [${truncateUtf8(String(title), 70)}](${url})${description ? `\n${truncateUtf8(String(description), 350)}` : ''}`,
+          }],
+          accessory: {
+            type: 11,
+            media: { url: imageUrl },
+          },
+        },
+        {
+          type: 1,
+          components: [{
+            type: 2,
+            style: 5,
+            url,
+            label: 'Open page',
+          }],
+        },
+      ],
+    },
+  }
+
+  const componentEmbedJson = JSON.stringify(componentEmbed).replace(/</g, '\\u003c')
+  if (Buffer.byteLength(componentEmbedJson, 'utf8') <= 3000) {
+    head.push(['script', {
+      id: 'discord:component-embed',
+      type: 'application/json',
+    }, componentEmbedJson])
+  }
+
   if (pageData.frontmatter.tag)
     addPropertyTag('article:tag', pageData.frontmatter.tag)
 
