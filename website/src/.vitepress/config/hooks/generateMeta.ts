@@ -97,7 +97,7 @@ async function generateMeta(context: TransformContext, hostname: string) {
   const addAction = (label: string, href: string) => {
     actions.push({ type: 2, style: 5, url: href, label })
   }
-  const needsReleaseData = pageData.filePath.startsWith('changelogs/') || pageData.filePath === 'download/index.md'
+  const needsReleaseData = pageData.filePath.startsWith('changelogs/')
   const releases = needsReleaseData ? await getReleaseData() : undefined
   const latestRelease = releases?.stableLatest
   const releaseTag = (pageData as any).params?.tag as string | undefined
@@ -112,10 +112,8 @@ async function generateMeta(context: TransformContext, hostname: string) {
     addAction('Getting started', `${hostname}/docs/guides/getting-started`)
   }
   else if (pageData.filePath === 'download/index.md') {
-    if (stableApk)
-      addAction('Download', stableApk.browser_download_url)
-    if (latestRelease)
-      addAction('Changelog', `${hostname}/changelogs/${latestRelease.tag_name}`)
+    addAction('Download', `${hostname}/download/`)
+    addAction('Changelog', `${hostname}/changelogs/latest`)
   }
   else if (pageData.filePath.startsWith('changelogs/')) {
     if (stableApk)
