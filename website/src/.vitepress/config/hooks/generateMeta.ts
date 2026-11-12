@@ -1,6 +1,7 @@
 import type { HeadConfig, TransformContext } from 'vitepress'
+import { getReleaseData } from '../releaseData'
 
-function generateMeta(context: TransformContext, hostname: string) {
+async function generateMeta(context: TransformContext, hostname: string) {
   const head: HeadConfig[] = []
   const { pageData } = context
 
@@ -92,6 +93,64 @@ function generateMeta(context: TransformContext, hostname: string) {
     return result
   }
 
+  const actions: Array<{ type: number, style: number, url: string, label: string }> = []
+  const addAction = (label: string, href: string) => {
+    actions.push({ type: 2, style: 5, url: href, label })
+  }
+  const needsReleaseData = pageData.filePath.startsWith('changelogs/') || pageData.filePath === 'download/index.md'
+  const releases = needsReleaseData ? await getReleaseData() : undefined
+  const latestRelease = releases?.stableLatest
+  const releaseTag = (pageData as any).params?.tag as string | undefined
+  const pageRelease = pageData.filePath === 'changelogs/[tag].md' && releaseTag
+    ? releases?.stable.find(release => release.tag_name === releaseTag)
+    : latestRelease
+  const stableApk = pageRelease?.assets.find(asset => /^mihon-v\d+\.\d+\.\d+\.apk/.test(asset.name))
+
+  let contextLabel = 'MIHON'
+  if (pageData.filePath === 'index.md') {
+    contextLabel = 'MIHON · ANDROID MANGA READER'
+    addAction('Get Mihon', `${hostname}/download/`)
+    addAction('Getting started', `${hostname}/docs/guides/getting-started`)
+  }
+  else if (pageData.filePath === 'download/index.md') {
+    contextLabel = 'MIHON DOWNLOADS'
+    if (stableApk)
+      addAction('Download', stableApk.browser_download_url)
+    if (latestRelease)
+      addAction('Changelog', `${hostname}/changelogs/${latestRelease.tag_name}`)
+  }
+  else if (pageData.filePath.startsWith('changelogs/')) {
+    contextLabel = 'MIHON RELEASES'
+    if (stableApk)
+      addAction('Download', stableApk.browser_download_url)
+    addAction('All changelogs', `${hostname}/changelogs/`)
+  }
+  else if (pageData.filePath.startsWith('docs/faq/')) {
+    contextLabel = 'MIHON · FREQUENTLY ASKED QUESTIONS'
+    addAction('Browse guides', `${hostname}/docs/guides/getting-started`)
+    addAction('Download Mihon', `${hostname}/download/`)
+  }
+  else if (pageData.filePath.startsWith('docs/')) {
+    contextLabel = 'MIHON · GUIDE'
+    addAction('Download Mihon', `${hostname}/download/`)
+    addAction('Browse FAQs', `${hostname}/docs/faq/general`)
+  }
+  else if (pageData.filePath.startsWith('news/')) {
+    contextLabel = 'MIHON NEWS'
+    addAction('All news', `${hostname}/news/`)
+    addAction('Download Mihon', `${hostname}/download/`)
+  }
+  else if (pageData.filePath.startsWith('forks/')) {
+    contextLabel = 'MIHON · COMMUNITY FORKS'
+    addAction('All forks', `${hostname}/forks/`)
+    addAction('Download Mihon', `${hostname}/download/`)
+  }
+
+  if (!actions.length)
+    addAction('Open page', url)
+
+  const componentText = `**${contextLabel}**\n# [${truncateUtf8(String(title), 70)}](${url})${description ? `\n${truncateUtf8(String(description), 350)}` : ''}`
+
   const componentEmbed = {
     component: {
       type: 17,
@@ -101,21 +160,16 @@ function generateMeta(context: TransformContext, hostname: string) {
           type: 9,
           components: [{
             type: 10,
-            content: `# [${truncateUtf8(String(title), 70)}](${url})${description ? `\n${truncateUtf8(String(description), 350)}` : ''}`,
+            content: componentText,
           }],
-          accessory: {
-            type: 11,
-            media: { url: imageUrl },
-          },
         },
         {
           type: 1,
-          components: [{
-            type: 2,
-            style: 5,
-            url,
-            label: 'Open page',
-          }],
+          components: actions,
+        },
+        {
+          type: 12,
+          items: [{ media: { url: imageUrl } }],
         },
       ],
     },
