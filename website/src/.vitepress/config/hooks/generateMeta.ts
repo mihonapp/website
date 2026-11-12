@@ -97,7 +97,7 @@ async function generateMeta(context: TransformContext, hostname: string) {
   const addAction = (label: string, href: string) => {
     actions.push({ type: 2, style: 5, url: href, label })
   }
-  const needsReleaseData = pageData.filePath.startsWith('changelogs/')
+  const needsReleaseData = pageData.filePath.startsWith('changelogs/') || pageData.filePath === 'download/index.md'
   const releases = needsReleaseData ? await getReleaseData() : undefined
   const latestRelease = releases?.stableLatest
   const releaseTag = (pageData as any).params?.tag as string | undefined
@@ -140,7 +140,10 @@ async function generateMeta(context: TransformContext, hostname: string) {
   if (!actions.length)
     addAction('Open page', url)
 
-  const componentText = `**${contextLabel}**\n# [${truncateUtf8(String(title), 70)}](${url})${description ? `\n${truncateUtf8(String(description), 350)}` : ''}`
+  const latestVersionText = pageData.filePath === 'download/index.md' && latestRelease
+    ? `\nLatest stable release: **${latestRelease.tag_name}**`
+    : ''
+  const componentText = `**${contextLabel}**\n# [${truncateUtf8(String(title), 70)}](${url})${description ? `\n${truncateUtf8(String(description), 350)}` : ''}${latestVersionText}`
 
   const componentEmbed = {
     component: {
