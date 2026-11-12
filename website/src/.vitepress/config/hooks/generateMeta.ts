@@ -140,8 +140,10 @@ async function generateMeta(context: TransformContext, hostname: string) {
   if (!actions.length)
     addAction('Open page', url)
 
+  const publishedAt = latestRelease?.published_at ? Date.parse(latestRelease.published_at) : Number.NaN
+  const publishedAtTimestamp = Number.isFinite(publishedAt) ? Math.floor(publishedAt / 1000) : undefined
   const latestVersionText = pageData.filePath === 'download/index.md' && latestRelease
-    ? `\nLatest stable release: **${latestRelease.tag_name}**`
+    ? `\nLatest stable **${latestRelease.tag_name}**${publishedAtTimestamp !== undefined ? ` released <t:${publishedAtTimestamp}:R>` : ''}`
     : ''
   const componentText = `**${contextLabel}**\n# [${truncateUtf8(String(title), 70)}](${url})${description ? `\n${truncateUtf8(String(description), 350)}` : ''}${latestVersionText}`
 
