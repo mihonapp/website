@@ -106,42 +106,35 @@ async function generateMeta(context: TransformContext, hostname: string) {
     : latestRelease
   const stableApk = pageRelease?.assets.find(asset => /^mihon-v\d+\.\d+\.\d+\.apk/.test(asset.name))
 
-  let contextLabel = 'MIHON'
+  const contextLabel = 'Mihon'
   if (pageData.filePath === 'index.md') {
-    contextLabel = 'MIHON · ANDROID MANGA READER'
     addAction('Get Mihon', `${hostname}/download/`)
     addAction('Getting started', `${hostname}/docs/guides/getting-started`)
   }
   else if (pageData.filePath === 'download/index.md') {
-    contextLabel = 'MIHON DOWNLOADS'
     if (stableApk)
       addAction('Download', stableApk.browser_download_url)
     if (latestRelease)
       addAction('Changelog', `${hostname}/changelogs/${latestRelease.tag_name}`)
   }
   else if (pageData.filePath.startsWith('changelogs/')) {
-    contextLabel = 'MIHON RELEASES'
     if (stableApk)
       addAction('Download', stableApk.browser_download_url)
     addAction('All changelogs', `${hostname}/changelogs/`)
   }
   else if (pageData.filePath.startsWith('docs/faq/')) {
-    contextLabel = 'MIHON · FREQUENTLY ASKED QUESTIONS'
     addAction('Browse guides', `${hostname}/docs/guides/getting-started`)
     addAction('Download Mihon', `${hostname}/download/`)
   }
   else if (pageData.filePath.startsWith('docs/')) {
-    contextLabel = 'MIHON · GUIDE'
     addAction('Download Mihon', `${hostname}/download/`)
     addAction('Browse FAQs', `${hostname}/docs/faq/general`)
   }
   else if (pageData.filePath.startsWith('news/')) {
-    contextLabel = 'MIHON NEWS'
     addAction('All news', `${hostname}/news/`)
     addAction('Download Mihon', `${hostname}/download/`)
   }
   else if (pageData.filePath.startsWith('forks/')) {
-    contextLabel = 'MIHON · COMMUNITY FORKS'
     addAction('All forks', `${hostname}/forks/`)
     addAction('Download Mihon', `${hostname}/download/`)
   }
