@@ -157,11 +157,8 @@ async function generateMeta(context: TransformContext, hostname: string) {
       accent_color: 22688,
       components: [
         {
-          type: 9,
-          components: [{
-            type: 10,
-            content: componentText,
-          }],
+          type: 10,
+          content: componentText,
         },
         {
           type: 1,
