@@ -124,6 +124,7 @@ async function generateOgImages(config: SiteConfig) {
       template,
       outDir: config.outDir,
       fonts,
+      discordPreview: false,
     })
   }
 }
@@ -135,6 +136,7 @@ interface GenerateImagesOptions {
   template: string
   outDir: string
   fonts: SatoriOptions['fonts']
+  discordPreview?: boolean
 }
 
 function getDir(url: string) {
@@ -150,7 +152,7 @@ function getDir(url: string) {
   return undefined
 }
 
-async function generateImage({ page, template, outDir, fonts }: GenerateImagesOptions) {
+async function generateImage({ page, template, outDir, fonts, discordPreview = true }: GenerateImagesOptions) {
   const { frontmatter, url } = page
 
   const options: SatoriOptions = {
@@ -183,6 +185,17 @@ async function generateImage({ page, template, outDir, fonts }: GenerateImagesOp
   const outputFile = resolve(outputFolder, 'og.png')
 
   await mkdir(outputFolder, { recursive: true })
+  await writeFile(outputFile, render.asPng())
 
-  return await writeFile(outputFile, render.asPng())
+  if (discordPreview) {
+    const discordSvg = await satoriVue({ ...options, height: 675 }, template)
+    const discordRender = await renderAsync(discordSvg, {
+      fitTo: {
+        mode: 'width',
+        value: 385,
+      },
+    })
+
+    await writeFile(resolve(outputFolder, 'og-discord.png'), discordRender.asPng())
+  }
 }

@@ -76,7 +76,7 @@ async function generateMeta(context: TransformContext, hostname: string) {
   const description = pageData.frontmatter.description || pageData.description
   const imageUrl = pageData.frontmatter.image
     ? `${hostname}/${pageData.frontmatter.image.replace(/^\//, '')}`
-    : `${url.replace(/\/$/, '')}/__og_image__/og.png`
+    : `${url.replace(/\/$/, '')}/__og_image__/og-discord.png`
 
   const truncateUtf8 = (value: string, maxBytes: number) => {
     let result = ''
