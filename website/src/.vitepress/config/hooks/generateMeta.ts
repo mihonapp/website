@@ -118,7 +118,13 @@ async function generateMeta(context: TransformContext, hostname: string) {
   else if (pageData.filePath.startsWith('changelogs/')) {
     if (stableApk)
       addAction('Download', stableApk.browser_download_url)
-    addAction('All changelogs', `${hostname}/changelogs/`)
+    if (pageData.filePath === 'changelogs/index.md' || pageData.filePath === 'changelogs/latest.md') {
+      if (latestRelease)
+        addAction('Latest changelog', `${hostname}/changelogs/${latestRelease.tag_name}`)
+    }
+    else {
+      addAction('All changelogs', `${hostname}/changelogs/`)
+    }
   }
   else if (pageData.filePath.startsWith('docs/faq/')) {
     addAction('Browse guides', `${hostname}/docs/guides/getting-started`)
@@ -145,7 +151,31 @@ async function generateMeta(context: TransformContext, hostname: string) {
   const latestVersionText = pageData.filePath === 'download/index.md' && latestRelease
     ? `\nLatest stable **${latestRelease.tag_name}**${publishedAtTimestamp !== undefined ? ` released <t:${publishedAtTimestamp}:R>` : ''}`
     : ''
-  const componentText = `**${contextLabel}**\n# [${truncateUtf8(String(title), 70)}](${url})${description ? `\n${truncateUtf8(String(description), 350)}` : ''}${latestVersionText}`
+  let componentText = `**${contextLabel}**\n# [${truncateUtf8(String(title), 70)}](${url})${description ? `\n${truncateUtf8(String(description), 350)}` : ''}${latestVersionText}`
+
+  if (pageData.filePath.startsWith('changelogs/') && pageRelease) {
+    const notes = (pageRelease.body ?? '').replace(/<!--[\s\S]*?-->/g, '')
+    const noteLines = notes.split(/\r?\n/)
+    const firstSection = noteLines.findIndex(line => /^#{2,4}\s/.test(line))
+    const sectionLines = noteLines.slice(firstSection < 0 ? 0 : firstSection)
+    const previousUpdate = sectionLines.findIndex(line => /^##\s+And in the last update\b/i.test(line))
+    const patchNotes = sectionLines.slice(0, previousUpdate < 0 ? sectionLines.length : previousUpdate)
+      .filter(line => !line.startsWith('>'))
+      .join('\n')
+      .trim()
+    const limitedPatchNotes = truncateUtf8(patchNotes, 1350)
+    const lastLineBreak = limitedPatchNotes.lastIndexOf('\n')
+    let completeLines = limitedPatchNotes
+    if (limitedPatchNotes.length < patchNotes.length && lastLineBreak > 0)
+      completeLines = limitedPatchNotes.slice(0, lastLineBreak)
+    const releasedAt = pageRelease.published_at ? Date.parse(pageRelease.published_at) : Number.NaN
+    const releasedAtTimestamp = Number.isFinite(releasedAt) ? Math.floor(releasedAt / 1000) : undefined
+
+    const releaseUrl = pageData.filePath === 'changelogs/index.md' || pageData.filePath === 'changelogs/latest.md'
+      ? `${hostname}/changelogs/${pageRelease.tag_name}`
+      : url
+    componentText = `**${contextLabel}**\n# [${pageRelease.tag_name} Patch Notes](${releaseUrl})${releasedAtTimestamp !== undefined ? `\nReleased <t:${releasedAtTimestamp}:R>` : ''}\n\n${completeLines}${completeLines.length < patchNotes.length ? '\n…' : ''}`
+  }
 
   const componentEmbed = {
     component: {
@@ -160,10 +190,12 @@ async function generateMeta(context: TransformContext, hostname: string) {
           type: 1,
           components: actions,
         },
-        {
-          type: 12,
-          items: [{ media: { url: imageUrl } }],
-        },
+        ...(!pageData.filePath.startsWith('changelogs/')
+          ? [{
+              type: 12,
+              items: [{ media: { url: imageUrl } }],
+            }]
+          : []),
       ],
     },
   }
